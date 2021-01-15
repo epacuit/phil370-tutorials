@@ -1,0 +1,630 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>Introduction to Proofs - PHIL 370 Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#introduction-to-proofs" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="PHIL 370 Notes" class="md-header-nav__button md-logo" aria-label="PHIL 370 Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            PHIL 370 Notes
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Introduction to Proofs
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PHIL 370 Notes" class="md-nav__button md-logo" aria-label="PHIL 370 Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    PHIL 370 Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Tutorials
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Week 1
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Week 1" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Week 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../01-basic-set-theory/" class="md-nav__link">
+      Set Theory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../02-relations-and-functions/" class="md-nav__link">
+      Relations and Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Introduction to Proofs
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Introduction to Proofs
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#blah" class="md-nav__link">
+    Blah...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-symdiffpng" class="md-nav__link">
+    ```{figure} ./symdiff.png
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-subsetpng" class="md-nav__link">
+    ```{figure} ./subset.png
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-intersectionpng" class="md-nav__link">
+    ```{figure} ./intersection.png
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-setdiffpng" class="md-nav__link">
+    ```{figure} ./setdiff.png
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-symdiffpng_1" class="md-nav__link">
+    ```{figure} ./symdiff.png
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#blah" class="md-nav__link">
+    Blah...
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-symdiffpng" class="md-nav__link">
+    ```{figure} ./symdiff.png
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-subsetpng" class="md-nav__link">
+    ```{figure} ./subset.png
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-intersectionpng" class="md-nav__link">
+    ```{figure} ./intersection.png
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-setdiffpng" class="md-nav__link">
+    ```{figure} ./setdiff.png
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#figure-symdiffpng_1" class="md-nav__link">
+    ```{figure} ./symdiff.png
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="introduction-to-proofs">Introduction to Proofs</h1>
+<h2 id="blah">Blah...</h2>
+<p>The notation "<span class="arithmatex">\(x \in X\)</span>", "<span class="arithmatex">\(x\not\in X\)</span>",  "<span class="arithmatex">\(X\subseteq Y\)</span>", "<span class="arithmatex">\(X\not\subseteq Y\)</span>" and "<span class="arithmatex">\(X\subsetneq Y\)</span>" are statements which may be true or false depending on what <span class="arithmatex">\(x\)</span>, <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> refer to.  The following table summarizes this notation and how to prove that the statement is true.<br />
+<br/></p>
+<table>
+<thead>
+<tr>
+<th>Notation</th>
+<th>Description</th>
+<th>To prove</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(x\in X\)</span></td>
+<td><span class="arithmatex">\(x\)</span> is an element of <span class="arithmatex">\(X\)</span></td>
+<td>Show that <span class="arithmatex">\(x\)</span> is listed in <span class="arithmatex">\(X\)</span> or <br/> <span class="arithmatex">\(x\)</span> has the property used to define the elements in <span class="arithmatex">\(X\)</span>.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(x\not\in X\)</span></td>
+<td><span class="arithmatex">\(x\)</span> is not an element of <span class="arithmatex">\(X\)</span></td>
+<td>Show that <span class="arithmatex">\(x\)</span> is not listed in <span class="arithmatex">\(X\)</span>, or <br/>   <span class="arithmatex">\(x\)</span> does not have the property used to define the elements in <span class="arithmatex">\(X\)</span>.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(X = Y\)</span></td>
+<td><span class="arithmatex">\(X\)</span> equals <span class="arithmatex">\(Y\)</span></td>
+<td>Show that <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> contain the same elements.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(X\ne Y\)</span></td>
+<td><span class="arithmatex">\(X\)</span> is not equal to <span class="arithmatex">\(Y\)</span></td>
+<td>Show that <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(Y\)</span> do not contain the same elements.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(X\subseteq Y\)</span></td>
+<td><span class="arithmatex">\(X\)</span> is a subset of <span class="arithmatex">\(Y\)</span></td>
+<td>Show that every element of <span class="arithmatex">\(X\)</span> is an element of <span class="arithmatex">\(Y\)</span>, or <br/>  there is no element of <span class="arithmatex">\(X\)</span> that is not an element of <span class="arithmatex">\(Y\)</span>.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(X\not\subseteq Y\)</span></td>
+<td><span class="arithmatex">\(X\)</span> is not a subset of <span class="arithmatex">\(Y\)</span></td>
+<td>Show that there is some element of <span class="arithmatex">\(X\)</span> <br /> that is not an element of <span class="arithmatex">\(Y\)</span>.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(X\subsetneq Y\)</span></td>
+<td><span class="arithmatex">\(X\)</span> is a proper subset of <span class="arithmatex">\(Y\)</span></td>
+<td>Show that <span class="arithmatex">\(X\subseteq Y\)</span> and <br/>there is some element of <span class="arithmatex">\(Y\)</span> that is not an element of <span class="arithmatex">\(X\)</span>.</td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(X\subset Y\)</span></td>
+<td>Same as <span class="arithmatex">\(X\subsetneq Y\)</span></td>
+<td>Same as <span class="arithmatex">\(X\subsetneq Y\)</span>.</td>
+</tr>
+</tbody>
+</table>
+<p>The symmetric difference is pictured as follows: </p>
+<h2 id="figure-symdiffpng">```{figure} ./symdiff.png</h2>
+<p>height: 180px
+name: symdiff</p>
+<hr />
+<p>The gray shaded region is <span class="arithmatex">\((A - B) \cup (B-A)\)</span>. 
+<div class="highlight"><pre><span></span><code>The following examples illustrates the operations of symmetric difference:
+
+* The symmetric difference of $A=\{1,2, 3\}$ and $B=\{1, 2, 4\}$  is $\{ 3, 4\}$.
+* The symmetric difference  $A=\{1,2,3\}$ and $B=\{1\}$ is $\{2, 3\}$.
+
+
+
+
+
+
+A **Venn diagram** is a picture that represents all the possible relationships between sets. For example, the following pictures represents all the possible relationships between two sets $A$ and $B$: 
+
+
+
+
+```{figure} ./venn1.png
+---
+height: 180px
+name: venn1
+---
+A Venn diagram for $X$ and $Y$ with the different regions labeled. 
+</code></pre></div>
+There are 4 distinct regions in the above picture: </p>
+<ul>
+<li>region <span class="arithmatex">\(1\)</span> is for items that are not in <span class="arithmatex">\(A\)</span> and not in  <span class="arithmatex">\(B\)</span>;</li>
+<li>region <span class="arithmatex">\(2\)</span> is for items in <span class="arithmatex">\(A\)</span> that are not in <span class="arithmatex">\(B\)</span>;</li>
+<li>region <span class="arithmatex">\(3\)</span> is for items in both <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>; and </li>
+<li>region <span class="arithmatex">\(4\)</span> is for items that are not in <span class="arithmatex">\(A\)</span> and are in <span class="arithmatex">\(B\)</span>. </li>
+</ul>
+<p>It is important to remember that in Venn diagrams, some of the regions might be empty, i.e., the region does not contain any elements.   For example, if <span class="arithmatex">\(A\subseteq B\)</span>, region <span class="arithmatex">\(2\)</span> does not contain any elements (since every element in <span class="arithmatex">\(A\)</span> is in <span class="arithmatex">\(B\)</span>).  To represent this subset relation between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> we can draw the <span class="arithmatex">\(A\)</span> region inside the <span class="arithmatex">\(B\)</span> region: [^euler]</p>
+<p>[^euler]: Techincally, this is called a <strong>Euler</strong> diagram.   Eurler diagrams do not represent the regions that are known to be empty. </p>
+<h2 id="figure-subsetpng">```{figure} ./subset.png</h2>
+<p>height: 180px
+name: subset</p>
+<hr />
+<p><span class="arithmatex">\(A\subseteq B\)</span>
+<div class="highlight"><pre><span></span><code>The union of two sets can be pictured as follows:
+
+```{figure} ./union.png
+---
+height: 180px
+name: union
+---
+The gray shaded region is $A\cup B$. 
+</code></pre></div></p>
+<p>The intersection of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> can be pictured as follows: </p>
+<h2 id="figure-intersectionpng">```{figure} ./intersection.png</h2>
+<p>height: 180px
+name: intersection</p>
+<hr />
+<p>The gray shaded region is <span class="arithmatex">\(A\cap B\)</span>. 
+<div class="highlight"><pre><span></span><code>The following examples illustrates the intersection of two sets.   
+
+* If $A=\{1,2,3\}$ and $B=\{1\}$, then $A\cap B=\{1\}$.
+* If $A=\{1,2, 3\}$ and $B=\{\{1,3\}, 2\}$, then $A\cap B=\{ 2\}$.
+* If $A=\{1, 2\}$ and $B=\{3, 4\}$, then $A\cap B=\varnothing$  (i.e., there are no elements in $A\cap B$).  
+
+
+```{glossary} 
+Set Difference
+  The **difference** between two sets $A$ and $B$ ($A$ minus $B$), denoted $A-B$  is all the elements in $A$ but not in $B$.   That is, the difference between $A$ and $B$ is the set 
+
+  $$
+  A-B=\{x\ |\ x\in A\text{ and } x\not\in B\}.
+  $$
+</code></pre></div>
+The difference  between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> can be pictured as follows: </p>
+<h2 id="figure-setdiffpng">```{figure} ./setdiff.png</h2>
+<p>height: 180px
+name: setdiff</p>
+<hr />
+<p>The gray shaded region is <span class="arithmatex">\(A - B\)</span>. 
+<div class="highlight"><pre><span></span><code>```{glossary}
+Complement
+  The **complement**  of a set is the set of all elements not contained in that set.  Formally, the complement of the set $A$ is 
+
+  $$
+  A^C=\{x\ |\ x\text{ is in the universal set and } x\not\in A\}.
+  $$
+</code></pre></div></p>
+<p>The following examples illustrates the operations of set difference and complement:</p>
+<ul>
+<li>If <span class="arithmatex">\(A=\{1,2, 3\}\)</span> and <span class="arithmatex">\(B=\{1, 2, 4\}\)</span>, then <span class="arithmatex">\(A - B=\{ 3\}\)</span> and <span class="arithmatex">\(B-A=\{4\}\)</span>.</li>
+<li>If <span class="arithmatex">\(A=\{1,2,3\}\)</span> and <span class="arithmatex">\(B=\{1\}\)</span>, then <span class="arithmatex">\(A - B=\{2, 3\}\)</span> and <span class="arithmatex">\(B-A\)</span> is the empty set.</li>
+<li>If the universal set is   <span class="arithmatex">\(\{0,1, 2, 3, 4, 5, 6, 7, 8, 9\}\)</span> and <span class="arithmatex">\(A=\{1, 2, 3\}\)</span>, then <span class="arithmatex">\(A^C=\{0, 4, 5, 6, 7, 8, 9\}\)</span>.     </li>
+</ul>
+<p><div class="highlight"><pre><span></span><code>Symmetric Difference  
+  The **symmetric difference** of sets $A$ and $B$ is all the elements in either set  *but not in both*.  That is, it is the set $(A-B)\cup (B-A)$. 
+</code></pre></div>
+The symmetric difference is pictured as follows: </p>
+<h2 id="figure-symdiffpng_1">```{figure} ./symdiff.png</h2>
+<p>height: 180px
+name: symdiff</p>
+<hr />
+<p>The gray shaded region is <span class="arithmatex">\((A - B) \cup (B-A)\)</span>. 
+<div class="highlight"><pre><span></span><code>The following examples illustrates the operations of symmetric difference:
+
+* The symmetric difference of $A=\{1,2, 3\}$ and $B=\{1, 2, 4\}$  is $\{ 3, 4\}$.
+* The symmetric difference  $A=\{1,2,3\}$ and $B=\{1\}$ is $\{2, 3\}$.
+
+
+Finally, it will  be useful to introduce notation to represent the number of elements in a set. 
+
+```{glossary}
+Cardinality 
+  The cardinality of a finite set $A$, denoted $|A|$,  is the total number of elements in $A$. The notion of cardinality can be applied to infinite sets as well.   However, a discussion of this is beyond the scope of these introductory notes. 
+</code></pre></div></p>
+<iframe width="100%" height="1000" src="https://www.gradescope.com/courses/218880/assignments/922145" frameborder="0" allowfullscreen></iframe>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../02-relations-and-functions/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Relations and Functions
+              </div>
+            </div>
+          </a>
+        
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+      
+        <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>
+      
+        <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+      
+        <script src="../../javascripts/testing.js"></script>
+      
+    
+  </body>
+</html>

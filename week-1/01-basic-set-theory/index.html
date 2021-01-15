@@ -1,0 +1,696 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>Set Theory - PHIL 370 Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#set-theory" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="PHIL 370 Notes" class="md-header-nav__button md-logo" aria-label="PHIL 370 Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            PHIL 370 Notes
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Set Theory
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PHIL 370 Notes" class="md-nav__button md-logo" aria-label="PHIL 370 Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    PHIL 370 Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Tutorials
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" checked>
+    
+    <label class="md-nav__link" for="nav-2">
+      Week 1
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Week 1" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Week 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Set Theory
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Set Theory
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operations-on-sets" class="md-nav__link">
+    Operations on Sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-reading" class="md-nav__link">
+    Additional Reading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../02-relations-and-functions/" class="md-nav__link">
+      Relations and Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../03-introduction-proofs/" class="md-nav__link">
+      Introduction to Proofs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#operations-on-sets" class="md-nav__link">
+    Operations on Sets
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#additional-reading" class="md-nav__link">
+    Additional Reading
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="set-theory">Set Theory</h1>
+<p>Set theory is a mathematical language to reason about collections of objects, called sets.  In this tutorial, we introduce the notation and terminology that will be used this semester to reason about sets.  There are two ways to denote a set:</p>
+<ol>
+<li>List all the items in the set.  The items should be separated by a comma and the list shouuld be written between curly brackets: '<span class="arithmatex">\(\}\)</span>' and '<span class="arithmatex">\(\{\)</span>'.  For example, <span class="arithmatex">\(\{a,b,c,e\}\)</span> is the set consisting of the  first 5 letters of the alphabet, and <span class="arithmatex">\(\{1, 3, 5\}\)</span> is the set consisting of the first 3 odd numbers.</li>
+<li>Define a property that  <em>all</em> items in the set have in common. This is useful when listing all the elements of the set is too cumbersome or impossible.  For example,  the set of all positive integers is <span class="arithmatex">\(\{x\ |\ x \text{ is an integer} \text{ and } x\geq 0  \}\)</span>.  This is read "the set of all <span class="arithmatex">\(x\)</span> such that <span class="arithmatex">\(x\)</span> is an integer and <span class="arithmatex">\(x\)</span> is greater than or equal to zero".</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>In these notes, sets are denoted with uppercase letters.  However, there is no standard notation for sets.  For instance, some texts may use lowercase letters to denote sets.  </p>
+</div>
+<p>There are two ways that we can talk about the items that are  <em>contained</em> in  a set.      </p>
+<div class="admonition definition">
+<p class="admonition-title">Element</p>
+<p>Suppose that <span class="arithmatex">\(A\)</span> is a set.  We write <span class="arithmatex">\(x\in A\)</span> when <span class="arithmatex">\(x\)</span> is an element of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(x\not\in A\)</span> when <span class="arithmatex">\(x\)</span> is not an element of <span class="arithmatex">\(A\)</span>. </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Subset</p>
+<p>Suppose that <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are both sets.   We say <span class="arithmatex">\(A\)</span> is a  <strong>subset</strong> of a set <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A\subseteq B\)</span>, provided that for all <span class="arithmatex">\(x\)</span>, if <span class="arithmatex">\(x\in A\)</span>, then <span class="arithmatex">\(x\in B\)</span>.   We write <span class="arithmatex">\(A\not\subseteq B\)</span> when <span class="arithmatex">\(A\)</span> is not a subset of <span class="arithmatex">\(B\)</span>, and <span class="arithmatex">\(A\subsetneq B\)</span> when <span class="arithmatex">\(A\)</span> is a <strong>proper subset</strong>  of <span class="arithmatex">\(B\)</span>: <span class="arithmatex">\(A\subseteq B\)</span> and there is some <span class="arithmatex">\(x\)</span> such that <span class="arithmatex">\(x\in B\)</span> and <span class="arithmatex">\(x\not\in A\)</span>.   </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<ul>
+<li><span class="arithmatex">\(0\in \{0, 1, 3\}\)</span></li>
+<li><span class="arithmatex">\(2\not\in \{0, 1, 3\}\)</span></li>
+<li><span class="arithmatex">\(\{0, 1, 3\}\subseteq \{0, 1, 2, 3, 4\}\)</span></li>
+<li><span class="arithmatex">\(\{0, 1, 3\}\not\subseteq \{0, 2, 4\}\)</span></li>
+<li><span class="arithmatex">\(\{0, 1, 3\}\subseteq \{0, 1, 3\}\)</span></li>
+<li><span class="arithmatex">\(\{0, 1\}\subsetneq \{0, 1, 3\}\)</span></li>
+</ul>
+</div>
+<p>It will be useful to introduce notation for a set containing no elements. </p>
+<div class="admonition definition">
+<p class="admonition-title">Emptyset</p>
+<p>The set that contains no elements is called the <strong>emptyset</strong>, or <strong>null set</strong>.   We write <span class="arithmatex">\(\varnothing\)</span> to denote the emptyset.</p>
+</div>
+<p>A key fact about the empty set is that it is a subset of any set: for all sets <span class="arithmatex">\(X\)</span>, <span class="arithmatex">\(\varnothing\subseteq X\)</span>.  The reason why <span class="arithmatex">\(\varnothing \subseteq X\)</span> for any set $X4 is that since <span class="arithmatex">\(\varnothing\)</span> does not contain any elements, so there is no element that is contained in <span class="arithmatex">\(\varnothing\)</span> but not in <span class="arithmatex">\(X\)</span>. </p>
+<p>Note that it is possible for a set to contain other sets as elements.  For instance, the set <span class="arithmatex">\(X=\{a, b, c\}\)</span> has three elements: <span class="arithmatex">\(a\in X\)</span>, <span class="arithmatex">\(b\in X\)</span> and <span class="arithmatex">\(c\in X\)</span>, but  <span class="arithmatex">\(Y=\{a, \{b, c\}\}\)</span> has two elements: <span class="arithmatex">\(a\in Y\)</span> and <span class="arithmatex">\(\{b,c\}\in Y\)</span>.   </p>
+<details class="question"><summary>Can a set contain an element that is also a subset?</summary><p>Yes. Let <span class="arithmatex">\(Z=\{a, \{a\}\}\)</span>.   Then, <span class="arithmatex">\(\{a\}\in Z\)</span>  and <span class="arithmatex">\(\{a\}\subseteq Z\)</span> (since <span class="arithmatex">\(a\in Z\)</span>).   So, <span class="arithmatex">\(\{a\}\)</span> is both an element of <span class="arithmatex">\(Z\)</span> and a subset of <span class="arithmatex">\(Z\)</span>.  </p>
+</details>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>We use the phrase "...is contained in" when talking about both elements and subsets.   If <span class="arithmatex">\(A=\{1,2,3\}\)</span>, then it is common to say that "<span class="arithmatex">\(A\)</span> contains <span class="arithmatex">\(1\)</span>" or "<span class="arithmatex">\(1\)</span> is contained in <span class="arithmatex">\(A\)</span>".   Something that can be confusing for beginners is that it is also common to say that "the set <span class="arithmatex">\(\{1,2\}\)</span> is contained in <span class="arithmatex">\(A\)</span>".   </p>
+</div>
+<p>Given a set <span class="arithmatex">\(A\)</span>, the <strong>power set</strong> of <span class="arithmatex">\(A\)</span> is the set containing all the subsets of <span class="arithmatex">\(A\)</span>:</p>
+<div class="admonition definition">
+<p class="admonition-title">Power Set</p>
+<p>Suppose that <span class="arithmatex">\(A\)</span> is a set.   The <strong>power set</strong> of  <span class="arithmatex">\(A\)</span> is the set  <span class="arithmatex">\(\wp(A)=\{B\ |\ B\subseteq A\}.\)</span> </p>
+</div>
+<p>Note that for any set <span class="arithmatex">\(A\)</span>,  <span class="arithmatex">\(\varnothing\in\wp(A)\)</span>.     </p>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>Suppose that <span class="arithmatex">\(A=\{1, 2, 3\}\)</span>.   The power set of <span class="arithmatex">\(A\)</span> is: </p>
+<div class="arithmatex">\[
+\wp(A)=\{\varnothing, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1,2,3\}\}.
+\]</div>
+</div>
+<h2 id="operations-on-sets">Operations on Sets</h2>
+<p>There are two basic operations that  combine a set <span class="arithmatex">\(A\)</span> and a set <span class="arithmatex">\(B\)</span> to form another set:  </p>
+<ul>
+<li>The <strong>union of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span></strong>, denoted <span class="arithmatex">\(A\cup B\)</span>,  is the set of all elements in either <span class="arithmatex">\(A\)</span> or <span class="arithmatex">\(B\)</span>.  </li>
+<li>The <strong>intersection of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span></strong>, denoted <span class="arithmatex">\(A\cap B\)</span>, is the set of all elements in both <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>. </li>
+</ul>
+<div class="admonition definition">
+<p class="admonition-title">Union</p>
+<p>Suppose that  <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are two sets.   The <strong>union</strong> of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A\cup B\)</span>,  is the set  <span class="arithmatex">\(A\cup B=\{x\ |\ x\in A\text{ or } x\in B\}.\)</span>   More generally, if <span class="arithmatex">\(\mathcal{S}\)</span> is any collection of sets, then </p>
+<div class="arithmatex">\[
+\bigcup \mathcal{S} = \{x\ |\ x\in A \mbox{ for some } A\in\mathcal{S}\}.
+\]</div>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Intersection</p>
+<p>Suppose that <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are two sets.  The <strong>intersection</strong> of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A\cap B\)</span>,  is the set <span class="arithmatex">\(A\cap B=\{x\ |\ x\in A\text{ and } x\in B\}.\)</span>  More generally, if <span class="arithmatex">\(\mathcal{S}\)</span> is any collection of sets, then </p>
+<div class="arithmatex">\[
+\bigcap \mathcal{S} = \{x\ |\ x\in A \text{ for all $A\in\mathcal{S}$}\}.
+\]</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example of union and intersection</p>
+<ul>
+<li>If <span class="arithmatex">\(A=\{1,2,3\}\)</span> and <span class="arithmatex">\(B=\{a,b\}\)</span>, then <span class="arithmatex">\(A\cup B=\{1,2,3,a,b\}\)</span>.</li>
+<li>If <span class="arithmatex">\(A=\{1,2,3\}\)</span> and <span class="arithmatex">\(B=\{1,3,4\}\)</span>, then <span class="arithmatex">\(A\cup B=\{ 1, 2, 3, 4\}\)</span>.</li>
+<li>If <span class="arithmatex">\(A=\{1,2, 3\}\)</span> and <span class="arithmatex">\(B=\{\{1,3\}, 4\}\)</span>, then <span class="arithmatex">\(A\cup B=\{ 1, 2, 3, \{1,3\}, 4\}\)</span>.</li>
+<li>If <span class="arithmatex">\(A=\{1,2\}\)</span>, <span class="arithmatex">\(B=\{2,3\}\)</span> and <span class="arithmatex">\(C=\{1,2, 4\}\)</span>, then <span class="arithmatex">\(A\cup (B\cup C) = \{1, 2, 3, 4\}\)</span></li>
+<li>If <span class="arithmatex">\(A=\{1,2,3\}\)</span> and <span class="arithmatex">\(B=\{1\}\)</span>, then <span class="arithmatex">\(A\cap B=\{1\}\)</span>.</li>
+<li>If <span class="arithmatex">\(A=\{1,2, 3\}\)</span> and <span class="arithmatex">\(B=\{\{1,3\}, 2\}\)</span>, then <span class="arithmatex">\(A\cap B=\{ 2\}\)</span>.</li>
+<li>If <span class="arithmatex">\(A=\{1, 2\}\)</span> and <span class="arithmatex">\(B=\{3, 4\}\)</span>, then <span class="arithmatex">\(A\cap B=\varnothing\)</span>  (i.e., there are no elements in <span class="arithmatex">\(A\cap B\)</span>).  </li>
+<li>If <span class="arithmatex">\(A=\{1,2\}\)</span>, <span class="arithmatex">\(B=\{2,3\}\)</span> and <span class="arithmatex">\(C=\{1,2, 4\}\)</span>, then <span class="arithmatex">\(A\cap (B\cap C) = \{2\}\)</span></li>
+</ul>
+</div>
+<p>The next operations on sets are:</p>
+<ul>
+<li>The <strong>complement</strong> of <span class="arithmatex">\(A\)</span>, denoted <span class="arithmatex">\(A^C\)</span>, is the set of all elements not contained in <span class="arithmatex">\(A\)</span>.d </li>
+<li>The <strong>difference</strong> of <span class="arithmatex">\(A\)</span> minus <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A\setminus B\)</span>,  is the set of all the elements in <span class="arithmatex">\(A\)</span> but not in <span class="arithmatex">\(B\)</span>.</li>
+<li>The <strong>symmetric difference</strong> of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> is the set of all elements in either <span class="arithmatex">\(A\)</span> or <span class="arithmatex">\(B\)</span>, but not in both. </li>
+</ul>
+<p>To define the complement of a set, it is assumed that there is a <strong>universal set</strong>, also called the  domain of discourse, so that a set is a collection of objects from the universal set. </p>
+<div class="admonition definition">
+<p class="admonition-title">Set Difference</p>
+<p>Suppose that <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are sets.   The <strong>difference</strong> between  <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> (<span class="arithmatex">\(A\)</span> minus <span class="arithmatex">\(B\)</span>), denoted <span class="arithmatex">\(A\setminus B\)</span>, is: </p>
+<div class="arithmatex">\[
+A\setminus B=\{x\ |\ x\in A\text{ and } x\not\in B\}.
+\]</div>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Complement</p>
+<p>Suppose that <span class="arithmatex">\(A\)</span> is a set.  The <strong>complement</strong>  of <span class="arithmatex">\(A\)</span>, denoted <span class="arithmatex">\(A^C\)</span>, is: </p>
+<div class="arithmatex">\[
+A^C=\{x\ |\ x\text{ is in the universal set and } x\not\in A\}.
+\]</div>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Symmetric Difference</p>
+<p>Suppose that <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are sets.   The <strong>symmetric difference</strong> of  <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A\mathrel{\Delta} B\)</span>,  is: </p>
+<div class="arithmatex">\[
+A\mathrel{\Delta} B=(A-B)\cup (B-A).
+\]</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example of set difference, symmetric difference and complement</p>
+<p>The following examples illustrates the operations of set difference and complement:</p>
+<ul>
+<li>If <span class="arithmatex">\(A=\{1,2, 3\}\)</span> and <span class="arithmatex">\(B=\{1, 2, 4\}\)</span>, then <span class="arithmatex">\(A - B=\{ 3\}\)</span> and <span class="arithmatex">\(B-A=\{4\}\)</span>.</li>
+<li>If <span class="arithmatex">\(A=\{1,2,3\}\)</span> and <span class="arithmatex">\(B=\{1\}\)</span>, then <span class="arithmatex">\(A - B=\{2, 3\}\)</span> and <span class="arithmatex">\(B-A\)</span> is the empty set.</li>
+<li>If the universal set is   <span class="arithmatex">\(\{0,1, 2, 3, 4, 5, 6, 7, 8, 9\}\)</span> and <span class="arithmatex">\(A=\{1, 2, 3\}\)</span>, then <span class="arithmatex">\(A^C=\{0, 4, 5, 6, 7, 8, 9\}\)</span>.     </li>
+<li>The symmetric difference of <span class="arithmatex">\(A=\{1,2, 3\}\)</span> and <span class="arithmatex">\(B=\{1, 2, 4\}\)</span>  is <span class="arithmatex">\(\{ 3, 4\}\)</span>.</li>
+<li>The symmetric difference  <span class="arithmatex">\(A=\{1,2,3\}\)</span> and <span class="arithmatex">\(B=\{1\}\)</span> is <span class="arithmatex">\(\{2, 3\}\)</span>.</li>
+</ul>
+</div>
+<p>Finally, it will be useful to introduce notation to represent the number of elements in a set. </p>
+<div class="admonition definition">
+<p class="admonition-title">Cardinality</p>
+<p>The cardinality of a finite set <span class="arithmatex">\(A\)</span>, denoted <span class="arithmatex">\(|A|\)</span>,  is the total number of elements in <span class="arithmatex">\(A\)</span>. </p>
+</div>
+<p>The notion of cardinality can be applied to infinite sets as well.   However, a discussion of this is beyond the scope of these introductory notes. </p>
+<h2 id="additional-reading">Additional Reading</h2>
+<ul>
+<li>
+<p>Chapter 1 of <a href="https://umd.instructure.com/courses/1301043/files/60595392?module_item_id=10449702">Mathematical Methods in Linguistics by Partee, Ter Meulen and Wall</a>. </p>
+</li>
+<li>
+<p>Chapter 1 of <a href="https://umd.instructure.com/courses/1301043/files/60596166?module_item_id=10449936">Open Logic Initiative Notes on Sets, Functions and Relations</a>. </p>
+</li>
+</ul>
+<h2 id="exercises">Exercises</h2>
+<ol>
+<li>
+<p>What is <span class="arithmatex">\(\wp(\emptyset)\)</span>?  </p>
+<details class="answer"><summary>Show Answer</summary><p><span class="arithmatex">\(\wp(\emptyset) = \{\emptyset\}\)</span>.  </p>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(A=\{1, 2, 3\}\)</span>,  <span class="arithmatex">\(B=\{2, 3, 4\}\)</span> and <span class="arithmatex">\(C=\{1, 2, 4, 6\}\)</span>. Find the following sets: </p>
+<ol>
+<li><span class="arithmatex">\((A\cap B)\cup C\)</span></li>
+<li><span class="arithmatex">\((A\cup B)\setminus (A\cup C)\)</span></li>
+<li><span class="arithmatex">\((A\cup B)\Delta (A\cup C)\)</span></li>
+<li><span class="arithmatex">\((A\cup B)\setminus (A\cap B)\)</span></li>
+<li><span class="arithmatex">\(A\cap (B\cup C)\)</span></li>
+</ol>
+<details class="answer"><summary>Show Answer</summary><ol>
+<li><span class="arithmatex">\((A\cap B)\cup C=\{2, 3\} \cup \{1, 2, 4, 6\} = \{1, 2, 3, 4, 6\}\)</span></li>
+<li><span class="arithmatex">\((A\cup B)\setminus (A\cup C) = \{1, 2, 3, 4\}\setminus \{ 1, 2, 3, 4, 6\} = \varnothing\)</span></li>
+<li><span class="arithmatex">\((A\cup C)\setminus (A\cup B) = \{ 1, 2, 3, 4, 6\}\setminus \{1, 2, 3, 4\}  = \{6\}\)</span></li>
+<li><span class="arithmatex">\((A\cup B)\Delta (A\cup C) = \varnothing\cup \{6\}=\{6\}\)</span></li>
+<li><span class="arithmatex">\((A\cup B)\setminus (A\cap B) = \{1, 2, 3, 4\}\setminus \{2, 3\}=\{1, 4\}\)</span></li>
+<li><span class="arithmatex">\(A\cap (B\cup C) = \{1, 2, 3\} \cap \{1,2, 3,4, 6\}=\{1,2,3\}\)</span></li>
+</ol>
+</details>
+</li>
+<li>
+<p>Suppose that  <span class="arithmatex">\(A=\{1\}\)</span> and $B={1, 3}. </p>
+<ol>
+<li>True or False: <span class="arithmatex">\(1\subseteq A\)</span>.</li>
+<li>True or False: <span class="arithmatex">\(1\in A\cap B\)</span>.</li>
+<li>True or False: <span class="arithmatex">\(1 \in \{A,B\}\)</span>.</li>
+<li>True or False: <span class="arithmatex">\(\{2\}\in A\cap B\)</span>.</li>
+<li>True or False: <span class="arithmatex">\(\{2\}\subseteq A\cap B\)</span>.</li>
+</ol>
+<details class="answer"><summary>Show Answer</summary><ol>
+<li><span class="arithmatex">\(1\subseteq A\)</span> is False: <span class="arithmatex">\(1\)</span> is an element of <span class="arithmatex">\(A\)</span>, but not a subset of <span class="arithmatex">\(A\)</span>.</li>
+<li><span class="arithmatex">\(1\in A\cap B\)</span> is True: <span class="arithmatex">\(A\cap B=\{1\}\)</span>, so <span class="arithmatex">\(1\in\{1\} = A\cap B\)</span>.</li>
+<li><span class="arithmatex">\(1 \in \{A,B\}\)</span> is False: <span class="arithmatex">\(\{A,B\}=\{\{1\}, \{2,3\}\}\)</span>, and <span class="arithmatex">\(1\not\in \{\{1\}, \{2,3\}\}\)</span>.  (Note that we do have that <span class="arithmatex">\(\{1\}\in\{A,B\}\)</span> and of course <span class="arithmatex">\(1\in\{1\}\)</span>.)</li>
+<li><span class="arithmatex">\(\{2\}\in A\cap B\)</span> is False: <span class="arithmatex">\(A\cap B=\{1\}\)</span> which does not contain <span class="arithmatex">\(2\)</span>.</li>
+<li><span class="arithmatex">\(\{2\}\subseteq A\cap B\)</span> is False: Since <span class="arithmatex">\(2\not\in \{1\}=A\cap B=\)</span>, we have that <span class="arithmatex">\(\{2\}\not\subseteq A\cap B\)</span>. </li>
+</ol>
+</details>
+</li>
+<li>
+<p>Consider the sets <span class="arithmatex">\(A=\{\varnothing\}\)</span>, <span class="arithmatex">\(B=\{A\}\)</span> and <span class="arithmatex">\(C=\{B, \varnothing\}\)</span>.</p>
+<ol>
+<li>True or False: <span class="arithmatex">\(\varnothing\in A\)</span>.</li>
+<li>True or False: <span class="arithmatex">\(\varnothing\in B\)</span>.</li>
+<li>True or False: <span class="arithmatex">\(A\subseteq B\)</span>.</li>
+<li>True or False: <span class="arithmatex">\(\varnothing\subseteq B\)</span>.</li>
+<li>True or False: <span class="arithmatex">\(\varnothing\in B\)</span>.</li>
+<li>True or False: <span class="arithmatex">\(B\in C\)</span>.</li>
+<li>True or False: <span class="arithmatex">\(A\in C\)</span>.</li>
+</ol>
+<details class="answer"><summary>Show Answer</summary><ol>
+<li><span class="arithmatex">\(\varnothing\in A\)</span> is true: The emptyset is the single element contained in <span class="arithmatex">\(A\)</span>. </li>
+<li><span class="arithmatex">\(\varnothing\in B\)</span> is false:  Note that <span class="arithmatex">\(B=\{\{\varnothing\}\}\)</span>, so <span class="arithmatex">\(B\)</span> contains the set containing the emptyset, but does not contain <span class="arithmatex">\(\varnothing\)</span>. </li>
+<li><span class="arithmatex">\(A\subseteq B\)</span> is false: Since <span class="arithmatex">\(\varnothing\not\in B\)</span>, we have <span class="arithmatex">\(A\not\subseteq B\)</span>. </li>
+<li><span class="arithmatex">\(\varnothing\subseteq B\)</span> is true: The emptyset is a subset of every set. </li>
+<li><span class="arithmatex">\(\varnothing\in B\)</span> is false: The single element of <span class="arithmatex">\(B\)</span> is <span class="arithmatex">\(\{\varnothing\}\)</span> which is not the empty set.  </li>
+<li><span class="arithmatex">\(B\in C\)</span> is true: <span class="arithmatex">\(C=\{\{\{\varnothing\}\}, \varnothing\}\)</span> and <span class="arithmatex">\(B=\{\{\varnothing\}\}\)</span>. </li>
+<li><span class="arithmatex">\(A\in C\)</span> is false: <span class="arithmatex">\(C=\{\{\{\varnothing\}\}, \varnothing\}\)</span> and <span class="arithmatex">\(\{\varnothing\}\not\in \{\{\{\varnothing\}\}, \varnothing\}\)</span>.</li>
+</ol>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are sets and that <span class="arithmatex">\(A\subseteq B\)</span>.   What else can you conclude about the sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>? </p>
+<ol>
+<li><span class="arithmatex">\(A\cap B=A\)</span></li>
+<li><span class="arithmatex">\(A\cap B=B\)</span></li>
+<li><span class="arithmatex">\(A\cup B=A\)</span></li>
+<li><span class="arithmatex">\(A\cup B=B\)</span></li>
+</ol>
+<details class="answer"><summary>Show Answer</summary><p>For all sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, the following are true: </p>
+<ol>
+<li>If <span class="arithmatex">\(A\subseteq B\)</span>, then <span class="arithmatex">\(A\cap B=A\)</span></li>
+<li>If <span class="arithmatex">\(A\subseteq B\)</span>, then <span class="arithmatex">\(A\cup B=B\)</span></li>
+</ol>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(A\)</span> is a set.  Select all of the following that are true.  </p>
+<ol>
+<li><span class="arithmatex">\(A\Delta A = A\)</span></li>
+<li><span class="arithmatex">\(A\Delta A = \varnothing\)</span></li>
+<li><span class="arithmatex">\(A\Delta \varnothing = A\)</span></li>
+<li><span class="arithmatex">\(A\Delta \varnothing = \varnothing\)</span></li>
+</ol>
+<details class="answer"><summary>Show Answer</summary><ol>
+<li><span class="arithmatex">\(A\Delta A = A\)</span> is false.   Let <span class="arithmatex">\(A=\{1\}\)</span>, then <span class="arithmatex">\(A\setminus A = \varnothing\)</span>, so <span class="arithmatex">\(A\Delta A=\varnothing\cup \varnothing = \varnothing\)</span></li>
+<li><span class="arithmatex">\(A\Delta A = \varnothing\)</span> is true.   For any set <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(A\setminus A=\varnothing\)</span>.  </li>
+<li><span class="arithmatex">\(A\Delta \varnothing = A\)</span> is true.  For any set <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(A\setminus \varnothing = A\)</span> and <span class="arithmatex">\(\varnothing \setminus A=\varnothing\)</span>; so <span class="arithmatex">\(A\Delta\varnothing = \varnothing\)</span></li>
+<li><span class="arithmatex">\(A\Delta \varnothing = \varnothing\)</span> is false.   Let <span class="arithmatex">\(A=\{1\}\)</span>, then <span class="arithmatex">\(A\Delta \varnothing = \{1\}\ne\varnothing\)</span>.  </li>
+</ol>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are sets.  </p>
+<ol>
+<li>True or False: If <span class="arithmatex">\(A\subseteq B\)</span>, then <span class="arithmatex">\(|A|\le |B|\)</span>.  </li>
+<li>True or False: If <span class="arithmatex">\(|A|\le |B|\)</span>, then <span class="arithmatex">\(A\subseteq B\)</span>.  </li>
+<li>True or False:  <span class="arithmatex">\(|A\cup B| = |A| + |B|\)</span>.  </li>
+</ol>
+<details class="answer"><summary>Show Answer</summary><ol>
+<li>True: If <span class="arithmatex">\(A\subseteq B\)</span>, then <span class="arithmatex">\(|A|\le |B|\)</span>.  If <span class="arithmatex">\(A\subseteq B\)</span>, then every element of <span class="arithmatex">\(A\)</span> is an element of <span class="arithmatex">\(B\)</span>.  Clearly this means that <span class="arithmatex">\(B\)</span> has at least as many elements as <span class="arithmatex">\(A\)</span>.</li>
+<li>False: If <span class="arithmatex">\(|A|\le |B|\)</span>, then <span class="arithmatex">\(A\subseteq B\)</span>.  Let <span class="arithmatex">\(A=\{1\}\)</span> and <span class="arithmatex">\(B=\{2, 3\}\)</span>.   Then <span class="arithmatex">\(|A|=1\le |B|=2\)</span>, but <span class="arithmatex">\(A\not\subseteq B\)</span>. </li>
+<li>False:  <span class="arithmatex">\(|A\cup B| = |A| + |B|\)</span>.  Let <span class="arithmatex">\(A=\{1, 2\}\)</span> and <span class="arithmatex">\(B=\{2, 3\}\)</span>.  Then <span class="arithmatex">\(|A\cup B|=|\{1, 2, 3\}|=3\ne |\{1, 2\}| + \{2, 3\}| = 2 + 2 = 4\)</span></li>
+</ol>
+</details>
+</li>
+<li>
+<p>If <span class="arithmatex">\(|A| = n\)</span>, then what is <span class="arithmatex">\(|\wp(A)|\)</span>? </p>
+<details class="answer"><summary>Show Answer</summary><p>If <span class="arithmatex">\(|A|=n\)</span>, then <span class="arithmatex">\(|\wp(A)|=2^n\)</span>.   So for example, if <span class="arithmatex">\(|A|=3\)</span>, then 
+the power set has <span class="arithmatex">\(2^3=8\)</span> elements.   We will prove this later in the semester. </p>
+</details>
+</li>
+</ol>
+<p><br/></p>
+<iframe width="100%" height="1000" src="https://www.gradescope.com/courses/218880/assignments/940089/submissions/new/" frameborder="0" allowfullscreen></iframe>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../.." class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Tutorials
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../02-relations-and-functions/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Relations and Functions
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+      
+        <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>
+      
+        <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+      
+        <script src="../../javascripts/testing.js"></script>
+      
+    
+  </body>
+</html>
