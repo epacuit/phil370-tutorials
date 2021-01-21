@@ -376,15 +376,15 @@
 <p class="admonition-title">Caution</p>
 <p>We use the phrase "...is contained in" when talking about both elements and subsets.   If <span class="arithmatex">\(A=\{1,2,3\}\)</span>, then it is common to say that "<span class="arithmatex">\(A\)</span> contains <span class="arithmatex">\(1\)</span>" or "<span class="arithmatex">\(1\)</span> is contained in <span class="arithmatex">\(A\)</span>".   Something that can be confusing for beginners is that it is also common to say that "the set <span class="arithmatex">\(\{1,2\}\)</span> is contained in <span class="arithmatex">\(A\)</span>".   </p>
 </div>
-<p>Given a set <span class="arithmatex">\(A\)</span>, the <strong>power set</strong> of <span class="arithmatex">\(A\)</span> is the set containing all the subsets of <span class="arithmatex">\(A\)</span>:</p>
+<p>Given a set <span class="arithmatex">\(A\)</span>, the <strong>powerset</strong> of <span class="arithmatex">\(A\)</span> is the set containing all the subsets of <span class="arithmatex">\(A\)</span>:</p>
 <div class="admonition definition">
-<p class="admonition-title">Power Set</p>
-<p>Suppose that <span class="arithmatex">\(A\)</span> is a set.   The <strong>power set</strong> of  <span class="arithmatex">\(A\)</span> is the set  <span class="arithmatex">\(\wp(A)=\{B\ |\ B\subseteq A\}.\)</span> </p>
+<p class="admonition-title">Powerset</p>
+<p>Suppose that <span class="arithmatex">\(A\)</span> is a set.   The <strong>powerset</strong> of  <span class="arithmatex">\(A\)</span> is the set  <span class="arithmatex">\(\wp(A)=\{B\ |\ B\subseteq A\}.\)</span> </p>
 </div>
 <p>Note that for any set <span class="arithmatex">\(A\)</span>,  <span class="arithmatex">\(\varnothing\in\wp(A)\)</span>.     </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
-<p>Suppose that <span class="arithmatex">\(A=\{1, 2, 3\}\)</span>.   The power set of <span class="arithmatex">\(A\)</span> is: </p>
+<p>Suppose that <span class="arithmatex">\(A=\{1, 2, 3\}\)</span>.   The powerset of <span class="arithmatex">\(A\)</span> is: </p>
 <div class="arithmatex">\[
 \wp(A)=\{\varnothing, \{1\}, \{2\}, \{3\}, \{1,2\}, \{1,3\}, \{2,3\}, \{1,2,3\}\}.
 \]</div>
@@ -424,7 +424,7 @@
 </div>
 <p>The next operations on sets are:</p>
 <ul>
-<li>The <strong>complement</strong> of <span class="arithmatex">\(A\)</span>, denoted <span class="arithmatex">\(A^C\)</span>, is the set of all elements not contained in <span class="arithmatex">\(A\)</span>.d </li>
+<li>The <strong>complement</strong> of <span class="arithmatex">\(A\)</span>, denoted <span class="arithmatex">\(\overline{A}\)</span> or <span class="arithmatex">\(A^C\)</span>, is the set of all elements not contained in <span class="arithmatex">\(A\)</span>.d </li>
 <li>The <strong>difference</strong> of <span class="arithmatex">\(A\)</span> minus <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A\setminus B\)</span>,  is the set of all the elements in <span class="arithmatex">\(A\)</span> but not in <span class="arithmatex">\(B\)</span>.</li>
 <li>The <strong>symmetric difference</strong> of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> is the set of all elements in either <span class="arithmatex">\(A\)</span> or <span class="arithmatex">\(B\)</span>, but not in both. </li>
 </ul>
@@ -438,7 +438,7 @@ A\setminus B=\{x\ |\ x\in A\text{ and } x\not\in B\}.
 </div>
 <div class="admonition definition">
 <p class="admonition-title">Complement</p>
-<p>Suppose that <span class="arithmatex">\(A\)</span> is a set.  The <strong>complement</strong>  of <span class="arithmatex">\(A\)</span>, denoted <span class="arithmatex">\(A^C\)</span>, is: </p>
+<p>Suppose that <span class="arithmatex">\(A\)</span> is a set.  The <strong>complement</strong>  of <span class="arithmatex">\(A\)</span>, denoted <span class="arithmatex">\(\overline{A}\)</span> or  <span class="arithmatex">\(A^C\)</span>, is: </p>
 <div class="arithmatex">\[
 A^C=\{x\ |\ x\text{ is in the universal set and } x\not\in A\}.
 \]</div>
@@ -590,7 +590,7 @@ A\mathrel{\Delta} B=(A-B)\cup (B-A).
 <li>
 <p>If <span class="arithmatex">\(|A| = n\)</span>, then what is <span class="arithmatex">\(|\wp(A)|\)</span>? </p>
 <details class="answer"><summary>Show Answer</summary><p>If <span class="arithmatex">\(|A|=n\)</span>, then <span class="arithmatex">\(|\wp(A)|=2^n\)</span>.   So for example, if <span class="arithmatex">\(|A|=3\)</span>, then 
-the power set has <span class="arithmatex">\(2^3=8\)</span> elements.   We will prove this later in the semester. </p>
+the powerset has <span class="arithmatex">\(2^3=8\)</span> elements.   We will prove this later in the semester. </p>
 </details>
 </li>
 </ol>

@@ -349,14 +349,15 @@
                 
                 <h1 id="relations-and-functions">Relations and Functions</h1>
 <h2 id="relations">Relations</h2>
-<p>The order in which we list elements in a set does not matter.   That is, <span class="arithmatex">\(\{a, b\}\)</span> is the same set as <span class="arithmatex">\(\{b, a\}\)</span> (they both denote the set consisting of two elements '<span class="arithmatex">\(a\)</span>' and '<span class="arithmatex">\(b\)</span>').  Similarly, listing the same element multiple times does not change a set. So, for instance, <span class="arithmatex">\(\{a,a,b\}\)</span> is the same set as <span class="arithmatex">\(\{a,b\}\)</span>.  </p>
-<p>There are many situations in which the order in which the elements appear is important.  In such situations, we use '<span class="arithmatex">\((\)</span>' and '<span class="arithmatex">\()\)</span>'.   The <strong>ordered pair</strong>, or  <strong>tuple</strong> of length 2,  is denoted <span class="arithmatex">\((a,b)\)</span>.   The first component is <span class="arithmatex">\(a\)</span> and the second component is <span class="arithmatex">\(b\)</span>.    Since the order in which the elements appear matters, we have that <span class="arithmatex">\((a, b)\ne (b,a)\)</span>.   More generally,  the following are examples  of tuples of length 5 consisting of elements from the set <span class="arithmatex">\(\{a, b, c, d, e\}\)</span>. </p>
+<p>The order in which elements in a set are listed does not matter.   That is, <span class="arithmatex">\(\{a, b\}\)</span> is the same set as <span class="arithmatex">\(\{b, a\}\)</span> (they both denote the set consisting of two elements '<span class="arithmatex">\(a\)</span>' and '<span class="arithmatex">\(b\)</span>').  Similarly, listing the same element multiple times does not change a set. So, for instance, <span class="arithmatex">\(\{a,a,b\}\)</span> is the same set as <span class="arithmatex">\(\{a,b\}\)</span>.  </p>
+<p>There are many situations in which the order in which the elements appear is important.  In such situations, we use '<span class="arithmatex">\((\)</span>' and '<span class="arithmatex">\()\)</span>'.   The <strong>ordered pair</strong>, or  <strong>tuple</strong> of length 2,  is denoted <span class="arithmatex">\((a,b)\)</span>.   The first component is <span class="arithmatex">\(a\)</span> and the second component is <span class="arithmatex">\(b\)</span>.    Since the order in which the elements appear matters, we have that <span class="arithmatex">\((a, b)\ne (b,a)\)</span>.   While there is only one set with two elements <span class="arithmatex">\(\{a, b\}\)</span>, there are 4 different ordered pairs that can be constructed using the elements <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>: </p>
 <ul>
-<li><span class="arithmatex">\((a, b, c, d, e)\)</span>  </li>
-<li><span class="arithmatex">\((b, d, a, d, e)\)</span></li>
-<li><span class="arithmatex">\((a, a, b, b,  e)\)</span> </li>
+<li><span class="arithmatex">\((a, a)\)</span>  </li>
+<li><span class="arithmatex">\((a, b)\)</span></li>
+<li><span class="arithmatex">\((b, a)\)</span> </li>
+<li><span class="arithmatex">\((b, b)\)</span> </li>
 </ul>
-<p>Note that in the last tuple we allow the same element to be repeated. </p>
+<p>Note that in the 2nd and 4th tuple we allow the same element to be repeated. </p>
 <div class="admonition definition">
 <p class="admonition-title">Product</p>
 <p>Suppose that <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are non-empty sets.  The  <strong>product</strong> of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, denoted <span class="arithmatex">\(A\times B\)</span>, is the set of ordered pairs where the first component comes from <span class="arithmatex">\(A\)</span> and the second component comes from <span class="arithmatex">\(B\)</span>.   That is, </p>
@@ -364,7 +365,7 @@
 A\times B=\{(a,b)\ |\ a\in A\text{ and } b\in B\}.
 \]</div>
 </div>
-<p>The set <span class="arithmatex">\(X\times X\)</span> is the <strong>product</strong> of <span class="arithmatex">\(X\)</span> with itself.   That is, it is the set of all pairs of elements from <span class="arithmatex">\(X\)</span>.   </p>
+<p>Note that the set <span class="arithmatex">\(X\times X\)</span> is the <strong>product</strong> of <span class="arithmatex">\(X\)</span> with itself, i.e., it is the set of all pairs of elements from <span class="arithmatex">\(X\)</span>.   </p>
 <div class="admonition example">
 <p class="admonition-title">Example</p>
 <p>Suppose that <span class="arithmatex">\(X=\{a, b, c\}\)</span> and <span class="arithmatex">\(Y=\{1, 2\}\)</span>.   Then, </p>
@@ -372,7 +373,14 @@ A\times B=\{(a,b)\ |\ a\in A\text{ and } b\in B\}.
 <li><span class="arithmatex">\(X\times Y=\{(a,1), (a,2), (b,1), (b,2), (c,1), (c,2)\}.\)</span></li>
 <li><span class="arithmatex">\(Y\times X=\{(1,a), (1,b), (1,c), (2,a), (2,b), (2,c)\}.\)</span></li>
 <li><span class="arithmatex">\(X\times X=\{(a,a), (a,b), (a,c), (b,a), (b,b), (b,c), (c,a), (c,b), (c,c)\}.\)</span></li>
+<li><span class="arithmatex">\((X\times X)\times Y=\{((a,a),1), ((a,b),1), ((a,c),1), ((b,a),1), ((b,b),1), ((b,c),1), ((c,a),1), ((c,b),1), ((c,c),1), ((a,a),2), ((a,b),2), ((a,c),2), ((b,a),2), ((b,b),2), ((b,c),2), ((c,a),2), ((c,b),2), ((c,c),2)\}.\)</span></li>
 </ol>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Tuples of length <span class="arithmatex">\(n&gt;2\)</span></p>
+<p>Note that in item 4 of the above Example, <span class="arithmatex">\((X\times X) \times Y\)</span> consists of tuples where the first component is a tuple of length 2 (where each component is from <span class="arithmatex">\(X\)</span>) and the second component is an element of <span class="arithmatex">\(Y\)</span>.   Often we will drop the parentheses, writing <span class="arithmatex">\(X\times X\times Y\)</span>,  and think of the elements of this set as tuples of length 3: 
+<span class="arithmatex">\((X\times X)\times Y=\{(a,a,1), (a,b,1), (a,c,1), (b,a,1), (b,b,1), (b,c,1), (c,a,1), (c,b,1), (c,c,1), (a,a,2), (a,b,2), (a,c,2), (b,a,2), (b,b,2), (b,c,2), (c,a,2), (c,b,2), (c,c,2)\}.\)</span>
+The parentheses can be recovered by associating them to the left. </p>
 </div>
 <p>A   <strong>relation</strong> <span class="arithmatex">\(R\)</span> on a set <span class="arithmatex">\(X\)</span> is  a subset of <span class="arithmatex">\(X\times X\)</span> (the set of pairs of elements from <span class="arithmatex">\(X\)</span>).  Formally,  <span class="arithmatex">\(R\)</span> is a relation on <span class="arithmatex">\(X\)</span> means that   <span class="arithmatex">\(R\subseteq X\times X\)</span>.   It is often convenient  to write <span class="arithmatex">\(a\mathrel{R}b\)</span> for <span class="arithmatex">\((a,b)\in R\)</span>.  To illustrate the idea of a relation, suppose that <span class="arithmatex">\(X\)</span> is the set of people in a room.   The following are two examples of relations on <span class="arithmatex">\(X\)</span>: </p>
 <ol>
@@ -393,179 +401,187 @@ A\times B=\{(a,b)\ |\ a\in A\text{ and } b\in B\}.
 <li><span class="arithmatex">\(R\)</span> is  <strong>transitive</strong> provided that for all <span class="arithmatex">\(a,b,c\in X\)</span>, if <span class="arithmatex">\(a\mathrel{R} b\)</span> and <span class="arithmatex">\(b\mathrel{R} c\)</span> then <span class="arithmatex">\(a\mathrel{R} c\)</span>. </li>
 </ul>
 </div>
-<div class="arithmatex">\[\begin{remark}
-  As stated, completeness implies reflexivity (let $a=b$ in the above definition of completeness).  Often,   completeness is defined as  follows: for all {\em distinct} $a,b\in X$, $a\mathrel{R} b$ or $b\mathrel{R} a$.  In what follows, we will use the above stronger definition of completeness where completeness implies reflexivity.  
-\end{remark}\]</div>
-<p>Recall the example of a relation <span class="arithmatex">\(R\)</span> that describes people pointing at other people in the room.   If <span class="arithmatex">\(R\)</span> is reflexive, then this means everyone is pointing at themselves.    If <span class="arithmatex">\(R\)</span> is irreflexive, then this means that no-one is pointing at themselves.  This example illustrates the fact that irrelexivity is <em>not</em> the negation of reflexivity.  That is, there are examples of relations that are neither reflexive nor irreflexive.   If <span class="arithmatex">\(R\)</span> is complete, then this means that every person in the room is either pointing at somebody or being pointed at.     Symmetry of <span class="arithmatex">\(R\)</span> means that   every person that is being pointed at is pointing back at the person pointing at them.  Asymmetry of <span class="arithmatex">\(R\)</span> means that nobody is pointing back at the person pointing at them.  Similar to the relationship between reflexivity and irreflexivity, asymmetry is  <em>not</em> the negation of symmetry.    Picturing transitivity of the relation <span class="arithmatex">\(R\)</span> is a bit more complicated.   If the relation <span class="arithmatex">\(R\)</span> is transitive, then   everyone is pointing at the person that is being pointed to by the person that they are pointing at.  </p>
-<div class="arithmatex">\[\begin{exercise} Suppose that there are 5 people in a room.  Draw a picture of a situation where the people are pointing at each other and the relation that describes the situation is transitive.  
-\end{exercise}\]</div>
-<div class="arithmatex">\[\begin{exercise} What properties does the ``better-than" relation satisfy? 
-\end{exercise}\]</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>As stated, completeness implies reflexivity (let <span class="arithmatex">\(a=b\)</span> in the above definition of completeness).  Often,   completeness is defined as  follows: for all <em>distinct</em> <span class="arithmatex">\(a,b\in X\)</span>, <span class="arithmatex">\(a\mathrel{R} b\)</span> or <span class="arithmatex">\(b\mathrel{R} a\)</span>.  In what follows, we will use the above stronger definition of completeness where completeness implies reflexivity.  </p>
+</div>
+<p>Recall the example of a relation <span class="arithmatex">\(R\)</span> that describes people pointing at other people in the room.   If <span class="arithmatex">\(R\)</span> is reflexive, then this means everyone is pointing at themselves.    If <span class="arithmatex">\(R\)</span> is irreflexive, then this means that no-one is pointing at themselves.  This example illustrates the fact that irrelexivity is <em>not</em> the negation of reflexivity.  That is, there are examples of relations that are neither reflexive nor irreflexive.   If <span class="arithmatex">\(R\)</span> is complete, then this means that every person in the room is either pointing at somebody or being pointed at (allowing people to point at themselves).     Symmetry of <span class="arithmatex">\(R\)</span> means that   every person that is being pointed at is pointing back at the person pointing at them.  Asymmetry of <span class="arithmatex">\(R\)</span> means that nobody is pointing back at the person pointing at them.  Similar to the relationship between reflexivity and irreflexivity, asymmetry is  <em>not</em> the negation of symmetry.    Picturing transitivity of the relation <span class="arithmatex">\(R\)</span> is a bit more complicated.   If the relation <span class="arithmatex">\(R\)</span> is transitive, then   everyone is pointing at the person that is being pointed to by the person that they are pointing at.  </p>
 <h2 id="functions">Functions</h2>
-<p>A function from a set <span class="arithmatex">\(A\)</span> to a set <span class="arithmatex">\(B\)</span> is a way of associating elements of <span class="arithmatex">\(A\)</span> with elements of <span class="arithmatex">\(B\)</span>.  Formally, a function is a  special type of relation:
-\begin{definition}{Function} A function <span class="arithmatex">\(f\)</span> is a binary relation on <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> (i.e., <span class="arithmatex">\(f\subseteq A\times B\)</span>) such
-that for all <span class="arithmatex">\(a\in A\)</span>, there exists a unique <span class="arithmatex">\(b\in B\)</span> such that <span class="arithmatex">\((a,b)\in f\)</span>.
-We  write <span class="arithmatex">\(f:A\rightarrow B\)</span> when <span class="arithmatex">\(f\)</span> is a function, and if <span class="arithmatex">\((a,b)\in f\)</span>, then write <span class="arithmatex">\(f(a)=b\)</span>.
-\end{definition}</p>
-<p>\begin{example}{Example of a function}
-Suppose that <span class="arithmatex">\(A=\{1, 2, 3\}\)</span> and <span class="arithmatex">\(B=\{a,b\}\)</span>. 
-Examples of relations that are functions include: 
-\begin{itemize}
-    \item <span class="arithmatex">\(R_1=\{(1,a), (2,a), (3,b)\}\)</span><br />
-    \item  <span class="arithmatex">\(R_2=\{(1,a), (2,a), (3,a)\}\)</span><br />
-    \item   <span class="arithmatex">\(R_3=\{(1,a),  (3,b)\}\)</span><br />
-\end{itemize}
-An example of a  relation that is not a function is <span class="arithmatex">\(R_4=\{(1,a), (1,b), (3,b)\}\)</span>. </p>
-<p>\end{example}</p>
-<p>\bigskip</p>
-<p>Suppose <span class="arithmatex">\(f:A\rightarrow B\)</span> is a function.  The set <span class="arithmatex">\(A\)</span> is called the {\bf domain} and <span class="arithmatex">\(B\)</span> the {\bf codomain}.</p>
-<p>\bigskip</p>
-<p>\begin{definition}{Image} The image of a set <span class="arithmatex">\(A'\subseteq A\)</span> is the set:
-\begin{center} <span class="arithmatex">\(f(A')=\{b\ |\ b=f(a) \text{ for some }a\in A'\}\)</span> \end{center}
-\end{definition}
-\begin{definition}{Range} The {\bf range} of a function is the image of its domain. 
-\end{definition}</p>
-<div class="arithmatex">\[\begin{definition}{Surjection} $f$ is a surjection (or onto) if its range is equal to its codomain.  I.e., $f$ is surjective iff for each $b\in B$, there exists an $a\in A$ such that $f(a)=b$
-\end{definition}
-\begin{definition}{Injection} $f$ is an injection (or 1-1) if distinct elements of the domain produce distinct elements of the codomain.  I.e., $f$ is 1-1 iff $a\ne a'$ implies $f(a)\ne f(a')$, or equivalently $f(a)=f(a')$ implies $a=a'$.
-\end{definition}
-\begin{definition}{Bijection} $f$ is a bijection if it is injective and surjective.  In this case, $f$ is often called a one-to-one correspondence.
-\end{definition}\]</div>
-<div class="arithmatex">\[\begin{definition}{Inverse Image} Suppose that $f:A\rightarrow B$ and that $Y\subseteq B$.   The inverse image of $Y$ is the set  $f^{-1}(Y)=\{x\ |\ x\in A\text{ and } f(x)\in Y\}$
-\end{definition}\]</div>
-<p>\begin{example}{Function on the powerset}
-Suppose that <span class="arithmatex">\(X=\{a, b, c\}\)</span>.  A function from non-empty subsets of <span class="arithmatex">\(X\)</span> to non-empty subsets of <span class="arithmatex">\(X\)</span> is denoted <span class="arithmatex">\(f:(\wp(X)-\emptyset) \rightarrow (\wp(X)-\emptyset)\)</span>.   An example of such a function is: 
-\begin{center}
-    \begin{tabular}{rcl}
-        <span class="arithmatex">\(f(\{a\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{b\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{b\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{b\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{c\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{c\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{a,b\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{a\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{a,c\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{b\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{b,c\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{b\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{a,b,c\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{b,c\}\)</span>\[2pt]
-    \end{tabular}
-\end{center}
-Consider the following constraint
-\begin{center} for all <span class="arithmatex">\(Y\in\wp(X)-\emptyset\)</span>, <span class="arithmatex">\(f(Y)\subseteq Y\)</span>\end{center}
-The above function does not satisfy this constraint since, for instance, <span class="arithmatex">\(f(\{a\})=\{b\}\not\subseteq \{a\}\)</span> (we also have that <span class="arithmatex">\(f(\{a,c\})=\{b\}\not\subseteq \{a,c\}\)</span>.  An example of a function that satisfies the above constraint is: 
-\begin{center}
-    \begin{tabular}{rcl}
-        <span class="arithmatex">\(f(\{a\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{a\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{b\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{b\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{c\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{c\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{a,b\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{a\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{a,c\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{c\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{b,c\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{b\}\)</span>\[2pt]
-<span class="arithmatex">\(f(\{a,b,c\})\)</span> &amp; <span class="arithmatex">\(=\)</span> &amp; <span class="arithmatex">\(\{b,c\}\)</span>\[2pt]
-    \end{tabular}
-\end{center}</p>
+<p>A function from a set <span class="arithmatex">\(A\)</span> to a set <span class="arithmatex">\(B\)</span> is a way of associating elements of <span class="arithmatex">\(A\)</span> with elements of <span class="arithmatex">\(B\)</span>.  Formally, a function is a  special type of relation:</p>
+<div class="admonition definition">
+<p class="admonition-title">Function</p>
+<p>A function <span class="arithmatex">\(F\)</span> is a binary relation on <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> (i.e., <span class="arithmatex">\(f\subseteq A\times B\)</span>) such that for all <span class="arithmatex">\(a\in A\)</span>, there exists a unique <span class="arithmatex">\(b\in B\)</span> such that <span class="arithmatex">\((a,b)\in f\)</span>.    </p>
+<p>We  write <span class="arithmatex">\(F:A\rightarrow B\)</span> when <span class="arithmatex">\(F\)</span> is a function, and if <span class="arithmatex">\((a,b)\in f\)</span>, then write <span class="arithmatex">\(F(a)=b\)</span>.</p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example of a function</p>
+<p>Suppose that <span class="arithmatex">\(A=\{1, 2, 3\}\)</span> and <span class="arithmatex">\(B=\{a,b\}\)</span>. 
+Examples of relations that are functions include: </p>
+<ul>
+<li><span class="arithmatex">\(R_1=\{(1,a), (2,a), (3,b)\}\)</span>  </li>
+<li><span class="arithmatex">\(R_2=\{(1,a), (2,a), (3,a)\}\)</span>  </li>
+<li><span class="arithmatex">\(R_3=\{(1,a),  (3,b)\}\)</span>  </li>
+</ul>
+<p>An example of a  relation that is not a function is <span class="arithmatex">\(R_4=\{(1,a), (1,b), (3,b)\}\)</span>. </p>
+</div>
+<p>Suppose <span class="arithmatex">\(F:A\rightarrow B\)</span> is a function.  The set <span class="arithmatex">\(A\)</span> is called the <strong>domain</strong> and <span class="arithmatex">\(B\)</span> is called the <strong>codomain</strong>.  The following  standard notions are usefule for reasoning about and with functions. </p>
+<div class="admonition definition">
+<p class="admonition-title">Image</p>
+<p>Suppose that <span class="arithmatex">\(F:A\rightarrow B\)</span>. The image of a set <span class="arithmatex">\(A'\subseteq A\)</span> is the set:</p>
+<div class="arithmatex">\[
+F(A')=\{b\ |\ b=F(a) \text{ for some }a\in A'\}
+\]</div>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Range</p>
+<p>The  <strong>range</strong> of a function is the image of its domain. </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Surjection</p>
+<p>A function <span class="arithmatex">\(F\)</span> is a surjection (or onto) if its range is equal to its codomain.  I.e., <span class="arithmatex">\(F:A\rightarrow B\)</span> is surjective when  for each <span class="arithmatex">\(b\in B\)</span>, there exists an <span class="arithmatex">\(a\in A\)</span> such that <span class="arithmatex">\(F(a)=b\)</span></p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Injection</p>
+<p>A function <span class="arithmatex">\(F\)</span> is an injection (or 1-1) if distinct elements of the domain produce distinct elements of the codomain.  I.e., <span class="arithmatex">\(F:A\rightarrow B\)</span> is 1-1 when for all <span class="arithmatex">\(a,a'\in A\)</span>,  <span class="arithmatex">\(a\ne a'\)</span> implies <span class="arithmatex">\(F(a)\ne F(a')\)</span>, or equivalently <span class="arithmatex">\(F(a)=F(a')\)</span> implies <span class="arithmatex">\(a=a'\)</span>.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Bijection</p>
+<p>A function <span class="arithmatex">\(F\)</span> is a bijection if it is injective and surjective.  In this case, <span class="arithmatex">\(F\)</span> is often called a one-to-one correspondence.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Inverse Image</p>
+<p>Suppose that <span class="arithmatex">\(F:A\rightarrow B\)</span> and that <span class="arithmatex">\(Y\subseteq B\)</span>.   The inverse image of <span class="arithmatex">\(Y\)</span> is the set  </p>
+<div class="arithmatex">\[
+F^{-1}(Y)=\{x\ |\ x\in A\text{ and } F(x)\in Y\}.
+\]</div>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Function on the powerset</p>
+<p>Suppose that <span class="arithmatex">\(X=\{a, b, c\}\)</span>.  A function from non-empty subsets of <span class="arithmatex">\(X\)</span> to non-empty subsets of <span class="arithmatex">\(X\)</span> is denoted <span class="arithmatex">\(F:(\wp(X)-\emptyset) \rightarrow (\wp(X)-\emptyset)\)</span>.   An example of such a function is: </p>
+<div class="arithmatex">\[
+\begin{align}
+    F(\{a\}) &amp; = &amp; \{a\}\\[2pt]
+F(\{b\}) &amp; = &amp; \{b\}\\[2pt]
+F(\{c\}) &amp; = &amp; \{c\}\\[2pt]
+F(\{a,b\}) &amp; = &amp; \{a\}\\[2pt]
+F(\{a,c\}) &amp; = &amp; \{c\}\\[2pt]
+F(\{b,c\}) &amp; = &amp; \{b\}\\[2pt]
+F(\{a,b,c\}) &amp; = &amp; \{b,c\}\\[2pt]
+\end{align}
+\]</div>
+</div>
 <h2 id="additional-reading">Additional Reading</h2>
 <ul>
 <li>
 <p>Chapter 2 of <a href="https://umd.instructure.com/courses/1301043/files/60595392?module_item_id=10449702">Mathematical Methods in Linguistics by Partee, Ter Meulen and Wall</a>. </p>
 </li>
 <li>
-<p>Chapters 2 and 3 of <a href="https://umd.instructure.com/courses/1301043/files/60596166?module_item_id=10449936">Openlogic Notes on Sets, Functions and Relations</a>. </p>
+<p>Chapters 2 and 3 of <a href="https://umd.instructure.com/courses/1301043/files/60596166?module_item_id=10449936">Open Logic Initiative Notes on Sets, Functions and Relations</a></p>
 </li>
 </ul>
 <h2 id="exercises">Exercises</h2>
 <ol>
 <li>
-<p>What is <span class="arithmatex">\(\wp(\emptyset)\)</span>?  </p>
-<details class="answer"><summary>Show Answer</summary><p><span class="arithmatex">\(\wp(\emptyset) = \{\emptyset\}\)</span>.  </p>
-</details>
-</li>
-<li>
-<p>Suppose that <span class="arithmatex">\(A=\{1, 2, 3\}\)</span>,  <span class="arithmatex">\(B=\{2, 3, 4\}\)</span> and <span class="arithmatex">\(C=\{1, 2, 4, 6\}\)</span>. Find the following sets: </p>
+<p>Suppose that <span class="arithmatex">\(A=\{b,c\}\)</span>,  <span class="arithmatex">\(B=\{2,3\}\)</span> and <span class="arithmatex">\(C=\{b,d\}\)</span>.   Find all the following sets. </p>
 <ol>
-<li><span class="arithmatex">\((A\cap B)\cup C\)</span></li>
-<li><span class="arithmatex">\((A\cup B)\setminus (A\cup C)\)</span></li>
-<li><span class="arithmatex">\((A\cup B)\Delta (A\cup C)\)</span></li>
-<li><span class="arithmatex">\((A\cup B)\setminus (A\cap B)\)</span></li>
-<li><span class="arithmatex">\(A\cap (B\cup C)\)</span></li>
+<li><span class="arithmatex">\(A\times B\)</span></li>
+<li><span class="arithmatex">\((A\cap C)\times B\)</span></li>
+<li><span class="arithmatex">\((C-B)\times B\)</span></li>
+<li><span class="arithmatex">\(A\times A\)</span></li>
+<li><span class="arithmatex">\((A\times B)\cup (B\times A)\)</span></li>
 </ol>
 <details class="answer"><summary>Show Answer</summary><ol>
-<li><span class="arithmatex">\((A\cap B)\cup C=\{2, 3\} \cup \{1, 2, 4, 6\} = \{1, 2, 3, 4, 6\}\)</span></li>
-<li><span class="arithmatex">\((A\cup B)\setminus (A\cup C) = \{1, 2, 3, 4\}\setminus \{ 1, 2, 3, 4, 6\} = \varnothing\)</span></li>
-<li><span class="arithmatex">\((A\cup C)\setminus (A\cup B) = \{ 1, 2, 3, 4, 6\}\setminus \{1, 2, 3, 4\}  = \{6\}\)</span></li>
-<li><span class="arithmatex">\((A\cup B)\Delta (A\cup C) = \varnothing\cup \{6\}=\{6\}\)</span></li>
-<li><span class="arithmatex">\((A\cup B)\setminus (A\cap B) = \{1, 2, 3, 4\}\setminus \{2, 3\}=\{1, 4\}\)</span></li>
-<li><span class="arithmatex">\(A\cap (B\cup C) = \{1, 2, 3\} \cap \{1,2, 3,4, 6\}=\{1,2,3\}\)</span></li>
+<li><span class="arithmatex">\(A\times B = \{(b, 2), (b, 3), (c, 2), (c, 3)\}\)</span></li>
+<li><span class="arithmatex">\((A\cap C)\times B  =  \{b\}\times \{2,3\} = \{(b, 2), (b, 3)\}\)</span></li>
+<li><span class="arithmatex">\((C-B)\times B = \{b, d\}\times \{2, 3\}=\{(b, 2), (b, 3), (d, 2), (d, 3)\}\)</span></li>
+<li><span class="arithmatex">\(A\times A = \{(b,b), (b,c), (c,b), (c,c)\}\)</span></li>
+<li><span class="arithmatex">\((A\times B)\cup (B\times A) = \{(b, 2), (b, 3), (c, 2), (c, 3)\}\cup \{(2, a), (2, c), (3, b), (3, c)\}\)</span>
+<span class="arithmatex">\(= \{(b, 2), (b, 3), (c, 2), (c, 3), (2, a), (2, c), (3, b), (3, c)\}\)</span></li>
 </ol>
 </details>
 </li>
 <li>
-<p>Suppose that  <span class="arithmatex">\(A=\{1\}\)</span> and $B={1, 3}. </p>
+<p>What is the set <span class="arithmatex">\(\varnothing \times A\)</span>?    </p>
+<details class="answer"><summary>Show Answer</summary><p><span class="arithmatex">\(\varnothing \times A = \varnothing\)</span>  </p>
+</details>
+</li>
+<li>
+<p>Consider the relation <span class="arithmatex">\(R = \{(a,a), (b,b), (c,c), (d,d), (a,b), (b,a)\}\)</span> on the set <span class="arithmatex">\(A=\{a,b,c,d\}\)</span>.   Determined which of the following properties are satisfied by <span class="arithmatex">\(R\)</span>: </p>
 <ol>
-<li>True or False: <span class="arithmatex">\(1\subseteq A\)</span>.</li>
-<li>True or False: <span class="arithmatex">\(1\in A\cap B\)</span>.</li>
-<li>True or False: <span class="arithmatex">\(1 \in \{A,B\}\)</span>.</li>
-<li>True or False: <span class="arithmatex">\(\{2\}\in A\cap B\)</span>.</li>
-<li>True or False: <span class="arithmatex">\(\{2\}\subseteq A\cap B\)</span>.</li>
+<li>Reflexive </li>
+<li>Symmetric </li>
+<li>Transitive </li>
 </ol>
 <details class="answer"><summary>Show Answer</summary><ol>
-<li><span class="arithmatex">\(1\subseteq A\)</span> is False: <span class="arithmatex">\(1\)</span> is an element of <span class="arithmatex">\(A\)</span>, but not a subset of <span class="arithmatex">\(A\)</span>.</li>
-<li><span class="arithmatex">\(1\in A\cap B\)</span> is True: <span class="arithmatex">\(A\cap B=\{1\}\)</span>, so <span class="arithmatex">\(1\in\{1\} = A\cap B\)</span>.</li>
-<li><span class="arithmatex">\(1 \in \{A,B\}\)</span> is False: <span class="arithmatex">\(\{A,B\}=\{\{1\}, \{2,3\}\}\)</span>, and <span class="arithmatex">\(1\not\in \{\{1\}, \{2,3\}\}\)</span>.  (Note that we do have that <span class="arithmatex">\(\{1\}\in\{A,B\}\)</span> and of course <span class="arithmatex">\(1\in\{1\}\)</span>.)</li>
-<li><span class="arithmatex">\(\{2\}\in A\cap B\)</span> is False: <span class="arithmatex">\(A\cap B=\{1\}\)</span> which does not contain <span class="arithmatex">\(2\)</span>.</li>
-<li><span class="arithmatex">\(\{2\}\subseteq A\cap B\)</span> is False: Since <span class="arithmatex">\(2\not\in \{1\}=A\cap B=\)</span>, we have that <span class="arithmatex">\(\{2\}\not\subseteq A\cap B\)</span>. </li>
+<li><span class="arithmatex">\(R\)</span> is reflexive. </li>
+<li><span class="arithmatex">\(R\)</span> is symmetric. </li>
+<li><span class="arithmatex">\(R\)</span> is transitive. </li>
 </ol>
 </details>
 </li>
 <li>
-<p>Consider the sets <span class="arithmatex">\(A=\{\varnothing\}\)</span>, <span class="arithmatex">\(B=\{A\}\)</span> and <span class="arithmatex">\(C=\{B, \varnothing\}\)</span>.</p>
+<p>Consider the relation <span class="arithmatex">\(R = \{(a,b), (a,c), (c,c), (b,b), (c,b), (b,c)\}\)</span> on the set <span class="arithmatex">\(A=\{a,b,c\}\)</span>. Determined which of the following properties are satisfied by <span class="arithmatex">\(R\)</span>: </p>
 <ol>
-<li>True or False: <span class="arithmatex">\(\varnothing\in A\)</span>.</li>
-<li>True or False: <span class="arithmatex">\(\varnothing\in B\)</span>.</li>
-<li>True or False: <span class="arithmatex">\(A\subseteq B\)</span>.</li>
-<li>True or False: <span class="arithmatex">\(\varnothing\subseteq B\)</span>.</li>
-<li>True or False: <span class="arithmatex">\(\varnothing\in B\)</span>.</li>
-<li>True or False: <span class="arithmatex">\(B\in C\)</span>.</li>
-<li>True or False: <span class="arithmatex">\(A\in C\)</span>.</li>
+<li>Reflexive </li>
+<li>Symmetric </li>
+<li>Transitive </li>
 </ol>
 <details class="answer"><summary>Show Answer</summary><ol>
-<li><span class="arithmatex">\(\varnothing\in A\)</span> is True: The emptyset is the single element contained in <span class="arithmatex">\(A\)</span>. </li>
-<li><span class="arithmatex">\(\varnothing\in B\)</span> is False:  Note that <span class="arithmatex">\(B=\{\{\varnothing\}\}\)</span>, so <span class="arithmatex">\(B\)</span> contains the set containing the emptyset, but does not contain <span class="arithmatex">\(\varnothing\)</span>. </li>
-<li><span class="arithmatex">\(A\subseteq B\)</span> is False: Since <span class="arithmatex">\(\varnothing\not\in B\)</span>, we have <span class="arithmatex">\(A\not\subseteq B\)</span>. </li>
-<li><span class="arithmatex">\(\varnothing\subseteq B\)</span> is True: The emptyset is a subset of every set. </li>
-<li><span class="arithmatex">\(\varnothing\in B\)</span> is False: The single element of <span class="arithmatex">\(B\)</span> is <span class="arithmatex">\(\{\varnothing\}\)</span> which is not the empty set.  </li>
-<li><span class="arithmatex">\(B\in C\)</span> is True: <span class="arithmatex">\(C=\{\{\{\varnothing\}\}, \varnothing\}\)</span> and <span class="arithmatex">\(B=\{\{\varnothing\}\}\)</span>. </li>
-<li><span class="arithmatex">\(A\in C\)</span> is False: <span class="arithmatex">\(C=\{\{\{\varnothing\}\}, \varnothing\}\)</span> and <span class="arithmatex">\(\{\varnothing\}\not\in \{\{\{\varnothing\}\}, \varnothing\}\)</span>.</li>
+<li><span class="arithmatex">\(R\)</span> is not reflexive.  This follows since <span class="arithmatex">\((a,a)\not\in R\)</span> </li>
+<li><span class="arithmatex">\(R\)</span> is not symmetric. This follows since <span class="arithmatex">\((a,b)\in R\)</span> but <span class="arithmatex">\((b,a)\not\in R\)</span>. </li>
+<li><span class="arithmatex">\(R\)</span> is transitive. </li>
 </ol>
 </details>
 </li>
 <li>
-<p>Suppose that <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are sets and that <span class="arithmatex">\(A\subseteq B\)</span>.   What else can you conclude about the sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>? </p>
-<ol>
-<li><span class="arithmatex">\(A\cap B=A\)</span></li>
-<li><span class="arithmatex">\(A\cap B=B\)</span></li>
-<li><span class="arithmatex">\(A\cup B=A\)</span></li>
-<li><span class="arithmatex">\(A\cup B=B\)</span></li>
-</ol>
-<details class="answer"><summary>Show Answer</summary><p>For all sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, the following are true: </p>
-<ol>
-<li>If <span class="arithmatex">\(A\subseteq B\)</span>, then <span class="arithmatex">\(A\cap B=A\)</span></li>
-<li>If <span class="arithmatex">\(A\subseteq B\)</span>, then <span class="arithmatex">\(A\cup B=B\)</span></li>
-</ol>
+<p>Let <span class="arithmatex">\(R\)</span> and <span class="arithmatex">\(S\)</span> be transitive relations on a set <span class="arithmatex">\(A\)</span>. Does it follow that <span class="arithmatex">\(R\cup S\)</span> is transitive? (Explain your answer.)   </p>
+<details class="answer"><summary>Show Answer</summary><p>No. Suppose that <span class="arithmatex">\(R=\{(a,b)\}\)</span> and <span class="arithmatex">\(S=\{(b,c)\}\)</span>.   Both <span class="arithmatex">\(R\)</span> and <span class="arithmatex">\(S\)</span> are transitive; however, <span class="arithmatex">\(R\cup S=\{(a,b),(b,c)\}\)</span> is not transitive. </p>
 </details>
 </li>
 <li>
-<p>Suppose that <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> are sets.  </p>
-<ol>
-<li>True or False: If <span class="arithmatex">\(A\subseteq B\)</span>, then <span class="arithmatex">\(|A|\le |B|\)</span>.  </li>
-<li>True or False: If <span class="arithmatex">\(|A|\le |B|\)</span>, then <span class="arithmatex">\(A\subseteq B\)</span>.  </li>
-<li>True or False:  <span class="arithmatex">\(|A\cup B| = |A| + |B|\)</span>.  </li>
-</ol>
-<details class="answer"><summary>Show Answer</summary><ol>
-<li>True: If <span class="arithmatex">\(A\subseteq B\)</span>, then <span class="arithmatex">\(|A|\le |B|\)</span>.  </li>
-<li>False: If <span class="arithmatex">\(|A|\le |B|\)</span>, then <span class="arithmatex">\(A\subseteq B\)</span>.  Let <span class="arithmatex">\(A=\{1\}\)</span> and <span class="arithmatex">\(B=\{2, 3\}\)</span>.   Then <span class="arithmatex">\(|A|=1\le |B|=2\)</span>, but <span class="arithmatex">\(A\not\subseteq B\)</span>. </li>
-<li>False:  <span class="arithmatex">\(|A\cup B| = |A| + |B|\)</span>.  Let <span class="arithmatex">\(A=\{1, 2\}\)</span> and <span class="arithmatex">\(B=\{2, 3\}\)</span>.  Then <span class="arithmatex">\(|A\cup B|=|\{1, 2, 3\}|=3\ne |\{1, 2\}| + \{2, 3\}| = 2 + 2 = 4\)</span></li>
-</ol>
+<p>Suppose <span class="arithmatex">\(R\)</span> and <span class="arithmatex">\(S\)</span> are transitive relations on the set <span class="arithmatex">\(A\)</span>. Is <span class="arithmatex">\(R \cap S\)</span> transitive? (Explain your answer.)</p>
+<details class="answer"><summary>Show Answer</summary><p>Yes. Suppose that <span class="arithmatex">\(R\)</span> and <span class="arithmatex">\(S\)</span> are transitive relations.  Let <span class="arithmatex">\(x\mathrel{R\cap S} y\)</span> and <span class="arithmatex">\(y\mathrel{R\cap S} z\)</span> (i.e., <span class="arithmatex">\((x,y),(y,z)\in R\cap S\)</span>).   Then, we have 1) <span class="arithmatex">\(x\mathrel{R} y\)</span> and <span class="arithmatex">\(y\mathrel{R}z\)</span>; and 2)  <span class="arithmatex">\(x\mathrel{S} y\)</span> and <span class="arithmatex">\(y\mathrel{S}z\)</span>.   Since <span class="arithmatex">\(R\)</span> is transitive, 1) implies that <span class="arithmatex">\(x\mathrel{R}z\)</span>; and since <span class="arithmatex">\(S\)</span> is transitive, 2) implies   that <span class="arithmatex">\(x\mathrel{S}z\)</span>.   Thus, <span class="arithmatex">\(x\mathrel{R\cap S} z\)</span>, as desired. </p>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(A\ne\varnothing\)</span>.  Since <span class="arithmatex">\(\varnothing \subseteq A\times A\)</span>, then <span class="arithmatex">\(R=\varnothing\)</span> is a relation on <span class="arithmatex">\(A\)</span>.   Is <span class="arithmatex">\(R\)</span> reflexive? Symmetric? Transitive? If a property does not hold, say why.</p>
+<details class="answer"><summary>Show Answer</summary><p><span class="arithmatex">\(R\)</span> is not reflexive.  Since <span class="arithmatex">\(A\ne \varnothing\)</span>, there is some <span class="arithmatex">\(a\in A\)</span>.   However, <span class="arithmatex">\((a,a)\not\in \varnothing\)</span>. 
+<span class="arithmatex">\(R\)</span> is   symmetric.<br />
+<span class="arithmatex">\(R\)</span> is  transitive. </p>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(X=\{a,b,c\}\)</span> and <span class="arithmatex">\(Y=\{e, f, g\}\)</span>.  Give an example of a function from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span> that is not surjective and not injective. </p>
+<details class="answer"><summary>Show Answer</summary><p>Let <span class="arithmatex">\(F:X\rightarrow Y\)</span> be the funciton where where  <span class="arithmatex">\(F(a)=e\)</span>, <span class="arithmatex">\(F(b)=f\)</span> and <span class="arithmatex">\(F(c)=e\)</span>. </p>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(X=\{a,b,c\}\)</span> and <span class="arithmatex">\(Y=\{e, f, g\}\)</span>.  Give an example of an injective and surjective function from <span class="arithmatex">\(X\)</span> to <span class="arithmatex">\(Y\)</span> </p>
+<details class="answer"><summary>Show Answer</summary><p>Let <span class="arithmatex">\(F:X\rightarrow Y\)</span> be the function where where  <span class="arithmatex">\(F(a)=e\)</span>, <span class="arithmatex">\(F(b)=f\)</span> and <span class="arithmatex">\(F(c)=g\)</span></p>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(Y=\{e, f, g\}\)</span> and  <span class="arithmatex">\(Z=\{a,b,c,d\}\)</span>.  Can you find a surjective function from <span class="arithmatex">\(Y\)</span> to <span class="arithmatex">\(Z\)</span>?   If yes, give an example and if no, explain why not.</p>
+<details class="answer"><summary>Show Answer</summary><p>No, there is no surjective function from <span class="arithmatex">\(Y\)</span> to <span class="arithmatex">\(Z\)</span>.   The reason is that <span class="arithmatex">\(Z\)</span> has more elements that <span class="arithmatex">\(Y\)</span>. If <span class="arithmatex">\(F:Y\rightarrow Z\)</span> is a surjective function, then for each <span class="arithmatex">\(z\in Z\)</span>, there is some <span class="arithmatex">\(y\in Y\)</span> such that <span class="arithmatex">\(F(y)=z\)</span>.  In order to satisfy this property, some element of <span class="arithmatex">\(Y\)</span> must be mapped  to two different elements of <span class="arithmatex">\(Z\)</span>.</p>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(Y=\{e, f, g\}\)</span> and  <span class="arithmatex">\(Z=\{a,b,c,d\}\)</span>.   Can you find a surjective function from <span class="arithmatex">\(Z\)</span> to <span class="arithmatex">\(Y\)</span>?   If yes, give an example and if no, explain why not. </p>
+<details class="answer"><summary>Show Answer</summary><p>Yes, for instance <span class="arithmatex">\(F:Z\rightarrow Y\)</span> where <span class="arithmatex">\(F(a) = e\)</span>, <span class="arithmatex">\(F(b)=e\)</span>, <span class="arithmatex">\(F(c)=f\)</span>, <span class="arithmatex">\(F(d)=g\)</span>. </p>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(Y=\{e, f, g\}\)</span> and  <span class="arithmatex">\(Z=\{a,b,c,d\}\)</span>.  Can you find an injective function from <span class="arithmatex">\(Z\)</span> to <span class="arithmatex">\(Y\)</span>?   If yes, give an example and if no, explain why not. </p>
+<details class="answer"><summary>Show Answer</summary><p>No, there is no injective function from <span class="arithmatex">\(Z\)</span> to <span class="arithmatex">\(Y\)</span>.   The reason is that <span class="arithmatex">\(Z\)</span> has more elements that <span class="arithmatex">\(Y\)</span>. If <span class="arithmatex">\(F:Z\rightarrow Y\)</span> is an injective function, then  for all <span class="arithmatex">\(z,z'\in Z\)</span>, if <span class="arithmatex">\(F(z)=F(z')\)</span> then <span class="arithmatex">\(z=z'\)</span>.  In order to satisfy this property, some element of <span class="arithmatex">\(Z\)</span> must not be in the domain of the function (i.e., the function would be a partial function).</p>
+</details>
+</li>
+<li>
+<p>Suppose that <span class="arithmatex">\(Y=\{e, f, g\}\)</span> and  <span class="arithmatex">\(Z=\{a,b,c,d\}\)</span>.   Can you find an injective function from <span class="arithmatex">\(Y\)</span> to <span class="arithmatex">\(Z\)</span>?   If yes, give an example and if no, explain why not.  </p>
+<details class="answer"><summary>Show Answer</summary><p>Yes, for instance <span class="arithmatex">\(F:Y\rightarrow Z\)</span> where <span class="arithmatex">\(F(e) = a\)</span>, <span class="arithmatex">\(F(f)=b\)</span>, and <span class="arithmatex">\(F(g)=c\)</span>. </p>
 </details>
 </li>
 </ol>
-<iframe width="100%" height="1000" src="https://www.gradescope.com/courses/218880/assignments/922145" frameborder="0" allowfullscreen></iframe>
+<iframe width="100%" height="1000" src="https://www.gradescope.com/courses/218880/assignments/942228/submissions/new" frameborder="0" allowfullscreen></iframe>
                 
               
               
