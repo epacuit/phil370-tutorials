@@ -419,9 +419,9 @@ are both finite sets.  For example, suppose <span class="arithmatex">\(A=\{2,3,4
 <h2 id="examples">Examples</h2>
 <p>In this section, we give two examples of mathematical proofs. </p>
 <p><strong>Claim 1.</strong> For all sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>, <span class="arithmatex">\(\overline{A}\cup \overline{B}=\overline{A\cap B}\)</span>. </p>
-<p><strong>Proof</strong>. We must show <span class="arithmatex">\(\overline{A}\cup \overline{B}\subseteq\overline{A\cap B}\)</span> and <span class="arithmatex">\(\overline{A\cap B}\subseteq \overline{A}\cup \overline{B}\)</span>.</p>
-<p>Suppose that <span class="arithmatex">\(x\in \overline{A}\cup \overline{B}\)</span>.  Then <span class="arithmatex">\(x\in \overline{A}\)</span> or <span class="arithmatex">\(x\in \overline{B}\)</span>.  There are two cases.  First, suppose that  <span class="arithmatex">\(x\in\overline{A}\)</span>.  Then, <span class="arithmatex">\(x\not\in A\)</span>.  This implies that <span class="arithmatex">\(x\not\in A\cap B\)</span> (this follows since <span class="arithmatex">\(x\)</span> is not in <span class="arithmatex">\(A\)</span> then <span class="arithmatex">\(x\)</span> is not in both <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>).  Hence <span class="arithmatex">\(x\in\overline{A\cap B}\)</span>.  Second, suppose that <span class="arithmatex">\(x\in\overline{B}\)</span>.  A similar argument shows that  <span class="arithmatex">\(x\in\overline{A\cap B}\)</span>.  Hence in either case, <span class="arithmatex">\(x\in\overline{A\cap B}\)</span>.  Therefore, <span class="arithmatex">\(\overline{A}\cup \overline{B}\subseteq\overline{A\cap B}\)</span>.</p>
-<p>Suppose that <span class="arithmatex">\(x\in \overline{A\cap B}\)</span>.  Then <span class="arithmatex">\(x\not\in A\cap B\)</span>, and so <span class="arithmatex">\(x\not\in A\)</span> <em>or</em> <span class="arithmatex">\(x\not\in B\)</span>.  Hence either <span class="arithmatex">\(x\in\overline{A}\)</span> or <span class="arithmatex">\(x\in\overline{B}\)</span>.  In either case, <span class="arithmatex">\(x\in\overline{A}\cup\overline{B}\)</span>. <span style="font-variant:small-caps;padding-left:10px">QED</span></p>
+<p><strong>Proof</strong>. We must show that <span class="arithmatex">\(\overline{A}\cup \overline{B}\subseteq\overline{A\cap B}\)</span> and <span class="arithmatex">\(\overline{A\cap B}\subseteq \overline{A}\cup \overline{B}\)</span>.</p>
+<p>Suppose that <span class="arithmatex">\(x\in \overline{A}\cup \overline{B}\)</span>.  Then <span class="arithmatex">\(x\in \overline{A}\)</span> or <span class="arithmatex">\(x\in \overline{B}\)</span>.  There are two cases.  First, suppose that  <span class="arithmatex">\(x\in\overline{A}\)</span>.  Then, <span class="arithmatex">\(x\not\in A\)</span>.  This implies that <span class="arithmatex">\(x\not\in A\cap B\)</span> (this follows since if <span class="arithmatex">\(x\)</span> is not in <span class="arithmatex">\(A\)</span> then <span class="arithmatex">\(x\)</span> is not in both <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span>).  Hence, <span class="arithmatex">\(x\in\overline{A\cap B}\)</span>.  Second, suppose that <span class="arithmatex">\(x\in\overline{B}\)</span>.  A similar argument shows that  <span class="arithmatex">\(x\in\overline{A\cap B}\)</span>.  Hence, in either case, <span class="arithmatex">\(x\in\overline{A\cap B}\)</span>.  Therefore, <span class="arithmatex">\(\overline{A}\cup \overline{B}\subseteq\overline{A\cap B}\)</span>.</p>
+<p>Suppose that <span class="arithmatex">\(x\in \overline{A\cap B}\)</span>.  Then, <span class="arithmatex">\(x\not\in A\cap B\)</span>, and so <span class="arithmatex">\(x\not\in A\)</span> <em>or</em> <span class="arithmatex">\(x\not\in B\)</span>.  Hence either <span class="arithmatex">\(x\in\overline{A}\)</span> or <span class="arithmatex">\(x\in\overline{B}\)</span>.  If <span class="arithmatex">\(x\in \overline{A}\)</span>, then since <span class="arithmatex">\(\overline{A}\subseteq \overline{A}\cup \overline{B}\)</span>, we have that <span class="arithmatex">\(x\in \overline{A}\cup\overline{B}\)</span>.   Similarly, if <span class="arithmatex">\(x\in\overline{B}\)</span>, then <span class="arithmatex">\(x\in\overline{A}\cup\overline{B}\)</span>.  In either case, <span class="arithmatex">\(x\in\overline{A}\cup\overline{B}\)</span>. <span style="font-variant:small-caps;padding-left:10px">QED</span></p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Notice that <span class="arithmatex">\(x\not\in A\cap B\)</span>  <strong>does not imply that</strong> <span class="arithmatex">\(x\not\in A\)</span> <em>and</em> <span class="arithmatex">\(x\not\in B\)</span>.  The "and" in italics  should be  an "or".  Make sure you clearly understand the logic here, since this is often misunderstood by students.</p>
@@ -455,35 +455,19 @@ are both finite sets.  For example, suppose <span class="arithmatex">\(A=\{2,3,4
 
 </figure>
 
-<p>The union of two sets can be pictured as follows:</p>
+<p>Typically, one shades a region corresponding to a set in a Venn diagram.   For example, the 4 regions described above are shaded as follows (each region is labeled with the corresponding set):  </p>
 <figure>
 
-<img src="../venn-images/union.png" width=400>
-<figcaption>The gray shaded region is the union. </figcaption>
+<img src="../venn-images/venn-regions.jpg" width=600>
+<figcaption> The 4 regions of a Venn diagram .</figcaption>
 
 </figure>
 
-<p>The intersection of <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> can be pictured as follows: </p>
+<p>Shading multiple regions in a Venn diagram corresponds to different ways to combine sets using union, intersection, complement, set difference, and symmetric difference.  Since there are 4 different regions for two sets, there are 16 different ways to shade these regions (since any subset of the set of 4 regions can be shaded, recall that if <span class="arithmatex">\(X\)</span> is a set with 4 elements, then the powerset has <span class="arithmatex">\(2^4=16\)</span> elements).  The next Figure shows all of the 16 possible shaded regions for two sets <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> labeled with the corresponding set.  The lines represent the subset relation (read from the bottom to the top).   For instance, the line from the <span class="arithmatex">\(A\cap B\)</span> diagrm to the <span class="arithmatex">\(A\)</span> diagram means that <span class="arithmatex">\(A\cap B\subseteq A\)</span>. </p>
 <figure>
 
-<img src="../venn-images/intersection.png" width=400>
-<figcaption>The gray shaded region is the intersection. </figcaption>
-
-</figure>
-
-<p>The difference  between <span class="arithmatex">\(A\)</span> and <span class="arithmatex">\(B\)</span> can be pictured as follows.  The gray shaded region is <span class="arithmatex">\(A\setminus B\)</span>.  </p>
-<figure>
-
-<img src="../venn-images/setdiff.png" width=400>
-<figcaption>The gray shaded region is the set difference. </figcaption>
-
-</figure>
-
-<p>The symmetric difference <span class="arithmatex">\(A\mathop{\Delta} B\)</span> is pictured as follows: </p>
-<figure>
-
-<img src="../venn-images/symdiff.png" width=400>
-<figcaption>The gray shaded region is the symmetric difference. </figcaption>
+<img src="../venn-images/venn-diagrams.jpg" width=800>
+<figcaption>All shaded Venn  diagrams for two sets.</figcaption>
 
 </figure>
 
