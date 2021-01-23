@@ -1,0 +1,515 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.3">
+    
+    
+      
+        <title>Trees - PHIL 370 Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.3b61ea93.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.39b8e14a.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>body,input{font-family:"Roboto",-apple-system,BlinkMacSystemFont,Helvetica,Arial,sans-serif}code,kbd,pre{font-family:"Roboto Mono",SFMono-Regular,Consolas,Menlo,monospace}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+      <link rel="stylesheet" href="https://unpkg.com/mermaid@7.1.2/dist/mermaid.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+      
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#trees" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid" aria-label="Header">
+    <a href="../.." title="PHIL 370 Notes" class="md-header-nav__button md-logo" aria-label="PHIL 370 Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header-nav__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header-nav__title" data-md-component="header-title">
+      <div class="md-header-nav__ellipsis">
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            PHIL 370 Notes
+          </span>
+        </div>
+        <div class="md-header-nav__topic">
+          <span class="md-ellipsis">
+            
+              Trees
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PHIL 370 Notes" class="md-nav__button md-logo" aria-label="PHIL 370 Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    PHIL 370 Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+
+
+  <li class="md-nav__item">
+    <a href="../.." class="md-nav__link">
+      Tutorials
+    </a>
+  </li>
+
+    
+      
+      
+      
+
+
+
+  
+  <li class="md-nav__item md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+    
+    <label class="md-nav__link" for="nav-2">
+      Week 1
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Week 1" data-md-level="1">
+      <label class="md-nav__title" for="nav-2">
+        <span class="md-nav__icon md-icon"></span>
+        Week 1
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../week-1/01-basic-set-theory/" class="md-nav__link">
+      Set Theory
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../week-1/02-relations-and-functions/" class="md-nav__link">
+      Relations and Functions
+    </a>
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../../week-1/03-introduction-proofs/" class="md-nav__link">
+      Introduction to Proofs
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+      
+      
+      
+
+
+  
+
+
+  
+  <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    
+    
+      <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" checked>
+    
+    <label class="md-nav__link" for="nav-3">
+      Week 2
+      <span class="md-nav__icon md-icon"></span>
+    </label>
+    <nav class="md-nav" aria-label="Week 2" data-md-level="1">
+      <label class="md-nav__title" for="nav-3">
+        <span class="md-nav__icon md-icon"></span>
+        Week 2
+      </label>
+      <ul class="md-nav__list" data-md-scrollfix>
+        
+        
+          
+          
+          
+
+
+  
+
+
+  <li class="md-nav__item md-nav__item--active">
+    
+    <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    
+      
+    
+    
+      <label class="md-nav__link md-nav__link--active" for="__toc">
+        Trees
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+    
+    <a href="./" class="md-nav__link md-nav__link--active">
+      Trees
+    </a>
+    
+      
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+    
+  </li>
+
+        
+          
+          
+          
+
+
+
+  <li class="md-nav__item">
+    <a href="../02-induction/" class="md-nav__link">
+      Induction
+    </a>
+  </li>
+
+        
+      </ul>
+    </nav>
+  </li>
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="trees">Trees</h1>
+<div class="mermaid">graph TD;
+    1--&gt;2;
+    2--&gt;3;
+    3--&gt;4;
+    C--&gt;D;</div>
+<p>Trees play an important role in logical systems. In this tutorial, I will introduce some terminology for reasoning about trees. </p>
+<p>A <strong>tree</strong> is a tuple <span class="arithmatex">\((T, E)\)</span>, where <span class="arithmatex">\(T\)</span> is a nonempty set,  whose elements   are called <strong>nodes</strong>, and <span class="arithmatex">\(E\)</span> is a relation on <span class="arithmatex">\(T\)</span>, <span class="arithmatex">\(E\subseteq T\times T\)</span>, called the  <strong>immediate edge relation</strong>, satisfying the following conditions:  For all nodes, <span class="arithmatex">\(n, n', m\in T\)</span>, </p>
+<ul>
+<li>Every node has a unique predecessor: If <span class="arithmatex">\(nEm\)</span> and <span class="arithmatex">\(n' Em\)</span>, then <span class="arithmatex">\(n=n'\)</span>,</li>
+<li>There are no cycles: If <span class="arithmatex">\((n_1,\ldots, n_k)\)</span> is a sequence of nodes where for each <span class="arithmatex">\(i=1,\ldots, k-1\)</span>, <span class="arithmatex">\(n_iEn_{i+1}\)</span>, then <span class="arithmatex">\(n_1\ne n_k\)</span>, and </li>
+<li>Between any two nodes  there is a unique path: For each <span class="arithmatex">\(n, n'\in T\)</span> there is a unique sequence <span class="arithmatex">\(n_1, n_2, \ldots, n_m\)</span> such that <span class="arithmatex">\(n=n_1En_2\cdots En_m=n'\)</span>. </li>
+</ul>
+<p>The following terminology will be used when talking about trees.   Let <span class="arithmatex">\((T, E)\)</span> be a tree.  </p>
+<ul>
+<li>For a node <span class="arithmatex">\(n\in T\)</span>, the <strong>successors</strong> or <strong>children</strong> of <span class="arithmatex">\(n\)</span> are <span class="arithmatex">\(\{n'\ |\ nEn'\}\)</span>. </li>
+<li>For a node <span class="arithmatex">\(n\in T\)</span>, the <strong>predecessor</strong> or <strong>parent</strong> of <span class="arithmatex">\(n\)</span> is the set <span class="arithmatex">\(\{n'\ |\ n'En\}\)</span>.  Note that this set contains either no elements or exactly one element.  </li>
+<li>A node <span class="arithmatex">\(n\in T\)</span> is called the <strong>root</strong> of the tree when the set of predecessors of <span class="arithmatex">\(n\)</span> is <span class="arithmatex">\(\varnothing\)</span>.</li>
+<li>The <strong>arity</strong> of a node is the number of successors.  The <strong>leaves</strong> of a tree are the nodes with no successors (i.e., the nodes with arity 0).</li>
+<li>A <strong>path</strong> in <span class="arithmatex">\((T,E)\)</span>  is a sequence of nodes connected by an edge relation: that is,  a path is a sequence <span class="arithmatex">\((n_1,n_2,\ldots, n_k)\)</span> such that for each  <span class="arithmatex">\(i=1,\ldots,k-1\)</span>, <span class="arithmatex">\(n_iEn_{i+1}\)</span>.  The <strong>length</strong> of a path is equal to the number of edges along that path (equivalently, one minus the number of nodes). </li>
+<li>The  <strong>height</strong> of <span class="arithmatex">\((T,E)\)</span> is the  length of the longest path.   </li>
+</ul>
+<p>As an example, let <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(E\)</span> be defined as follows: </p>
+<div class="arithmatex">\[
+T=\{n_1, n_2, n_3, n_4, n_5, n_6, n_7, n_8\}
+\]</div>
+<div class="arithmatex">\[
+E=\{(n_1,n_2), (n_1,n_3), (n_3, n_4), (n_3, n_5), (n_3, n_6), (n_2, n_7), (n_6, n_8)\}
+\]</div>
+<p>We can depict this tree as follows: </p>
+<figure>
+
+<img src="../tree-example.jpg" >
+
+</figure>
+
+<ul>
+<li>The root of the above tree is <span class="arithmatex">\(n_1\)</span> 
+The leaves are <span class="arithmatex">\(n_8, n_5, n_4,\)</span> and <span class="arithmatex">\(n_7\)</span>.  </li>
+<li>The successors of <span class="arithmatex">\(n_3\)</span> are <span class="arithmatex">\(\{n_6,n_5, n_4\}\)</span> and the predecessor  of <span class="arithmatex">\(n_3\)</span> is <span class="arithmatex">\(\{n_1\}\)</span>.  </li>
+<li>An example of two paths in the tree are <span class="arithmatex">\((n_3,n_5)\)</span> and <span class="arithmatex">\((n_1,n_3,n_6)\)</span>.   </li>
+<li>The height of the tree is 3: the longest path in the tree is <span class="arithmatex">\((n_1,n_3,n_6, n_8)\)</span>  which has length 3. </li>
+</ul>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>We defined the predecessor of a node as a set, but the set will consist of either no elements (if the node is a root) or a single element (since every node as at most one predecessor).  So, we will often say, for instance, "the parent of <span class="arithmatex">\(n_3\)</span> is <span class="arithmatex">\(n_1\)</span>. </p>
+</div>
+<p>A <strong>labelling</strong> of a tree <span class="arithmatex">\((T,E)\)</span> is a function <span class="arithmatex">\(f\)</span> defined on the set of nodes deﬁned on the set of nodes <span class="arithmatex">\(T\)</span>. The labelling <span class="arithmatex">\(f\)</span> is a <strong>right labelling</strong> when we write <span class="arithmatex">\(f(n)\)</span> to the right of eacn node <span class="arithmatex">\(n\)</span>, and a <strong>left labelling</strong> when we write <span class="arithmatex">\(f(n)\)</span> to the left of each noe <span class="arithmatex">\(n\)</span>.  A <strong>labelled tree</strong> is a tree together with a labelling.</p>
+<h2 id="exercises">Exercises</h2>
+<ol>
+<li>A <strong>binary tree</strong>  is a tree where every node has at most 2 children.  Suppose that there are 6 nodes, i.e., <span class="arithmatex">\(T=\{1, 2, 3, 4, 5, 6\}\)</span>.  What is the maximum height of a binary tree on <span class="arithmatex">\(T\)</span>?   What is the minimum height of a binary tree on <span class="arithmatex">\(T\)</span>? </li>
+</ol>
+<details class="answer"><summary>Show Answer</summary><p>The maximum height of a binary tree with 6 nodes is 5. 
+The minimum height of a binary tree with 6 nodes is 2.  In general, the minimum height of a binary tree with <span class="arithmatex">\(n\)</span> nodes is <span class="arithmatex">\(\lfloor\log_2(n)\rfloor\)</span>. </p>
+</details>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid" aria-label="Footer">
+        
+          <a href="../../week-1/03-introduction-proofs/" class="md-footer-nav__link md-footer-nav__link--prev" rel="prev">
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+            </div>
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Previous
+                </span>
+                Introduction to Proofs
+              </div>
+            </div>
+          </a>
+        
+        
+          <a href="../02-induction/" class="md-footer-nav__link md-footer-nav__link--next" rel="next">
+            <div class="md-footer-nav__title">
+              <div class="md-ellipsis">
+                <span class="md-footer-nav__direction">
+                  Next
+                </span>
+                Induction
+              </div>
+            </div>
+            <div class="md-footer-nav__button md-icon">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+            </div>
+          </a>
+        
+      </nav>
+    </div>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.08c56446.min.js"></script>
+      <script src="../../assets/javascripts/bundle.6ced434e.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.8c7e0a7e.min.js"
+          }, typeof search !== "undefined" && search)
+        })
+      </script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+      
+        <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>
+      
+        <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+      
+        <script src="../../javascripts/testing.js"></script>
+      
+    
+  </body>
+</html>
