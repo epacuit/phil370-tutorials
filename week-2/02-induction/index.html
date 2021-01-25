@@ -305,6 +305,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#structural-induction-and-inductive-definitions" class="md-nav__link">
+    Structural Induction and Inductive Definitions
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#additional-reading" class="md-nav__link">
     Additional Reading
   </a>
@@ -357,6 +364,13 @@
         <li class="md-nav__item">
   <a href="#strong-induction" class="md-nav__link">
     Strong Induction
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#structural-induction-and-inductive-definitions" class="md-nav__link">
+    Structural Induction and Inductive Definitions
   </a>
   
 </li>
@@ -425,6 +439,73 @@
 <p><strong>Claim 2</strong>.  Any positive integer <span class="arithmatex">\(n\)</span> can
 be expressed uniquely as a product of prime numbers.</p>
 <p><strong>Proof</strong>.  The proof using strong induction on <span class="arithmatex">\(n\)</span>.  The base case is <span class="arithmatex">\(n=1\)</span>.   Clearly, <span class="arithmatex">\(1\)</span> can be expressed as an empty product of prime numbers.   Suppose that for any  <span class="arithmatex">\(1&lt; k&lt; n\)</span>, <span class="arithmatex">\(k\)</span> can be written as a product of primes.  We must show that <span class="arithmatex">\(n\)</span> can be written as a product of primes.  There are two cases: 1. <span class="arithmatex">\(n\)</span> is prime or 2. <span class="arithmatex">\(n\)</span> is not prime.   If <span class="arithmatex">\(n\)</span> is prime, then <span class="arithmatex">\(n\)</span> can be expressed as the product of 1 prime number (namely <span class="arithmatex">\(n\)</span> itself).   If <span class="arithmatex">\(n\)</span> is not prime, then <span class="arithmatex">\(n=ab\)</span> where $a\ge 2 and <span class="arithmatex">\(b\ge 2\)</span>.  Since <span class="arithmatex">\(a&lt; n\)</span> and <span class="arithmatex">\(b&lt; n\)</span>, by the induction hypothesis, both <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span> can be written as a product of primes.   Then, <span class="arithmatex">\(n=ab\)</span> can  also be written as a product of primes.  <span style="font-variant:small-caps;padding-left:10px">QED</span> </p>
+<div class="admonition note">
+<p class="admonition-title">Weak and Strong Induction</p>
+<p>Note that  the above proof used strong induction rather than weak induction.   We did not argue that if <span class="arithmatex">\(k\)</span> is the product of primes, then so is <span class="arithmatex">\(k+1\)</span>.   When we noted that <span class="arithmatex">\(n=ab\)</span> in the above proof, all we can conclude is that <span class="arithmatex">\(a&lt; n\)</span> and <span class="arithmatex">\(b&lt; n\)</span>.  We then apply strong induction.   </p>
+<p>See <a href="https://math.stackexchange.com/questions/1184541/what-exactly-is-the-difference-between-weak-and-strong-induction">this discussion for further discussion of weak and strong induction.</a> </p>
+</div>
+<h2 id="structural-induction-and-inductive-definitions">Structural Induction and Inductive Definitions</h2>
+<p>Consider the following definition: </p>
+<div class="admonition definition">
+<p class="admonition-title">Nice Terms</p>
+<p>The set of <strong>nice terms</strong> is inductively defined as follows:</p>
+<ol>
+<li>Any letter <span class="arithmatex">\(\mathrm{a}\)</span>, <span class="arithmatex">\(\mathrm{b}\)</span>, <span class="arithmatex">\(\mathrm{c}\)</span>,
+<span class="arithmatex">\(\mathrm{d}\)</span> is a nice term.</li>
+<li>If <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(s'\)</span> are nice terms, then so
+is <span class="arithmatex">\([s \circ s']\)</span>.</li>
+<li>Nothing else is a nice term.</li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Examples of nice terms.</p>
+<p>The following are examples of nice terms include: </p>
+<ul>
+<li><span class="arithmatex">\(\mathrm{a}\)</span>, </li>
+<li><span class="arithmatex">\([\mathrm{a}\circ \mathrm{a}]\)</span>, </li>
+<li><span class="arithmatex">\([[\mathrm{a}\circ \mathrm{b}]\circ [\mathrm{c}\circ\mathrm{d}]]\)</span>, </li>
+<li><span class="arithmatex">\([[\mathrm{a}\circ \mathrm{a}]\circ[\mathrm{b}\circ[\mathrm{c}\circ[\mathrm{d}\circ\mathrm{a}]]]]\)</span>.</li>
+</ul>
+</div>
+<p>The length of a nice term is the number characters in the term.  Note that we have the following </p>
+<ul>
+<li>The length of <span class="arithmatex">\(\mathrm{a}\)</span> is 1 and there are 0 occurrences of <span class="arithmatex">\([\)</span>, </li>
+<li>The length of <span class="arithmatex">\([\mathrm{a}\circ \mathrm{a}]\)</span> is 5 and there is 1 occurrence of <span class="arithmatex">\([\)</span>, </li>
+<li>The length of <span class="arithmatex">\([[\mathrm{a}\circ \mathrm{b}]\circ [\mathrm{c}\circ\mathrm{d}]]\)</span> is 13 and there is 3 occurrences of <span class="arithmatex">\([\)</span>, </li>
+<li>The length of <span class="arithmatex">\([[\mathrm{a}\circ \mathrm{a}]\circ[\mathrm{b}\circ[\mathrm{c}\circ[\mathrm{d}\circ\mathrm{a}]]]]\)</span> is 21 and there are 5 occurrences of <span class="arithmatex">\([\)</span>.</li>
+</ul>
+<p>Notice that in each case, the number of occurrences of <span class="arithmatex">\([\)</span> in a nice term is strictly less than <span class="arithmatex">\(n/2\)</span> where <span class="arithmatex">\(n\)</span> the length of the term.   This is not necessarily true if an expression is not a nice term: </p>
+<ul>
+<li>The length of <span class="arithmatex">\([[[[a\circ b\)</span> is 6, but there are <span class="arithmatex">\(4&gt;6/2\)</span> occurrences of <span class="arithmatex">\([\)</span>. </li>
+</ul>
+<p><strong>Claim 3</strong>. For any <span class="arithmatex">\(n\)</span>, the number of <span class="arithmatex">\([\)</span> in a nice term of length <span class="arithmatex">\(n\)</span> is
+  <span class="arithmatex">\(&lt; n/2\)</span>.</p>
+<p><strong>Proof</strong>. To prove this result by (strong) induction, we have to show that the
+following conditional claim is true:</p>
+<p>If for every <span class="arithmatex">\(k &lt; n\)</span>, any nice term of length <span class="arithmatex">\(k\)</span> has <span class="arithmatex">\(k/2\)</span> <span class="arithmatex">\([\)</span>'s, then any nice term  of length <span class="arithmatex">\(n\)</span> has <span class="arithmatex">\(n/2\)</span> <span class="arithmatex">\([\)</span>'s.</p>
+<p>To show this conditional, assume that the antecedent is true, i.e.,
+assume that for any <span class="arithmatex">\(k&lt; n\)</span>, nice terms of length <span class="arithmatex">\(k\)</span> contain <span class="arithmatex">\(&lt; k/2\)</span>
+<span class="arithmatex">\([\)</span>'s.  We call this assumption the inductive hypothesis. We want to
+show the same is true for nice terms of length <span class="arithmatex">\(n\)</span>.</p>
+<p>So suppose <span class="arithmatex">\(t\)</span> is a nice term of length <span class="arithmatex">\(n\)</span>.  Because
+nice terms are inductively defined, we have  two cases: (1)
+<span class="arithmatex">\(t\)</span> is a letter by itself, or <span class="arithmatex">\(t\)</span> is <span class="arithmatex">\([s \circ s']\)</span> for some nice terms
+<span class="arithmatex">\(s\)</span> and~<span class="arithmatex">\(s'\)</span>.</p>
+<ol>
+<li>
+<p><span class="arithmatex">\(t\)</span> is a letter.  Then <span class="arithmatex">\(n = 1\)</span>, and the number of <span class="arithmatex">\([\)</span> in <span class="arithmatex">\(t\)</span> is <span class="arithmatex">\(0\)</span>. Since <span class="arithmatex">\(0 &lt; 1/2\)</span>, the claim holds.</p>
+</li>
+<li>
+<p><span class="arithmatex">\(t\)</span> is <span class="arithmatex">\([s \circ s']\)</span> for some nice terms <span class="arithmatex">\(s\)</span> and~<span class="arithmatex">\(s'\)</span>.  Let <span class="arithmatex">\(k\)</span> be the length of <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(k'\)</span> be the length of <span class="arithmatex">\(s'\)</span>.  Then the length <span class="arithmatex">\(n\)</span> of <span class="arithmatex">\(t\)</span> is <span class="arithmatex">\(k+k'+3\)</span> (the lengths of <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(s'\)</span> plus three symbols <span class="arithmatex">\([\)</span>, <span class="arithmatex">\(\circ\)</span>, <span class="arithmatex">\(]\)</span>). Since <span class="arithmatex">\(k+k'+3\)</span> is always greater than <span class="arithmatex">\(k\)</span>, <span class="arithmatex">\(k &lt; n\)</span>. Similarly, <span class="arithmatex">\(k' &lt; n\)</span>. That means that the induction hypothesis applies to the terms <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(s'\)</span>: the number <span class="arithmatex">\(m\)</span> of <span class="arithmatex">\([\)</span> in <span class="arithmatex">\(s\)</span> is <span class="arithmatex">\(&lt; k/2\)</span>, and the number of <span class="arithmatex">\([\)</span> in <span class="arithmatex">\(s'\)</span> is <span class="arithmatex">\(&lt; k'/2\)</span>.</p>
+</li>
+</ol>
+<p>The number of <span class="arithmatex">\([\)</span> in <span class="arithmatex">\(t\)</span> is the number of <span class="arithmatex">\([\)</span> in <span class="arithmatex">\(s\)</span>, plus the number of <span class="arithmatex">\([\)</span> in <span class="arithmatex">\(s'\)</span>, plus <span class="arithmatex">\(1\)</span>, i.e., it is <span class="arithmatex">\(m + m' + 1\)</span>. Since <span class="arithmatex">\(m &lt; k/2\)</span> and <span class="arithmatex">\(m' &lt; k'/2\)</span> we have:</p>
+<div class="arithmatex">\[
+m + m' + 1 &lt; \frac{k}{2} + \frac{k'}{2} + 1 = \frac{k+k'+2}{2} &lt; \frac{k+k'+3}{2} = n/2.
+\]</div>
+<p>In each case, we have shown that the number of <span class="arithmatex">\([\)</span> in <span class="arithmatex">\(t\)</span> is <span class="arithmatex">\(&lt; n/2\)</span> (on
+the basis of the inductive hypothesis). By strong induction, the
+proposition follows. <span style="font-variant:small-caps;padding-left:10px">QED</span> </p>
 <h2 id="additional-reading">Additional Reading</h2>
 <ul>
 <li>
@@ -438,6 +519,21 @@ be expressed uniquely as a product of prime numbers.</p>
 <ol>
 <li>
 <p>Prove that for all <span class="arithmatex">\(n\ge 0\)</span>, <span class="arithmatex">\(\sum_{i=0}^n 2^i = 2^{n+1} - 1\)</span>. </p>
+<details class="answer"><summary>Show Answer</summary><p>The proof is by induction on <span class="arithmatex">\(n\)</span>.  </p>
+<p>Base Case: When <span class="arithmatex">\(n=0\)</span>, we have  <span class="arithmatex">\(\sum_{i=0}^0 2^i = 2^0=1 = 2^{0+1} - 1\)</span>. </p>
+<p>Let <span class="arithmatex">\(k\ge 0\)</span>.   The induction hypothesis is <span class="arithmatex">\(\sum_{i=0}^k 2^i = 2^{k+1} - 1\)</span>. </p>
+<p>We must show that <span class="arithmatex">\(\sum_{i=0}^{k+1} 2^i = 2^{(k+1)+1} - 1\)</span>. This is proved as follows: </p>
+<p>$$
+\begin{align}
+\sum_{i=0}^{k+1} 2^i &amp; = &amp; \sum_{i=0}^{k} 2^i + 2^{k+1}\ 
+&amp; = &amp; 2^{k+1} - 1 + 2^{k+1}\
+&amp; = &amp; 2\times 2^{k+1} - 1\
+&amp; = &amp; 2^{(k+1)+1} - 1.
+\end{align}
+$$
+Note that the second equality follows by the induction hypothesis. 
+Therefore, by induction for all <span class="arithmatex">\(n\ge 0\)</span>, <span class="arithmatex">\(\sum_{i=0}^n 2^i = 2^{n+1} - 1\)</span>. <span style="font-variant:small-caps;padding-left:10px">QED</span> </p>
+</details>
 </li>
 <li>
 <p>Prove that for all integers <span class="arithmatex">\(n\ge 5\)</span>, <span class="arithmatex">\(n^2&lt;2^n\)</span>. </p>

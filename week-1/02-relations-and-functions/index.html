@@ -428,14 +428,19 @@ A\times B=\{(a,b)\ |\ a\in A\text{ and } b\in B\}.
 <li><span class="arithmatex">\(X\times Y=\{(a,1), (a,2), (b,1), (b,2), (c,1), (c,2)\}.\)</span></li>
 <li><span class="arithmatex">\(Y\times X=\{(1,a), (1,b), (1,c), (2,a), (2,b), (2,c)\}.\)</span></li>
 <li><span class="arithmatex">\(X\times X=\{(a,a), (a,b), (a,c), (b,a), (b,b), (b,c), (c,a), (c,b), (c,c)\}.\)</span></li>
-<li><span class="arithmatex">\((X\times X)\times Y=\{((a,a),1), ((a,b),1), ((a,c),1), ((b,a),1), ((b,b),1), ((b,c),1), ((c,a),1), ((c,b),1), ((c,c),1), ((a,a),2), ((a,b),2), ((a,c),2), ((b,a),2), ((b,b),2), ((b,c),2), ((c,a),2), ((c,b),2), ((c,c),2)\}.\)</span></li>
+<li><span class="arithmatex">\(\begin{align}
+    (X\times X)\times Y  = &amp;\   \{((a,a),1), ((a,b),1), ((a,c),1), ((b,a),1), ((b,b),1), ((b,c),1),\\
+     &amp; \ \ \ \,((c,a),1), ((c,b),1), ((c,c),1), ((a,a),2), ((a,b),2), ((a,c),2),\\
+     &amp;  \ \ \ \, ((b,a),2), ((b,b),2), ((b,c),2),((c,a),2), ((c,b),2), ((c,c),2)\}.\end{align}\)</span></li>
 </ol>
 </div>
 <div class="admonition warning">
 <p class="admonition-title">Tuples of length <span class="arithmatex">\(n&gt;2\)</span></p>
-<p>Note that in item 4 of the above Example, <span class="arithmatex">\((X\times X) \times Y\)</span> consists of tuples where the first component is a tuple of length 2 (where each component is from <span class="arithmatex">\(X\)</span>) and the second component is an element of <span class="arithmatex">\(Y\)</span>.   Often we will drop the parentheses, writing <span class="arithmatex">\(X\times X\times Y\)</span>,  and think of the elements of this set as tuples of length 3: 
-<span class="arithmatex">\((X\times X)\times Y=\{(a,a,1), (a,b,1), (a,c,1), (b,a,1), (b,b,1), (b,c,1), (c,a,1), (c,b,1), (c,c,1), (a,a,2), (a,b,2), (a,c,2), (b,a,2), (b,b,2), (b,c,2), (c,a,2), (c,b,2), (c,c,2)\}.\)</span>
-The parentheses can be recovered by associating them to the left. </p>
+<p>Note that in item 4 of the above Example, <span class="arithmatex">\((X\times X) \times Y\)</span> consists of tuples where the first component is a tuple of length 2 (where each component is from <span class="arithmatex">\(X\)</span>) and the second component is an element of <span class="arithmatex">\(Y\)</span>.   Often we will drop the parentheses, writing <span class="arithmatex">\(X\times X\times Y\)</span>,  and think of the elements of this set as tuples of length 3: </p>
+<p><span class="arithmatex">\(\begin{align} (X\times X)\times Y= &amp; \ \{(a,a,1), (a,b,1), (a,c,1), (b,a,1), (b,b,1), (b,c,1),(c,a,1), \\
+&amp;\ \ \ \,(c,b,1), (c,c,1), (a,a,2), (a,b,2), (a,c,2), (b,a,2), (b,b,2), \\
+&amp; \ \ \ \,(b,c,2), (c,a,2), (c,b,2), (c,c,2)\}.\end{align}\)</span></p>
+<p>The parentheses can be recovered by associating them to the left. </p>
 </div>
 <p>A   <strong>relation</strong> <span class="arithmatex">\(R\)</span> on a set <span class="arithmatex">\(X\)</span> is  a subset of <span class="arithmatex">\(X\times X\)</span> (the set of pairs of elements from <span class="arithmatex">\(X\)</span>).  Formally,  <span class="arithmatex">\(R\)</span> is a relation on <span class="arithmatex">\(X\)</span> means that   <span class="arithmatex">\(R\subseteq X\times X\)</span>.   It is often convenient  to write <span class="arithmatex">\(a\mathrel{R}b\)</span> for <span class="arithmatex">\((a,b)\in R\)</span>.  To illustrate the idea of a relation, suppose that <span class="arithmatex">\(X\)</span> is the set of people in a room.   The following are two examples of relations on <span class="arithmatex">\(X\)</span>: </p>
 <ol>
@@ -524,6 +529,10 @@ F(\{b,c\}) &amp; = &amp; \{b\}\\[2pt]
 F(\{a,b,c\}) &amp; = &amp; \{b,c\}\\[2pt]
 \end{align}
 \]</div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Sequences</p>
+<p>A <strong>sequence</strong> is an enumerated list of elements.  For instance, <span class="arithmatex">\((b, a, c, b)\)</span> is a sequence of length 4.   Above, this mathematical object was called  a <em>tuple of length 4</em>.  It will be convenient to view a sequence as a function from an index set to some set of objects.  For example, the sequence <span class="arithmatex">\((b, a, c, b)\)</span> can be viewed as a function <span class="arithmatex">\(s:\{0,1,2,3\} \rightarrow\{a,b,c\}\)</span> where <span class="arithmatex">\(s(0)=b\)</span>, <span class="arithmatex">\(s(1)=a\)</span>, <span class="arithmatex">\(s(2)=c\)</span> and <span class="arithmatex">\(s(3)=b\)</span>.  Conversely, a function <span class="arithmatex">\(s:\mathbb{N}\rightarrow A\)</span> can be viewed as a (possibly infinite) sequence of elements from <span class="arithmatex">\(A\)</span>.  When the function <span class="arithmatex">\(s\)</span> is viewed as a sequence, we write <span class="arithmatex">\(s_i\)</span> for <span class="arithmatex">\(s(i)\)</span>. </p>
 </div>
 <h2 id="additional-reading">Additional Reading</h2>
 <ul>
