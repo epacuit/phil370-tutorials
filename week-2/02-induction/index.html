@@ -305,8 +305,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#structural-induction-and-inductive-definitions" class="md-nav__link">
-    Structural Induction and Inductive Definitions
+  <a href="#inductive-definitions-and-structural-induction" class="md-nav__link">
+    Inductive Definitions and Structural Induction
   </a>
   
 </li>
@@ -369,8 +369,8 @@
 </li>
       
         <li class="md-nav__item">
-  <a href="#structural-induction-and-inductive-definitions" class="md-nav__link">
-    Structural Induction and Inductive Definitions
+  <a href="#inductive-definitions-and-structural-induction" class="md-nav__link">
+    Inductive Definitions and Structural Induction
   </a>
   
 </li>
@@ -444,7 +444,7 @@ be expressed uniquely as a product of prime numbers.</p>
 <p>Note that  the above proof used strong induction rather than weak induction.   We did not argue that if <span class="arithmatex">\(k\)</span> is the product of primes, then so is <span class="arithmatex">\(k+1\)</span>.   When we noted that <span class="arithmatex">\(n=ab\)</span> in the above proof, all we can conclude is that <span class="arithmatex">\(a&lt; n\)</span> and <span class="arithmatex">\(b&lt; n\)</span>.  We then apply strong induction.   </p>
 <p>See <a href="https://math.stackexchange.com/questions/1184541/what-exactly-is-the-difference-between-weak-and-strong-induction">this discussion for further discussion of weak and strong induction.</a> </p>
 </div>
-<h2 id="structural-induction-and-inductive-definitions">Structural Induction and Inductive Definitions</h2>
+<h2 id="inductive-definitions-and-structural-induction">Inductive Definitions and Structural Induction</h2>
 <p>Consider the following definition: </p>
 <div class="admonition definition">
 <p class="admonition-title">Nice Terms</p>
@@ -523,20 +523,46 @@ proposition follows. <span style="font-variant:small-caps;padding-left:10px">QED
 <p>Base Case: When <span class="arithmatex">\(n=0\)</span>, we have  <span class="arithmatex">\(\sum_{i=0}^0 2^i = 2^0=1 = 2^{0+1} - 1\)</span>. </p>
 <p>Let <span class="arithmatex">\(k\ge 0\)</span>.   The induction hypothesis is <span class="arithmatex">\(\sum_{i=0}^k 2^i = 2^{k+1} - 1\)</span>. </p>
 <p>We must show that <span class="arithmatex">\(\sum_{i=0}^{k+1} 2^i = 2^{(k+1)+1} - 1\)</span>. This is proved as follows: </p>
-<p>$$
+<div class="arithmatex">\[
 \begin{align}
-\sum_{i=0}^{k+1} 2^i &amp; = &amp; \sum_{i=0}^{k} 2^i + 2^{k+1}\ 
-&amp; = &amp; 2^{k+1} - 1 + 2^{k+1}\
-&amp; = &amp; 2\times 2^{k+1} - 1\
+\sum_{i=0}^{k+1} 2^i &amp; = &amp; \sum_{i=0}^{k} 2^i + 2^{k+1}\\ 
+&amp; = &amp; 2^{k+1} - 1 + 2^{k+1}\\
+&amp; = &amp; 2\times 2^{k+1} - 1\\
 &amp; = &amp; 2^{(k+1)+1} - 1.
 \end{align}
-$$
-Note that the second equality follows by the induction hypothesis. 
+\]</div>
+<p>Note that the second equality follows by the induction hypothesis. 
 Therefore, by induction for all <span class="arithmatex">\(n\ge 0\)</span>, <span class="arithmatex">\(\sum_{i=0}^n 2^i = 2^{n+1} - 1\)</span>. <span style="font-variant:small-caps;padding-left:10px">QED</span> </p>
 </details>
 </li>
 <li>
-<p>Prove that for all integers <span class="arithmatex">\(n\ge 5\)</span>, <span class="arithmatex">\(n^2&lt;2^n\)</span>. </p>
+<p>Prove that for all integers <span class="arithmatex">\(n\ge 5\)</span>, <span class="arithmatex">\(n^2&lt;2^n\)</span>.</p>
+<details class="answer"><summary>Show Answer</summary><p><strong>Proof</strong>.  The proof is by induction on <span class="arithmatex">\(n\)</span>.  </p>
+<p>Base Case: When <span class="arithmatex">\(n=5\)</span>, we have <span class="arithmatex">\(5^2 = 25 &lt; 32 = 2^5\)</span>. </p>
+<p>Induction Hypothesis: If <span class="arithmatex">\(k\ge 5\)</span>, then <span class="arithmatex">\(k^2 &lt; 2^k\)</span>. </p>
+<p>Induction Step: We must show that if <span class="arithmatex">\(k\ge 5\)</span>, then <span class="arithmatex">\((k+1)^2 &lt; 2^{k+1}\)</span>. 
+Suppose that <span class="arithmatex">\(k\ge 5\)</span>.   Then, <span class="arithmatex">\(k^2\ge 5k\)</span>.  First, note that: </p>
+<div class="arithmatex">\[
+\begin{align}
+(k+1)^2 &amp; = &amp; k^2 + 2k + 1 \\
+        &amp; &lt; &amp; k^2 + 2k + 5\\
+        &amp; \le &amp; k^2 + 2k + k\\
+        &amp; = &amp; k^2 + 3k\\
+        &amp; &lt; &amp; k^2 + 5k\\
+        &amp; \le &amp; k^2 + k^2\\
+        &amp; = &amp; 2k^2 
+\end{align}
+\]</div>
+<p>Then, we have that: </p>
+<div class="arithmatex">\[
+\begin{align}
+(k+1)^2 &amp; &lt; &amp; 2k^2 \\
+        &amp; &lt; &amp; 2*2^k\\
+        &amp; = &amp; 2^{k+1}
+\end{align}
+\]</div>
+<p>The second inequality follows from the induction hypothesis.          Therefore, by induction for all integers <span class="arithmatex">\(n\ge 5\)</span>, <span class="arithmatex">\(n^2&lt;2^n\)</span>. <span style="font-variant:small-caps;padding-left:10px">QED</span> </p>
+</details>
 </li>
 <li>
 <p>What is wrong with the following proof by induction that for all <span class="arithmatex">\(n\ge 0\)</span>, <span class="arithmatex">\(n+3=n+7\)</span>? <br/>
