@@ -469,6 +469,34 @@ The leaves are <span class="arithmatex">\(n_8, n_5, n_4,\)</span> and <span clas
 <p>In general, the minimum height of a binary tree with <span class="arithmatex">\(n\)</span> nodes is <span class="arithmatex">\(\lfloor\log_2(n)\rfloor\)</span>. </p>
 </details>
 </li>
+<li>
+<p>Consider the following tree: 
+<pre class="mermaid-experimental"><code>    graph TD
+    A((2)) --&gt; B((1));
+    A((2)) --&gt; C((3));
+    B((1)) --&gt; D((4));
+    C((3)) --&gt; F((6));
+    F((6)) --&gt; E((5));
+    F((6)) --&gt; G((7));
+</code></pre></p>
+<ul>
+<li>What is the height of the tree?</li>
+<li>Which node is the root of the tree? </li>
+<li>Which nodes are the leaves of the tree? </li>
+<li>Which nodes are all the children of node 6? </li>
+<li>Is the tree a binary tree? </li>
+<li>Which node is the predecessor of 3? </li>
+</ul>
+<details class="answer"><summary>Show Answer</summary><ul>
+<li>The height of the tree is 3.</li>
+<li>The root of the tree is node 2. </li>
+<li>The leaves of the tree are <span class="arithmatex">\(\{4, 5, 6\}\)</span>.</li>
+<li>The children of node 6 are <span class="arithmatex">\(\{5, 7\}\)</span>.</li>
+<li>The tree is a binary tree (the arity of every node is either 0, 1 or 2)</li>
+<li>The predecessor of 3 is node 2. </li>
+</ul>
+</details>
+</li>
 </ol>
                 
               
