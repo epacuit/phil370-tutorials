@@ -17,7 +17,7 @@
     
     
       
-        <title>Trees - PHIL 370 Notes</title>
+        <title>Parse Trees and Compositional Definitions - PHIL 370 Notes</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#trees" class="md-skip">
+        <a href="#parse-trees-and-compositional-definitions" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Trees
+              Parse Trees and Compositional Definitions
             
           </span>
         </div>
@@ -296,6 +296,30 @@
             
   
   
+  
+    <li class="md-nav__item">
+      <a href="../01-trees/" class="md-nav__link">
+        Trees
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-induction/" class="md-nav__link">
+        Induction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
     
   
   
@@ -307,12 +331,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Trees
+          Parse Trees and Compositional Definitions
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Trees
+        Parse Trees and Compositional Definitions
       </a>
       
         
@@ -339,30 +363,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../02-induction/" class="md-nav__link">
-        Induction
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../03-parse-trees/" class="md-nav__link">
-        Parse Trees and Compositional Definitions
-      </a>
     </li>
   
 
@@ -417,95 +417,40 @@
               
                 
                 
-                <h1 id="trees">Trees</h1>
-<p>Trees play an important role in logical systems. In this tutorial, I will introduce some terminology for reasoning about trees. </p>
-<p>A <strong>tree</strong> is a tuple <span class="arithmatex">\((T, E)\)</span>, where <span class="arithmatex">\(T\)</span> is a nonempty set,  whose elements   are called <strong>nodes</strong>, and <span class="arithmatex">\(E\)</span> is a relation on <span class="arithmatex">\(T\)</span>, <span class="arithmatex">\(E\subseteq T\times T\)</span>, called the  <strong>immediate edge relation</strong>, satisfying the following conditions:  For all nodes, <span class="arithmatex">\(n, n', m\in T\)</span>, </p>
-<ul>
-<li>Every node has a unique predecessor: If <span class="arithmatex">\(nEm\)</span> and <span class="arithmatex">\(n' Em\)</span>, then <span class="arithmatex">\(n=n'\)</span>,</li>
-<li>There are no cycles: If <span class="arithmatex">\((n_1,\ldots, n_k)\)</span> is a sequence of nodes where for each <span class="arithmatex">\(i=1,\ldots, k-1\)</span>, <span class="arithmatex">\(n_iEn_{i+1}\)</span>, then <span class="arithmatex">\(n_1\ne n_k\)</span>, and </li>
-<li>Between any two nodes  there is a unique path: For each <span class="arithmatex">\(n, n'\in T\)</span> there is a unique sequence <span class="arithmatex">\(n_1, n_2, \ldots, n_m\)</span> such that <span class="arithmatex">\(n=n_1En_2\cdots En_m=n'\)</span>. </li>
-</ul>
-<p>The following terminology will be used when talking about trees.   Let <span class="arithmatex">\((T, E)\)</span> be a tree.  </p>
-<ul>
-<li>For a node <span class="arithmatex">\(n\in T\)</span>, the <strong>successors</strong> or <strong>children</strong> of <span class="arithmatex">\(n\)</span> are <span class="arithmatex">\(\{n'\ |\ nEn'\}\)</span>. </li>
-<li>For a node <span class="arithmatex">\(n\in T\)</span>, the <strong>predecessor</strong> or <strong>parent</strong> of <span class="arithmatex">\(n\)</span> is the set <span class="arithmatex">\(\{n'\ |\ n'En\}\)</span>.  Note that this set contains either no elements or exactly one element.  </li>
-<li>A node <span class="arithmatex">\(n\in T\)</span> is called the <strong>root</strong> of the tree when the set of predecessors of <span class="arithmatex">\(n\)</span> is <span class="arithmatex">\(\varnothing\)</span>.</li>
-<li>The <strong>arity</strong> of a node is the number of successors.  The <strong>leaves</strong> of a tree are the nodes with no successors (i.e., the nodes with arity 0).</li>
-<li>A <strong>path</strong> in <span class="arithmatex">\((T,E)\)</span>  is a sequence of nodes connected by an edge relation: that is,  a path is a sequence <span class="arithmatex">\((n_1,n_2,\ldots, n_k)\)</span> such that for each  <span class="arithmatex">\(i=1,\ldots,k-1\)</span>, <span class="arithmatex">\(n_iEn_{i+1}\)</span>.  The <strong>length</strong> of a path is equal to the number of edges along that path (equivalently, one minus the number of nodes). </li>
-<li>The  <strong>height</strong> of <span class="arithmatex">\((T,E)\)</span> is the  length of the longest path.   </li>
-</ul>
-<p>As an example, let <span class="arithmatex">\(T\)</span> and <span class="arithmatex">\(E\)</span> be defined as follows: </p>
-<div class="arithmatex">\[
-T=\{n_1, n_2, n_3, n_4, n_5, n_6, n_7, n_8\}
-\]</div>
-<div class="arithmatex">\[
-E=\{(n_1,n_2), (n_1,n_3), (n_3, n_4), (n_3, n_5), (n_3, n_6), (n_2, n_7), (n_6, n_8)\}
-\]</div>
-<p>We can depict this tree as follows: </p>
-<figure>
-
-<img src="../tree-example.jpg" >
-
-</figure>
-
-<ul>
-<li>The root of the above tree is <span class="arithmatex">\(n_1\)</span> 
-The leaves are <span class="arithmatex">\(n_8, n_5, n_4,\)</span> and <span class="arithmatex">\(n_7\)</span>.  </li>
-<li>The successors of <span class="arithmatex">\(n_3\)</span> are <span class="arithmatex">\(\{n_6,n_5, n_4\}\)</span> and the predecessor  of <span class="arithmatex">\(n_3\)</span> is <span class="arithmatex">\(\{n_1\}\)</span>.  </li>
-<li>An example of two paths in the tree are <span class="arithmatex">\((n_3,n_5)\)</span> and <span class="arithmatex">\((n_1,n_3,n_6)\)</span>.   </li>
-<li>The height of the tree is 3: the longest path in the tree is <span class="arithmatex">\((n_1,n_3,n_6, n_8)\)</span>  which has length 3. </li>
-</ul>
-<div class="admonition warning">
-<p class="admonition-title">Warning</p>
-<p>We defined the predecessor of a node as a set, but the set will consist of either no elements (if the node is a root) or a single element (since every node as at most one predecessor).  So, we will often say, for instance, "the parent of <span class="arithmatex">\(n_3\)</span> is <span class="arithmatex">\(n_1\)</span>". </p>
+                <h1 id="parse-trees-and-compositional-definitions">Parse Trees and Compositional Definitions</h1>
+<div class="video-wrapper">
+  <iframe src="https://umd.hosted.panopto.com/Panopto/Pages/Embed.aspx?id=0c634bfc-f498-43ca-8c7b-acc3017ce692&autoplay=false&offerviewer=true&showtitle=true&showbrand=false&start=0&interactivity=all" height="405" width="720" style="border: 1px solid #464646;" allowfullscreen allow="autoplay"></iframe>
 </div>
-<p>A <strong>labelling</strong> of a tree <span class="arithmatex">\((T,E)\)</span> is a function <span class="arithmatex">\(f\)</span> defined on the set of nodes deﬁned on the set of nodes <span class="arithmatex">\(T\)</span>. The labelling <span class="arithmatex">\(f\)</span> is a <strong>right labelling</strong> when we write <span class="arithmatex">\(f(n)\)</span> to the right of eacn node <span class="arithmatex">\(n\)</span>, and a <strong>left labelling</strong> when we write <span class="arithmatex">\(f(n)\)</span> to the left of each noe <span class="arithmatex">\(n\)</span>.  A <strong>labelled tree</strong> is a tree together with a labelling.</p>
+
 <h2 id="exercises">Exercises</h2>
 <ol>
 <li>
-<p>A <strong>binary tree</strong>  is a tree where every node has at most 2 children.  Suppose that there are 6 nodes, i.e., <span class="arithmatex">\(T=\{1, 2, 3, 4, 5, 6\}\)</span>.  What is the maximum height of a binary tree on <span class="arithmatex">\(T\)</span>?   What is the minimum height of a binary tree on <span class="arithmatex">\(T\)</span>? </p>
-<details class="answer"><summary>Show Answer</summary><p>The maximum height of a binary tree with 6 nodes is 5: </p>
-<pre class="mermaid-experimental"><code>    graph LR
-    A((1)) --&gt; B((2));
-    B((2)) --&gt; C((3));
-    C((3)) --&gt; D((4));
-    D((4)) --&gt; E((5));
-    E((5)) --&gt; F((6));</code></pre>
-<p>The minimum height of a binary tree with 6 nodes is 2:</p>
-<pre class="mermaid-experimental"><code>    graph TD
-    A((1)) --&gt; B((2));
-    A((1)) --&gt; C((3));
-    B((2)) --&gt; D((4));
-    B((2)) --&gt; E((5));
-    C((3)) --&gt; F((6));</code></pre>
-<p>In general, the minimum height of a binary tree with <span class="arithmatex">\(n\)</span> nodes is <span class="arithmatex">\(\lfloor\log_2(n)\rfloor\)</span>. </p>
+<p>What is the formula associated with the following parse tree?<br />
+<img alt="parse-tree1.jpg" src="../parse-tree1.jpg" /></p>
+<details class="answer"><summary>Show Answer</summary><p><span class="arithmatex">\((p_0 \wedge (\neg p_1))\)</span></p>
 </details>
 </li>
 <li>
-<p>Consider the following tree: 
-<pre class="mermaid-experimental"><code>    graph TD
-    A((2)) --&gt; B((1));
-    A((2)) --&gt; C((3));
-    B((1)) --&gt; D((4));
-    C((3)) --&gt; F((6));
-    F((6)) --&gt; E((5));
-    F((6)) --&gt; G((7));
-</code></pre></p>
+<p>Find the parse tree for the formula <span class="arithmatex">\(((\neg p_2)\vee p_1)\)</span>.</p>
+<details class="answer"><summary>Show Answer</summary><p><img alt="parse-tree2.jpg" src="../parse-tree2.jpg" /></p>
+</details>
+</li>
+<li>
+<p>Find the parse tree for the formula <span class="arithmatex">\((p_1 \rightarrow (p_1\wedge p_2))\)</span>.</p>
+<details class="answer"><summary>Show Answer</summary><p><img alt="parse-tree3.jpg" src="../parse-tree3.jpg" /></p>
+</details>
+</li>
+<li>
+<p>The following compositional definition assigns a number, called the G&#246;del number, to each propositional formula. <br/>
+<img alt="godel-num.jpg" src="../godel-num.jpg" /> <br/></p>
 <ul>
-<li>What is the height of the tree?</li>
-<li>Which node is the root of the tree? </li>
-<li>Which nodes are the leaves of the tree? </li>
-<li>Which nodes are all the children of node 6? </li>
-<li>Is the tree a binary tree? </li>
-<li>Which node is the predecessor of 3? </li>
+<li>What is the G&#246;del number of the formula <span class="arithmatex">\((\neg(\neg p_3))\)</span>? </li>
+<li>What is the G&#246;del number of the formula <span class="arithmatex">\((\bot \wedge (p_0 \vee p_0))\)</span>? </li>
 </ul>
 <details class="answer"><summary>Show Answer</summary><ul>
-<li>The height of the tree is 3.</li>
-<li>The root of the tree is node 2. </li>
-<li>The leaves of the tree are <span class="arithmatex">\(\{4, 5, 6\}\)</span>.</li>
-<li>The children of node 6 are <span class="arithmatex">\(\{5, 7\}\)</span>.</li>
-<li>The tree is a binary tree (the arity of every node is either 0, 1 or 2)</li>
-<li>The predecessor of 3 is node 2. </li>
+<li>The G&#246;del number of the formula <span class="arithmatex">\((\neg(\neg p_3))\)</span> is: <span class="arithmatex">\(2^{2^{19}\times 3^9}\times 3^9\)</span>.</li>
+<li>The G&#246;del number of the formula <span class="arithmatex">\((\bot \wedge (p_0 \vee p_0))\)</span> is 
+<span class="arithmatex">\(2^{11}\times 3^{2^{13}\times 3^{13}\times 5^3}\times 5^1\)</span></li>
 </ul>
 </details>
 </li>
@@ -527,7 +472,7 @@ The leaves are <span class="arithmatex">\(n_8, n_5, n_4,\)</span> and <span clas
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../../week-1/03-introduction-proofs/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../02-induction/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -536,25 +481,11 @@ The leaves are <span class="arithmatex">\(n_8, n_5, n_4,\)</span> and <span clas
               <span class="md-footer__direction">
                 Previous
               </span>
-              Introduction to Proofs
-            </div>
-          </div>
-        </a>
-      
-      
-        <a href="../02-induction/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
               Induction
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
