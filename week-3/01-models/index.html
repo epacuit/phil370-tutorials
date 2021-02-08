@@ -410,6 +410,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#logical-equivalence" class="md-nav__link">
+    Logical Equivalence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#aditional-reading" class="md-nav__link">
     Aditional Reading
   </a>
@@ -427,6 +434,18 @@
   
 </nav>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-substitution/" class="md-nav__link">
+        Substitutions
+      </a>
     </li>
   
 
@@ -476,6 +495,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#logical-equivalence" class="md-nav__link">
+    Logical Equivalence
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#aditional-reading" class="md-nav__link">
     Aditional Reading
   </a>
@@ -506,6 +532,7 @@
 <p>This tutorial assumes familiarity with the definition of truth tables.  We use the symbols <span class="arithmatex">\(\mathsf{T}\)</span> and <span class="arithmatex">\(\mathsf{F}\)</span> for the two truth values truth and falsity, respectively.  Other texts might use different symbols for the truth values: e.g., <span class="arithmatex">\(1\)</span> or <span class="arithmatex">\(\top\)</span> for truth and <span class="arithmatex">\(0\)</span> or <span class="arithmatex">\(\bot\)</span> for false.   </p>
 <h2 id="truth-tables">Truth Tables</h2>
 <p>Recall the definition of truth tables for each of the logical connectives $\neg, <span class="arithmatex">\(\wedge\)</span>, <span class="arithmatex">\(\vee\)</span>, <span class="arithmatex">\(\rightarrow\)</span>, <span class="arithmatex">\(\leftrightarrow\)</span> and  the special atomic proposition <span class="arithmatex">\(\bot\)</span>:</p>
+<p><center></p>
 <table>
 <thead>
 <tr>
@@ -522,8 +549,8 @@
 </tr>
 <tr>
 <td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
-<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
 <td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
 </tr>
 </tbody>
 </table>
@@ -573,18 +600,20 @@
 </tr>
 </tbody>
 </table>
+<p></center></p>
 <div class="admonition example">
 <p class="admonition-title">Finding a truth table for a formula</p>
 <p>The truth table for <span class="arithmatex">\(((\neg p_0) \rightarrow (\bot \vee (p_1\wedge p_2)))\)</span> is: </p>
 <p><img alt="truth-table-ex1.jpg" src="../truth-table-ex1.jpg" /></p>
 </div>
+<p>See <a href="https://text.phil171.org/logic/5">https://text.phil171.org/logic/5</a> for an overview of how to find truth tables. </p>
 <h2 id="models">Models</h2>
 <div class="admonition definition">
 <p class="admonition-title">Model</p>
 <p>Suppose that <span class="arithmatex">\(\sigma\)</span> is a signature.   A <strong><span class="arithmatex">\(\sigma\)</span>-model</strong>, also called a <strong><span class="arithmatex">\(\sigma\)</span>-structure</strong>, is a function <span class="arithmatex">\(A\)</span> with domain <span class="arithmatex">\(\sigma\)</span> that assigns a truth value to each atomic proposition in <span class="arithmatex">\(\sigma\)</span>.   We call <span class="arithmatex">\(A\)</span> a model, or structure, when <span class="arithmatex">\(\sigma\)</span> is clear from context. </p>
 </div>
-<p>If <span class="arithmatex">\(\sigma\)</span> is finite, then each row of a truth table with a column for each atomic proposition in <span class="arithmatex">\(\sigma\)</span> is a <span class="arithmatex">\(\sigma\)</span>-model.  Furthermore, every <span class="arithmatex">\(\sigma\)</span>-model.  </p>
-<p>If <span class="arithmatex">\(A\)</span> is a <span class="arithmatex">\(\sigma\)</span>-structure, then <span class="arithmatex">\(A\)</span> assigns a truth value to each atomci proposition in <span class="arithmatex">\(\sigma\)</span>.  We lift this to all formula of <span class="arithmatex">\(LP(\sigma)\)</span> using the following (flattened) compositional definition: </p>
+<p>If <span class="arithmatex">\(\sigma\)</span> is finite, then each row of a truth table with a column for each atomic proposition in <span class="arithmatex">\(\sigma\)</span> is a <span class="arithmatex">\(\sigma\)</span>-structure.  Furthermore, every <span class="arithmatex">\(\sigma\)</span>-structure corresponds to a row of a truth table for <span class="arithmatex">\(\sigma\)</span>.  </p>
+<p>If <span class="arithmatex">\(A\)</span> is a <span class="arithmatex">\(\sigma\)</span>-structure, then <span class="arithmatex">\(A\)</span> assigns a truth value to each atomic proposition in <span class="arithmatex">\(\sigma\)</span>.   We define truth for all formula of <span class="arithmatex">\(LP(\sigma)\)</span> using the following (flattened) compositional definition: </p>
 <div class="admonition definition">
 <p class="admonition-title">Truth</p>
 <p>Suppose that <span class="arithmatex">\(\sigma\)</span> is a signature and that <span class="arithmatex">\(A\)</span> is a  <strong><span class="arithmatex">\(\sigma\)</span>-model</strong>.  We define a function <span class="arithmatex">\(A^*:LP(\sigma)\rightarrow \{\mathsf{T}, \mathsf{F}\}\)</span> as follows: </p>
@@ -620,13 +649,129 @@
 <ul>
 <li><span class="arithmatex">\(\models_A\varphi\)</span> means <span class="arithmatex">\(A^*(\varphi)=\mathsf{T}\)</span></li>
 <li><span class="arithmatex">\(\not\models_A\varphi\)</span> means <span class="arithmatex">\(A^*(\varphi)=\mathsf{F}\)</span></li>
-<li><span class="arithmatex">\(\models\varphi\)</span> means for every <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(A^*(\varphi)=\mathsf{T}\)</span></li>
+<li><span class="arithmatex">\(\models\varphi\)</span> means for all <span class="arithmatex">\(\sigma\)</span>-structures <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(A^*(\varphi)=\mathsf{T}\)</span></li>
 <li><span class="arithmatex">\(\not\models\varphi\)</span> means there is some <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(A\)</span>, such that <span class="arithmatex">\(A^*(\varphi)=\mathsf{F}\)</span></li>
 </ul>
 </div>
+<h2 id="logical-equivalence">Logical Equivalence</h2>
+<div class="admonition definition">
+<p class="admonition-title">Logical Equivalence</p>
+<p>Suppose that <span class="arithmatex">\(\sigma\)</span> is a signature and <span class="arithmatex">\(\varphi\)</span> and <span class="arithmatex">\(\psi\)</span> are formulas of <span class="arithmatex">\(LP(\sigma)\)</span>.  We say that <span class="arithmatex">\(\varphi\)</span> is logically equivalent to <span class="arithmatex">\(\psi\)</span>, denoted <span class="arithmatex">\(\varphi\mathrel{\mathsf{eq}}\psi\)</span>, when for every <span class="arithmatex">\(\sigma\)</span> structure <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(A^*(\varphi)= A^*(\psi)\)</span>.</p>
+</div>
+<p>There are alternative characterizations of <span class="arithmatex">\(\varphi\mathrel{\mathsf{eq}}\psi\)</span>.   The following are equivalent: </p>
+<ol>
+<li><span class="arithmatex">\(\varphi\mathrel{\mathsf{eq}}\psi\)</span></li>
+<li>For all <span class="arithmatex">\(\sigma\)</span>-structures <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\(A\)</span> is a model of <span class="arithmatex">\(\varphi\)</span> if and only if <span class="arithmatex">\(A\)</span> is a model of <span class="arithmatex">\(\psi\)</span></li>
+<li><span class="arithmatex">\(\models\varphi\leftrightarrow\psi\)</span></li>
+</ol>
+<div class="admonition example">
+<p class="admonition-title">Example of a logical equivalence</p>
+<p>We have that  <span class="arithmatex">\((p_0\rightarrow p_1) \mathrel{\mathsf{eq}}\neg p_0\vee p_1\)</span>.  You can see this by the following truth table: </p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(p_0\)</span></th>
+<th align="center"><span class="arithmatex">\(p_1\)</span></th>
+<th align="center"><span class="arithmatex">\(p_0\rightarrow p_1\)</span></th>
+<th align="center"><span class="arithmatex">\(\neg p_0\vee p_1\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+</tr>
+</tbody>
+</table>
+</div>
+<p>The following are some important logical equivalences: </p>
+<p><center></p>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Equivalence</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>Double Negation</td>
+<td><span class="arithmatex">\((\neg(\neg p_1))\mathrel{\mathsf{eq}} p_1\)</span></td>
+</tr>
+<tr>
+<td>DeMorgan's Law</td>
+<td><span class="arithmatex">\((\neg( p_1\vee p_2))\mathrel{\mathsf{eq}} ((\neg  p_1)\wedge (\neg p_2))\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\((\neg( p_1\wedge p_2))\mathrel{\mathsf{eq}} ((\neg  p_1)\vee (\neg p_2))\)</span></td>
+</tr>
+<tr>
+<td>Distribution</td>
+<td><span class="arithmatex">\(( p_1\wedge(p_2\vee p_3))\mathrel{\mathsf{eq}} (( p_1 \wedge p_2)\vee ( p_1\wedge p_3))\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(( p_1\vee(p_2\wedge p_3))\mathrel{\mathsf{eq}} (( p_1\vee p_2)\wedge ( p_1\vee p_3))\)</span></td>
+</tr>
+<tr>
+<td>Associativity</td>
+<td><span class="arithmatex">\(( p_1\vee(p_2\vee p_3))\mathrel{\mathsf{eq}} ((p_1\vee p_2)\vee p_3)\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(( p_1\wedge(p_2\wedge p_3))\mathrel{\mathsf{eq}} ((p_1\wedge p_2)\wedge p_3)\)</span></td>
+</tr>
+<tr>
+<td>Absorption</td>
+<td><span class="arithmatex">\(( p_1\vee( p_1 \wedge p_2))\mathrel{\mathsf{eq}} p_1\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(( p_1\wedge( p_1\vee p_2))\mathrel{\mathsf{eq}} p_1\)</span></td>
+</tr>
+<tr>
+<td>Idempotence</td>
+<td><span class="arithmatex">\((p_1\vee p_1)\mathrel{\mathsf{eq}} p_1\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\((p_1\wedge p_1)\mathrel{\mathsf{eq}} p_1\)</span></td>
+</tr>
+<tr>
+<td>Commutativity</td>
+<td><span class="arithmatex">\(( p_1\wedge p_2)\mathrel{\mathsf{eq}}(p_2\wedge p_1)\)</span></td>
+</tr>
+<tr>
+<td></td>
+<td><span class="arithmatex">\(( p_1\vee p_2)\mathrel{\mathsf{eq}}(p_2\vee p_1)\)</span></td>
+</tr>
+</tbody>
+</table>
+<p></center></p>
 <h2 id="aditional-reading">Aditional Reading</h2>
 <ul>
-<li>Section 3.4 of <a href="https://umd.instructure.com/courses/1301043/files/60595391?module_item_id=10449701">Mathematical Logic by Chiswell and Hodges</a>.</li>
+<li>Sections 3.5 and 3.6 of <a href="https://umd.instructure.com/courses/1301043/files/60595391?module_item_id=10449701">Mathematical Logic by Chiswell and Hodges</a>.</li>
 </ul>
 <h2 id="exercises">Exercises</h2>
 <ol>
@@ -654,6 +799,9 @@
 <p>True or false: If <span class="arithmatex">\(\varphi\)</span> is not satisfiable, then <span class="arithmatex">\(\models \neg \varphi\)</span>.</p>
 <details class="answer"><summary>Show Answer</summary><p>This is true.  If <span class="arithmatex">\(\varphi\)</span> is not satisfiable, then there is no model <span class="arithmatex">\(A\)</span> that makes <span class="arithmatex">\(\varphi\)</span> true.   This means that every model <span class="arithmatex">\(A\)</span> makes <span class="arithmatex">\(\varphi\)</span> false.   So, <span class="arithmatex">\(\models\neg\varphi\)</span>.   </p>
 </details>
+</li>
+<li>
+<p>Verify that each of the formulas in the above table of  equivalences are logically equivalent.  </p>
 </li>
 </ol>
                 
@@ -687,6 +835,20 @@
           </div>
         </a>
       
+      
+        <a href="../02-substitution/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Substitutions
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   

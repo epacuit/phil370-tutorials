@@ -46,6 +46,36 @@
     -webkit-mask-image: none;
             mask-image: none;
   }
+
+
+  .md-typeset .admonition.theorem,
+  .md-typeset details.theorem {
+    font-size:inherit;
+    border-color: white; /* rgb(43, 155, 70);*/
+    box-shadow: none;
+  }
+ .admonition.theorem p {
+    margin-top:0 !important;
+    padding-top:0 !important;
+    /*border-color: rgb(43, 155, 70);*/
+  }
+
+  .md-typeset .theorem > .admonition-title,
+  .md-typeset .theorem > summary {
+    background-color: white; /* rgba(43, 155, 70, 0.1);*/
+    padding-left:0;
+    font-weight:bolder
+  }
+  .md-typeset .theorem > .admonition-title::before,
+  .md-typeset .theorem > summary::before {
+    
+    background-color:transparent;  /*rgb(43, 155, 70);*/
+    -webkit-mask-image: none;
+            mask-image: none;
+  }
+
+
+
   
 
   .md-typeset .admonition.answer,
