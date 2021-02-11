@@ -511,7 +511,7 @@
 \]</div>
 <p>The application of a substitution is defined by the following compositional definition: </p>
 <div class="admonition definition">
-<p class="admonition-title">Applying a Subsitution</p>
+<p class="admonition-title">Applying a Substitution</p>
 <p>Suppose that <span class="arithmatex">\(\varphi\)</span> is a formula of <span class="arithmatex">\(LP(\sigma)\)</span>, <span class="arithmatex">\(q_1,\ldots,q_k\)</span> are atomic propositions and <span class="arithmatex">\(\psi_1,\ldots\psi_k\)</span> are formulas of <span class="arithmatex">\(LP(\sigma)\)</span>.  </p>
 <ol>
 <li>
@@ -570,8 +570,8 @@
 </div>
 <p>The following two fundamental theorems show how to use subtitutions to derive logical equivalences. </p>
 <div class="admonition theorem">
-<p class="admonition-title">Substituion Theorem</p>
-<p>Let <span class="arithmatex">\(S\)</span> be a substitution and <span class="arithmatex">\(\varphi_1\)</span> and <span class="arithmatex">\(\varphi_2\)</span> formulas of <span class="arithmatex">\(LP(\sigma)\)</span>.   If <span class="arithmatex">\(\varphi_i\mathop{\mathsf{eq}}\varphi_2\)</span>, then <span class="arithmatex">\(\varphi_1[S]\mathop{\mathsf{eq}}\varphi_2[S]\)</span>.</p>
+<p class="admonition-title">Substitution Theorem</p>
+<p>Let <span class="arithmatex">\(S\)</span> be a substitution and <span class="arithmatex">\(\varphi_1\)</span> and <span class="arithmatex">\(\varphi_2\)</span> formulas of <span class="arithmatex">\(LP(\sigma)\)</span>.   If <span class="arithmatex">\(\varphi_1\mathop{\mathsf{eq}}\varphi_2\)</span>, then <span class="arithmatex">\(\varphi_1[S]\mathop{\mathsf{eq}}\varphi_2[S]\)</span>.</p>
 </div>
 <p>The substituion theorem can be used to verify the above three logical equivalences.  For instance, to prove that  <span class="arithmatex">\((\neg( p_2\vee p_3))\mathrel{\mathsf{eq}} ((\neg  p_2)\wedge (\neg p_3))\)</span>, first note that we have shown that <span class="arithmatex">\((\neg( p_1\vee p_2))\mathrel{\mathsf{eq}} ((\neg  p_1)\wedge (\neg p_2))\)</span>.  Then, by the substitution theorem: </p>
 <div class="arithmatex">\[
@@ -633,19 +633,146 @@
 <h2 id="exercises">Exercises</h2>
 <ol>
 <li>
-<p>Use the substitution theorem to show that <span class="arithmatex">\((\neg( p_3\vee (p_1\wedge p_2)))\mathrel{\mathsf{eq}} ((\neg  p_3)\wedge (\neg (p_1\wedge p_2)))\)</span>.</p>
+<p>Use the Substitution Theorem to show that <span class="arithmatex">\((\neg( p_3\vee (p_1\wedge p_2)))\mathrel{\mathsf{eq}} ((\neg  p_3)\wedge (\neg (p_1\wedge p_2)))\)</span>.</p>
+<details class="answer"><summary>Show Answer</summary><p>We have seen in the previous tutorial that: </p>
+<div class="arithmatex">\[
+(\neg(p_1\vee p_2)) \mathrel{\mathsf{eq}} ((\neg p_1)\wedge \neg(p_2))
+\]</div>
+<p>Then, by the substitution theorem, we have that: </p>
+<div class="arithmatex">\[
+(\neg(p_1\vee p_2))[p_3/p_1, (p_1\wedge p_2)/p_2] \mathrel{\mathsf{eq}} ((\neg p_1)\wedge \neg(p_2))[p_3/p_1, (p_1\wedge p_2)/p_2]
+\]</div>
+<p>Applying the substitutions, we have: </p>
+<div class="arithmatex">\[
+(\neg( p_3\vee (p_1\wedge p_2)))\mathrel{\mathsf{eq}} ((\neg  p_3)\wedge (\neg (p_1\wedge p_2))).
+\]</div>
+</details>
 </li>
 <li>
-<p>Use the substitution theorem to show that </p>
+<p>Use the Substitution Theorem  to show that </p>
 <div class="arithmatex">\[
 (\neg((p_3\vee p_4)\vee (p_1\wedge p_2)))\mathrel{\mathsf{eq}} ((\neg  (p_3\vee p_4))\wedge (\neg (p_1\wedge p_2))).
 \]</div>
+<details class="answer"><summary>Show Answer</summary><p>We have seen in the previous tutorial that: </p>
+<div class="arithmatex">\[
+(\neg(p_1\vee p_2)) \mathrel{\mathsf{eq}} ((\neg p_1)\wedge \neg(p_2))
+\]</div>
+<p>Then, by the substitution theorem, we have that: </p>
+<div class="arithmatex">\[
+(\neg(p_1\vee p_2))[(p_3\vee p_4)/p_1, (p_1\wedge p_2)/p_2] \mathrel{\mathsf{eq}} ((\neg p_1)\wedge \neg(p_2))[(p_3\vee p_4)/p_1, (p_1\wedge p_2)/p_2]
+\]</div>
+<p>Applying the substitutions, we have: </p>
+<div class="arithmatex">\[
+(\neg((p_3\vee p_4)\vee (p_1\wedge p_2)))\mathrel{\mathsf{eq}} ((\neg  (p_3\vee p_4))\wedge (\neg (p_1\wedge p_2))).
+\]</div>
+</details>
+</li>
+<li>
+<p>Use the Substitution Theorem  to show that:</p>
+<div class="arithmatex">\[
+p_2\ \mathop{\mathsf{eq}}\ (p_2\wedge p_3)\vee (p_2\wedge (\neg p_3)).
+\]</div>
+<details class="answer"><summary>Show Answer</summary><p>We first note that <span class="arithmatex">\(p_2\mathop{\mathsf{eq}}(p_2\wedge (p_3\vee (\neg p_3))\)</span></p>
+<table>
+<thead>
+<tr>
+<th align="center"><span class="arithmatex">\(p_2\)</span></th>
+<th align="center"><span class="arithmatex">\(p_3\)</span></th>
+<th align="center"><span class="arithmatex">\((p_3\vee (\neg p_3))\)</span></th>
+<th align="center"><span class="arithmatex">\((p_2\wedge (p_3\vee (\neg p_3))\)</span></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+</tr>
+<tr>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{T}\)</span></td>
+<td align="center"><span class="arithmatex">\(\mathsf{F}\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>Now, from the previous tutorial we have that: </p>
+<div class="arithmatex">\[
+( p_1\wedge(p_2\vee p_3))\mathrel{\mathsf{eq}} (( p_1 \wedge p_2)\vee ( p_1\wedge p_3))
+\]</div>
+<p>By the substitution theorem we have that, where <span class="arithmatex">\(S\)</span> is the substituion  <span class="arithmatex">\(p_2/p_1, p_3/p_2, (\neg p_3)/p_3\)</span></p>
+<div class="arithmatex">\[
+( p_1\wedge(p_2\vee p_3))[S]\mathrel{\mathsf{eq}} (( p_1 \wedge p_2)\vee ( p_1\wedge p_3))[S]
+\]</div>
+<p>Applying the substitution gives: </p>
+<div class="arithmatex">\[
+(p_2\wedge (p_3\vee (\neg p_3)))\ \mathop{\mathsf{eq}}\ ((p_2\wedge p_3)\vee (p_2\wedge (\neg p_3))).
+\]</div>
+<p>By transitivity of <span class="arithmatex">\(\mathsf{eq}\)</span>, we have that: </p>
+<div class="arithmatex">\[
+p_2\ \mathop{\mathsf{eq}}\ (p_2\wedge p_3)\vee (p_2\wedge (\neg p_3)).
+\]</div>
+</details>
 </li>
 <li>
 <p>Use the substitution and replacement theorem to show that:</p>
 <div class="arithmatex">\[
-p_2\ \mathop{\mathsf{eq}}\ (p_2\wedge p_3)\vee (p_2\wedge (\neg p_3)).
+(\neg (p_1\rightarrow p_2)) \mathop{\mathsf{eq}} (p_1\wedge \neg p_2).
 \]</div>
+<details class="answer"><summary>Show Answer</summary><p>We first recall that: </p>
+<div class="arithmatex">\[
+p_1\rightarrow p_2 \mathop{\mathsf{eq}} \neg p_1\vee p_2
+\]</div>
+<p>By the Repalcement Theorem, </p>
+<div class="arithmatex">\[
+\neg (p_0)[(p_1\rightarrow p_2)/p_0] \mathop{\mathsf{eq}} \neg (p_0)[((\neg p_1)\vee p_2)/p_0]
+\]</div>
+<p>Applying the substitution, we have that: </p>
+<div class="arithmatex">\[
+\neg (p_1\rightarrow p_2)\mathop{\mathsf{eq}} \neg(\neg p_1\vee p_2)
+\]</div>
+<p>We note that: </p>
+<div class="arithmatex">\[
+\neg (p_1\vee p_2) \mathop{\mathsf{eq}} ((\neg p_1)\wedge (\neg p_2))
+\]</div>
+<p>By the Substitution Theorem, we have that: </p>
+<div class="arithmatex">\[
+\neg (p_1\vee p_2)[\neg p_1/p_1] \mathop{\mathsf{eq}} ((\neg p_1)\wedge (\neg p_2))[\neg p_1/p_1]
+\]</div>
+<p>Applying the substitution we have that: </p>
+<div class="arithmatex">\[
+\neg ((\neg p_1)\vee p_2)  \mathop{\mathsf{eq}} ((\neg(\neg p_1))\wedge (\neg p_2))
+\]</div>
+<p>We have that: </p>
+<div class="arithmatex">\[
+(\neg (\neg p_1))\mathop{\mathsf{eq}} p_1
+\]</div>
+<p>By the Replacement Theorem, </p>
+<div class="arithmatex">\[
+(p_1\wedge (\neg p_2))[(\neg(\neg p_1))/p_1]\mathop{\mathsf{eq}} (p_1\wedge (\neg p_2))[p_1/p_1]
+\]</div>
+<p>Applying the substitutions, we have that: </p>
+<div class="arithmatex">\[
+((\neg(\neg p_1))\wedge (\neg p_2)) \mathop{\mathsf{eq}} (p_1\wedge (\neg p_2)) 
+\]</div>
+<p>Applying transitivity twice, we have the following: </p>
+<div class="arithmatex">\[
+(\neg (p_1\rightarrow p_2)) \mathop{\mathsf{eq}} (p_1\wedge \neg p_2).
+\]</div>
+</details>
 </li>
 </ol>
                 
