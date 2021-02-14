@@ -17,7 +17,7 @@
     
     
       
-        <title>01 derivations - PHIL 370 Notes</title>
+        <title>Derivations - PHIL 370 Notes</title>
       
     
     
@@ -66,6 +66,11 @@
     <label class="md-overlay" for="__drawer"></label>
     <div data-md-component="skip">
       
+        
+        <a href="#derivations" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
     <div data-md-component="announce">
       
@@ -96,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              01 derivations
+              Derivations
             
           </span>
         </div>
@@ -420,11 +425,25 @@
       
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
+        
+      
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        01 derivations
+        Derivations
       </a>
       
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-soundness-completeness/" class="md-nav__link">
+        Soundness and Completeness
+      </a>
     </li>
   
 
@@ -442,15 +461,91 @@
               </div>
             
             
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
           
           <div class="md-content">
             <article class="md-content__inner md-typeset">
               
                 
                 
-                  <h1>01 derivations</h1>
-                
-                <p>natural-deduction-rules-prop-logic.pdf</p>
+                <h1 id="derivations">Derivations</h1>
+<p>The  <strong>natural deduction rules</strong> for propositional logic: </p>
+<iframe src="http://docs.google.com/gview?url=https://epacuit.github.io/phil370-tutorials/week-4/natural-deduction-rules-prop-logic.pdf&embedded=true" style="width:700px; height:900px;" frameborder="0"></iframe>
+
+<p>Here is an example of a derivation: </p>
+<p><img alt="dedex0.jpg" src="../dedex0.jpg" /></p>
+<p>Formally, a derivation is a left-and-right labelled tree: </p>
+<div class="admonition definition">
+<p class="admonition-title">Derivation</p>
+<p>Let <span class="arithmatex">\(\sigma\)</span> be a signature. Then a <span class="arithmatex">\(\sigma\)</span>-derivation or, for short, a
+derivation is a left-and-right-labelled tree (drawn branching upwards) such that the following hold:</p>
+<ol>
+<li>Every node has arity 0, 1, 2 or 3.</li>
+<li>Every left label is either a formula of <span class="arithmatex">\(LP(\sigma)\)</span>, or a formula of <span class="arithmatex">\(LP(\sigma)\)</span> with a dandah.</li>
+<li>Every node of arity 0 carries the right-hand label (A).</li>
+<li>
+<p>If <span class="arithmatex">\(\nu\)</span> is a node of arity 1, then one of the following holds:</p>
+<p>a. <span class="arithmatex">\(\nu\)</span> has right-hand label (<span class="arithmatex">\(\rightarrow\)</span>I), and for some formulas <span class="arithmatex">\(\varphi\)</span> and <span class="arithmatex">\(\psi\)</span>, <span class="arithmatex">\(\nu\)</span> has the left label <span class="arithmatex">\((\varphi\rightarrow\psi)\)</span> and its daughter has the left label <span class="arithmatex">\(\psi\)</span>;</p>
+<p>b. <span class="arithmatex">\(\nu\)</span> has right-hand label (<span class="arithmatex">\(\neg\)</span>I) or (RAA), the daughter of <span class="arithmatex">\(\nu\)</span> has left label <span class="arithmatex">\(\bot\)</span>, and if the right-hand label on <span class="arithmatex">\(\nu\)</span> is (<span class="arithmatex">\(\neg\)</span>I) then the left label on <span class="arithmatex">\(\nu\)</span> is of the form <span class="arithmatex">\((\neg\varphi)\)</span>.</p>
+<p>c.,d.,e. Similar clauses for (<span class="arithmatex">\(\wedge\)</span>E), (<span class="arithmatex">\(\vee\)</span>I) and (<span class="arithmatex">\(\leftrightarrow\)</span>E) (left as an exercise).</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\nu\)</span> is a node of arity 2, then one of the following holds:</p>
+<p>a. <span class="arithmatex">\(\nu\)</span> has right-hand label (<span class="arithmatex">\(\rightarrow\)</span>E), and there are formulas <span class="arithmatex">\(\varphi\)</span> and <span class="arithmatex">\(\psi\)</span> such that <span class="arithmatex">\(\nu\)</span> has the left label <span class="arithmatex">\(\psi\)</span>, and the left labels on the daughters of <span class="arithmatex">\(\nu\)</span> are (from left to right) <span class="arithmatex">\(\varphi\)</span> and <span class="arithmatex">\((\varphi\rightarrow\psi)\)</span>.</p>
+<p>b., c, d. Similar clauses for (<span class="arithmatex">\(\wedge\)</span>I), (<span class="arithmatex">\(\rightarrow\)</span>E) and (<span class="arithmatex">\(\leftrightarrow\)</span>I) (left as an exercise).</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\nu\)</span> is a node of arity 3, then the right-hand label on <span class="arithmatex">\(\nu\)</span> is (<span class="arithmatex">\(\vee\)</span>E), and there are formulas <span class="arithmatex">\(\varphi\)</span>, <span class="arithmatex">\(\psi\)</span> such that the leftmost daughter of <span class="arithmatex">\(\nu\)</span> is a leaf with left label <span class="arithmatex">\((\varphi \vee \psi)\)</span>, and the other two daughters of <span class="arithmatex">\(\nu\)</span> carry the same left label as <span class="arithmatex">\(\nu\)</span></p>
+</li>
+<li>
+<p>If a node <span class="arithmatex">\(\mu\)</span> has left label <span class="arithmatex">\(\chi\)</span> with a dandah, then <span class="arithmatex">\(\mu\)</span> is a leaf, and the branch to <span class="arithmatex">\(\mu\)</span>  contains a node <span class="arithmatex">\(\nu\)</span> where one of the following happens:</p>
+<p>a. Case 4.a occurs with formulas <span class="arithmatex">\(\varphi\)</span> and <span class="arithmatex">\(\psi\)</span>, and <span class="arithmatex">\(\varphi\)</span> is <span class="arithmatex">\(\chi\)</span>,</p>
+<p>b. Case 4.b occurs; if the right-hand label on <span class="arithmatex">\(\nu\)</span> is (<span class="arithmatex">\(\neg\)</span>I) then the left label on <span class="arithmatex">\(\nu\)</span> is <span class="arithmatex">\((\neg\chi)\)</span>, while if it is (RAA) then <span class="arithmatex">\(\chi\)</span> is <span class="arithmatex">\((\neg\varphi)\)</span> where <span class="arithmatex">\(\varphi\)</span> is the left label on <span class="arithmatex">\(\nu\)</span>.</p>
+<p>c.  <span class="arithmatex">\(\nu\)</span> has label (<span class="arithmatex">\(\vee\)</span>E) with formulas <span class="arithmatex">\(\varphi\)</span> and <span class="arithmatex">\(\psi\)</span> as in Case 6., and either <span class="arithmatex">\(\chi\)</span> is <span class="arithmatex">\(\varphi\)</span> and the path from the root to <span class="arithmatex">\(\nu\)</span> goes through the middle daughter of <span class="arithmatex">\(\nu\)</span>, or <span class="arithmatex">\(\chi\)</span> is <span class="arithmatex">\(\psi\)</span> and the path goes through the right-hand daughter.</p>
+</li>
+</ol>
+<p>The <strong>conclusion</strong> of the derivation is the left label on its root, and its <strong>undischarged assumptions</strong> are all the formulas that appear without dandahs as left labels on leaves. The derivation is a derivation of its conclusion.</p>
+</div>
+<p>Using the above definition, the derivation above is represented as the following tree: </p>
+<p><img alt="dedex1.jpg" src="../dedex1.jpg" /></p>
+<div class="admonition definition">
+<p class="admonition-title">Sequent</p>
+<p>Let <span class="arithmatex">\(\sigma\)</span> be a signature.  A <span class="arithmatex">\(\sigma\)</span>-sequent, or sequent for short, is an expression</p>
+<div class="arithmatex">\[
+\Gamma\vdash_\sigma \varphi
+\]</div>
+<p>where <span class="arithmatex">\(\varphi\)</span> is a formula (called the <em>conclusion</em>) of <span class="arithmatex">\(LP(\sigma)\)</span> and <span class="arithmatex">\(\Gamma\)</span> (called the assumptions) is a set of formulas of <span class="arithmatex">\(LP(\sigma)\)</span>.  We write <span class="arithmatex">\(\Gamma\vdash \varphi\)</span> when <span class="arithmatex">\(\sigma\)</span> is unimportant or clear from context.   </p>
+<p>We say <span class="arithmatex">\(\Gamma\vdash_\sigma\varphi\)</span> is correct when there is a <span class="arithmatex">\(\sigma\)</span>-derivation with conclusion <span class="arithmatex">\(\varphi\)</span> and whose undischarged assumptions are all in <span class="arithmatex">\(\Gamma\)</span>. </p>
+<p>We write <span class="arithmatex">\(\vdash \varphi\)</span> when there is a <span class="arithmatex">\(\sigma\)</span>-derivation with conclusion <span class="arithmatex">\(\varphi\)</span> and there are no undischarged assumptions. </p>
+</div>
+<p>We note the following properties of <span class="arithmatex">\(\vdash\)</span>: </p>
+<ol>
+<li><span class="arithmatex">\(\Gamma\cup\{\varphi\}\vdash\bot\)</span> is correct if and only if <span class="arithmatex">\(\Gamma\vdash (\neg\varphi)\)</span> is correct. </li>
+<li>Axiom Rule: If <span class="arithmatex">\(\psi\in\Gamma\)</span>, then <span class="arithmatex">\(\Gamma\vdash\psi\)</span>
+Monotonicity: If <span class="arithmatex">\(\Gamma\subseteq \Delta\)</span> and <span class="arithmatex">\(\Gamma\vdash \psi\)</span> is correct, then <span class="arithmatex">\(\Delta\vdash\psi\)</span> is correct. </li>
+<li>Transitivity: If <span class="arithmatex">\(\Delta\vdash\psi\)</span> is correct and  for every <span class="arithmatex">\(\chi\in\Delta\)</span>, <span class="arithmatex">\(\Gamma\vdash\chi\)</span> is correct, then <span class="arithmatex">\(\Gamma\vdash\psi\)</span> is correct.</li>
+<li>The Cut Rule: If <span class="arithmatex">\(\Gamma\vdash\varphi\)</span> is correct and <span class="arithmatex">\(\Gamma\cup\{\varphi\}\vdash\psi\)</span> is correct, then <span class="arithmatex">\(\Gamma\vdash\psi\)</span> is correct. </li>
+<li>Deduction Theorem: If <span class="arithmatex">\(\Gamma\cup\{\varphi\}\vdash\psi\)</span>, then <span class="arithmatex">\(\Gamma\vdash (\varphi\rightarrow\psi)\)</span>.  </li>
+</ol>
+<p><br/>
+<br/>
+<br/>
+<br/></p>
                 
               
               
@@ -482,6 +577,20 @@
           </div>
         </a>
       
+      
+        <a href="../02-soundness-completeness/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Soundness and Completeness
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
       
     </nav>
   
