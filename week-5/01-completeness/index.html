@@ -688,6 +688,12 @@
 <li>If <span class="arithmatex">\(\Gamma\)</span> is a Hintikka set, then <span class="arithmatex">\(\Gamma\)</span> is satisfiable. </li>
 <li>If <span class="arithmatex">\(\Gamma\)</span> is consistent, then there is a Hintikka set <span class="arithmatex">\(\Delta\)</span> such that <span class="arithmatex">\(\Gamma\subseteq \Delta\)</span>. </li>
 </ol>
+<p>An important consequence of the soundness and completeness theorems is the Compactness Theorem.   </p>
+<div class="admonition theorem">
+<p class="admonition-title">Compactness</p>
+<p>Suppose that <span class="arithmatex">\(\Gamma\)</span> is a (possibly infinite) set of formulas of <span class="arithmatex">\(LP(\sigma)\)</span>.  If every finite subset of <span class="arithmatex">\(\Gamma\)</span> is satisfiable, then <span class="arithmatex">\(\Gamma\)</span> is satisfiable.  </p>
+</div>
+<p><strong>Proof</strong>.  Suppose that <span class="arithmatex">\(\Gamma\)</span> is not satisfiable.   Then, by the completeness theorem, <span class="arithmatex">\(\Gamma\)</span> is inconsistent.   Hence, there is a derivation of <span class="arithmatex">\(\bot\)</span> with undischarged assumption from <span class="arithmatex">\(\Gamma\)</span>.  Since derivations are finite, there is a finite <span class="arithmatex">\(\Gamma_0\)</span> such that <span class="arithmatex">\(\Gamma_0\subseteq \Gamma\)</span> and <span class="arithmatex">\(\Gamma_0\)</span> is inconsistent.   By the soundness theorem, <span class="arithmatex">\(\Gamma_0\)</span> is not satisfiable.    Hence, it is not true that every finite subset of <span class="arithmatex">\(\Gamma\)</span> is satisfiable.   </p>
 <h2 id="exercises">Exercises</h2>
 <p>The tutorial questions are available at <a href="https://umd.instructure.com/courses/1301043/assignments/5538726">https://umd.instructure.com/courses/1301043/assignments/5538726</a></p>
 <p><br/>
