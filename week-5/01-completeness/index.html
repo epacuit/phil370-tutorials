@@ -394,14 +394,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
       
       <label class="md-nav__link" for="nav-5">
         Week 4
@@ -420,12 +418,45 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-derivations/" class="md-nav__link">
+      <a href="../../week-4/01-derivations/" class="md-nav__link">
         Derivations
       </a>
     </li>
   
 
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" checked>
+      
+      <label class="md-nav__link" for="nav-6">
+        Week 5
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Week 5" data-md-level="1">
+        <label class="md-nav__title" for="nav-6">
+          <span class="md-nav__icon md-icon"></span>
+          Week 5
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
           
             
   
@@ -440,9 +471,52 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Soundness and Completeness
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         Soundness and Completeness
       </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#soundness-theorem" class="md-nav__link">
+    Soundness Theorem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completeness-theorem" class="md-nav__link">
+    Completeness Theorem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -472,6 +546,35 @@
     
   
   
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#soundness-theorem" class="md-nav__link">
+    Soundness Theorem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#completeness-theorem" class="md-nav__link">
+    Completeness Theorem
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#exercises" class="md-nav__link">
+    Exercises
+  </a>
+  
+</li>
+      
+    </ul>
+  
 </nav>
                   </div>
                 </div>
@@ -492,14 +595,101 @@
 <li>We write <span class="arithmatex">\(\Gamma\models\psi\)</span> to mean that for every <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(A\)</span>, if <span class="arithmatex">\(A\)</span> is a model of <span class="arithmatex">\(\Gamma\)</span>, then <span class="arithmatex">\(A\)</span> is a model of <span class="arithmatex">\(\psi\)</span>. We write <span class="arithmatex">\(\Gamma\not\models\psi\)</span> when thre is some <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(A\)</span> is a model of <span class="arithmatex">\(\Gamma\)</span> but <span class="arithmatex">\(A\)</span> is not a model of <span class="arithmatex">\(\psi\)</span>. </li>
 </ol>
 </div>
+<p>Suppose that <span class="arithmatex">\(\sigma\)</span> is a signature and that <span class="arithmatex">\(\Gamma\)</span> is a set of formulas of <span class="arithmatex">\(LP(\sigma)\)</span> and <span class="arithmatex">\(\varphi\)</span> is a formula of <span class="arithmatex">\(LP(\sigma)\)</span>.  </p>
+<div class="admonition definition">
+<p class="admonition-title">Satisfiable</p>
+<p>A set of formulas <span class="arithmatex">\(\Gamma\)</span> is <strong>satisfiable</strong> if there is a model <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(A^*(\psi)=\mathsf{T}\)</span> for all <span class="arithmatex">\(\psi\in\Gamma.\)</span></p>
+<p>A set of formulas <span class="arithmatex">\(\Gamma\)</span> is <strong>unsatisfiable</strong> when there is no model <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(A^*(\psi)=\mathsf{T}\)</span> for all <span class="arithmatex">\(\psi\in\Gamma\)</span>.  </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The set <span class="arithmatex">\(\{p_0\vee p_1, \neg p_1, p_0\rightarrow p_1\}\)</span> is unsatisfiable: Any model that makes <span class="arithmatex">\(p_0\vee p_1\)</span> and <span class="arithmatex">\(\neg p_1\)</span> true, must also make <span class="arithmatex">\(p_0\)</span> true.   But, if <span class="arithmatex">\(p_0\)</span> is true and <span class="arithmatex">\(p_0\rightarrow p_1\)</span> is true, then <span class="arithmatex">\(p_1\)</span> must be true.  Thus, any model that makes all the formulas true, makes <span class="arithmatex">\(p_1\)</span> true and <span class="arithmatex">\(\neg p_1\)</span> true, which is impossible.  We can also verify that the set is unsatisfiable by considering all possible models of the set: </p>
+<ol>
+<li>When <span class="arithmatex">\(A(p_0) = \mathsf{T}\)</span>, <span class="arithmatex">\(A(p_1)=\mathsf{T}\)</span>, we have <span class="arithmatex">\(A^*(\neg p_1)=\mathsf{F}\)</span></li>
+<li>When <span class="arithmatex">\(A(p_0) = \mathsf{T}\)</span>, <span class="arithmatex">\(A(p_1)=\mathsf{F}\)</span>, we have <span class="arithmatex">\(A^*(p_0\rightarrow p_1)=\mathsf{F}\)</span></li>
+<li>When <span class="arithmatex">\(A(p_0) = \mathsf{F}\)</span>, <span class="arithmatex">\(A(p_1)=\mathsf{T}\)</span>, we have <span class="arithmatex">\(A^*(\neg p_1)=\mathsf{F}\)</span></li>
+<li>When <span class="arithmatex">\(A(p_0) = \mathsf{F}\)</span>, <span class="arithmatex">\(A(p_1)=\mathsf{F}\)</span>. we have <span class="arithmatex">\(A^*(p_0\vee p_1) = \mathsf{F}\)</span></li>
+</ol>
+<p>So, <span class="arithmatex">\(\Gamma\)</span> is <strong>unsatisfiable</strong> when for every model <span class="arithmatex">\(A\)</span>, there is some <span class="arithmatex">\(\psi\in\Gamma\)</span> such that <span class="arithmatex">\(A^*(\psi)=\mathsf{F}\)</span>. </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Inconsistency</p>
+<p>A set of formulas <span class="arithmatex">\(\Gamma\)</span> is <strong>inconsistent</strong> if <span class="arithmatex">\(\Gamma\vdash\bot\)</span>.   A set of formulas <span class="arithmatex">\(\Gamma\)</span> is <strong>consistent</strong> when <span class="arithmatex">\(\Gamma\)</span> is not inconsistent, i.e., <span class="arithmatex">\(\Gamma\not\vdash \bot\)</span>. </p>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p>The set <span class="arithmatex">\(\{p_0\vee p_1, \neg p_1, p_0\rightarrow p_1\}\)</span> is inconsistent: We have that <span class="arithmatex">\(\{p_0\vee p_1, \neg p_1, p_0\rightarrow p_1\}\vdash\bot\)</span>, as shown by the following derivation. </p>
+<p><img alt="derivation.jpg" src="../derivation.jpg" /></p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The book uses the phrase "syntactic inconsistency" rather than "inconsistency" (see Definition 3.10.2).  This is because they use "consistent" to mean "satisfiable" and "inconsistent" to mean "unsatisfiable" (see Definition 3.5.8 part (b) and (c)).  </p>
+</div>
+<h2 id="soundness-theorem">Soundness Theorem</h2>
 <div class="admonition theorem">
 <p class="admonition-title">Soundness Theorem</p>
 <p>Let <span class="arithmatex">\(\sigma\)</span> be a signature and suppose that <span class="arithmatex">\(\Gamma\)</span> is a set of <span class="arithmatex">\(LP(\sigma)\)</span> formulas and <span class="arithmatex">\(\varphi\)</span> is <span class="arithmatex">\(LP(\sigma)\)</span> formula.  If <span class="arithmatex">\(\Gamma\vdash\varphi\)</span> then <span class="arithmatex">\(\Gamma\models\varphi\)</span>. </p>
 </div>
+<p>The proof of soundness is by induction on the height of a derivation.   See Theorem 3.9.2 for the proof. </p>
+<h2 id="completeness-theorem">Completeness Theorem</h2>
 <div class="admonition theorem">
 <p class="admonition-title">Completeness Theorem</p>
 <p>Let <span class="arithmatex">\(\sigma\)</span> be a signature and suppose that <span class="arithmatex">\(\Gamma\)</span> is a set of <span class="arithmatex">\(LP(\sigma)\)</span> formulas and <span class="arithmatex">\(\varphi\)</span> is <span class="arithmatex">\(LP(\sigma)\)</span> formula.  If <span class="arithmatex">\(\Gamma\models\varphi\)</span> then <span class="arithmatex">\(\Gamma\vdash\varphi\)</span>. </p>
 </div>
+<p>We first note the following two observations: </p>
+<ol>
+<li>
+<p><span class="arithmatex">\(\Gamma\vdash\varphi\)</span> if and only if <span class="arithmatex">\(\Gamma\cup \{\neg\varphi\}\)</span> is inconsistent. </p>
+<p><strong>Proof</strong>. Suppose that <span class="arithmatex">\(\Gamma\vdash\varphi\)</span>.  So there is a derivation <span class="arithmatex">\(D\)</span> where the root is left labeled with <span class="arithmatex">\(\varphi\)</span> and undischarged assumptions are from <span class="arithmatex">\(\Gamma\)</span>.  We can show that <span class="arithmatex">\(\Gamma\cup \{\neg\varphi\}\vdash\bot\)</span> as follows: Add a new root to <span class="arithmatex">\(D\)</span> left labeled with <span class="arithmatex">\(\bot\)</span>.  The left child of the root is the derivation <span class="arithmatex">\(D\)</span> and the right child is <span class="arithmatex">\(\neg\varphi\)</span>.  Right label the root with <span class="arithmatex">\(\bot\)</span>E.   This is a derivation of <span class="arithmatex">\(\bot\)</span> with undsicharged assumptions from <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span>.  </p>
+<p>Suppose that <span class="arithmatex">\(\Gamma\cup \{\neg\varphi\}\)</span> is inconsistent.  Then, <span class="arithmatex">\(\{\Gamma\cup\{\neg\varphi\}\vdash \bot\)</span>. So, there is a derivation  <span class="arithmatex">\(D\)</span> with the root left labeled with  <span class="arithmatex">\(\bot\)</span> and <span class="arithmatex">\(\neg\varphi\)</span> may occurr in <span class="arithmatex">\(D\)</span> as an undischarged assumption.  To turn <span class="arithmatex">\(D\)</span> into a derivation of <span class="arithmatex">\(\varphi\)</span>, add a node left labeled with <span class="arithmatex">\(\varphi\)</span>  below <span class="arithmatex">\(\bot\)</span> (the current root of <span class="arithmatex">\(D\)</span>), right label the new node with  RAA and add a dandah to any leaf left labeled with <span class="arithmatex">\(\neg\varphi\)</span>.  </p>
+</li>
+<li>
+<p><span class="arithmatex">\(\Gamma\models\varphi\)</span> if and only if <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span> is unsatisfiable.  </p>
+<p><strong>Proof</strong>. Suppose that <span class="arithmatex">\(\Gamma\models\varphi\)</span>.   Then, for every model <span class="arithmatex">\(A\)</span>, if <span class="arithmatex">\(A\)</span> is a model of <span class="arithmatex">\(\Gamma\)</span>, then <span class="arithmatex">\(A^*(\varphi)=\mathsf{T}\)</span>.  If there is no model of <span class="arithmatex">\(\Gamma\)</span>, then there is no model of <span class="arithmatex">\(\Gamma\cup\{\varphi\}\)</span>, and so, <span class="arithmatex">\(\Gamma\cup\{\varphi\}\)</span> is  unsatisfiable.   So, we can assume that there is a model <span class="arithmatex">\(A\)</span> of <span class="arithmatex">\(\Gamma\)</span>.  If <span class="arithmatex">\(A\)</span> is a model of <span class="arithmatex">\(\Gamma\)</span>, then since <span class="arithmatex">\(\Gamma\models\varphi\)</span>, <span class="arithmatex">\(A^*(\varphi)=\mathsf{T}\)</span>.  Hence <span class="arithmatex">\(A^*(\neg\varphi)=\mathsf{F}\)</span>.   Hence, <span class="arithmatex">\(A\)</span> is not a model of <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span>.  Therefore, <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span> is unsatisfiable. </p>
+<p>Suppose that <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span> is unsatisfiable.  If <span class="arithmatex">\(\Gamma\)</span> is unsatisfiable, then <span class="arithmatex">\(\Gamma\models\varphi\)</span>.  Suppose that <span class="arithmatex">\(\Gamma\)</span> is satisfiable.  Let <span class="arithmatex">\(A\)</span> be a model of <span class="arithmatex">\(\Gamma\)</span>.  Then, since  <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span> is unsatisfiable and <span class="arithmatex">\(A^*(\psi)\)</span> for all <span class="arithmatex">\(\psi\in\Gamma\)</span>, we must have <span class="arithmatex">\(A^*(\neg\varphi)=\mathsf{F}\)</span>.  Hence, <span class="arithmatex">\(A^*(\varphi)=\mathsf{T}\)</span>.  Therefore, <span class="arithmatex">\(\Gamma\models\varphi\)</span>. </p>
+</li>
+</ol>
+<p>The completeness theorem states that for all <span class="arithmatex">\(\Gamma\)</span> and <span class="arithmatex">\(\varphi\)</span>, if <span class="arithmatex">\(\Gamma\models\varphi\)</span> then <span class="arithmatex">\(\Gamma\vdash\varphi\)</span>.  We prove the contraposition: If <span class="arithmatex">\(\Gamma\not\vdash\varphi\)</span>, then <span class="arithmatex">\(\Gamma\not\models\varphi\)</span>.  We argue as follows: </p>
+<ol>
+<li><span class="arithmatex">\(\Gamma\not\vdash\varphi\)</span> iff <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span> is not inconsistent iff <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span> is consistent. </li>
+<li>Using Definitions  3.10.4, Lemmas 3.10.5 and 3.10.6, we have that <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span> is consistent implies that there is a <span class="arithmatex">\(\Delta\)</span> such that <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\subseteq \Delta\)</span> and <span class="arithmatex">\(\Delta\)</span> is satisfiable. So, <span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span> is satisfiable.</li>
+<li><span class="arithmatex">\(\Gamma\cup\{\neg\varphi\}\)</span> is satisfiable iff <span class="arithmatex">\(\Gamma\not\models \varphi\)</span></li>
+</ol>
+<p>To illustrate the above proof, suppose that <span class="arithmatex">\(\{p\rightarrow q, \neg p, q\vee r, r\wedge s\}\not\vdash \neg q\wedge s\)</span>.  This means that <span class="arithmatex">\(\{p\rightarrow q, \neg p, q\vee r, r\wedge s\}\cup \{\neg(\neg q\wedge s)\} = \{p\rightarrow q, \neg p, q\vee r, r\wedge s, \neg(\neg q\wedge s)\}\)</span> is consistent.   How can we argue that <span class="arithmatex">\(\{p\rightarrow q, \neg p, q\vee r, r\wedge s, \neg(\neg q\wedge s)\}\)</span> is satisfiable?  </p>
+<p>To simplify our dsicussion, restrict the language of <span class="arithmatex">\(LP(\sigma)\)</span> so that the only connectives are <span class="arithmatex">\(\wedge\)</span> and <span class="arithmatex">\(\neg\)</span>.  </p>
+<div class="admonition definition">
+<p class="admonition-title">Hintikka Set</p>
+<p>A Hintikka set for the restricted language is a set <span class="arithmatex">\(\Gamma\)</span> of formulas such that: </p>
+<ol>
+<li>If <span class="arithmatex">\((\varphi\wedge\psi)\in\Gamma\)</span>, then <span class="arithmatex">\(\varphi\in\Gamma\)</span> and <span class="arithmatex">\(\psi\in\Gamma\)</span>, </li>
+<li>If <span class="arithmatex">\(\neg(\varphi\wedge\psi)\in\Gamma\)</span>, then either <span class="arithmatex">\(\neg\varphi\in\Gamma\)</span> or <span class="arithmatex">\(\neg\psi\in\Gamma\)</span>, </li>
+<li>If  <span class="arithmatex">\((\neg(\neg\varphi)) \in\Gamma\)</span>, then  <span class="arithmatex">\(\varphi \in\Gamma\)</span>.</li>
+<li><span class="arithmatex">\(\bot\not\in\Gamma\)</span>.</li>
+<li>There is no propositional symbol <span class="arithmatex">\(p\)</span> such that both <span class="arithmatex">\(p\)</span> and <span class="arithmatex">\((\neg p)\)</span> are in <span class="arithmatex">\(\Gamma\)</span>.</li>
+</ol>
+</div>
+<div class="admonition example">
+<p class="admonition-title">Example</p>
+<p><span class="arithmatex">\(\Gamma=\{p_0\wedge \neg(p_1\wedge\neg p_2), p_0, \neg(\neg p_3\wedge\neg p_4)\}\)</span> is not a Hintikka set: </p>
+<ul>
+<li><span class="arithmatex">\(p_0\wedge \neg(p_1\wedge\neg p_2)\in \Gamma\)</span> but <span class="arithmatex">\(\neg(p_1\wedge\neg p_2)\not\in\Gamma\)</span>. </li>
+<li><span class="arithmatex">\(\neg(\neg p_3\wedge\neg p_4)\in \Gamma\)</span> but <span class="arithmatex">\(\neg\neg p_3\not\in\Gamma\)</span> and <span class="arithmatex">\(\neg\neg p_4\not\in\Gamma\)</span>. </li>
+</ul>
+<p>The following are  Hintikka sets containing <span class="arithmatex">\(\Gamma\)</span>: </p>
+<ol>
+<li><span class="arithmatex">\(\{p_0\wedge \neg(p_1\wedge\neg p_2), p_0,  \neg(p_1\wedge\neg p_2), \neg p_1, \neg(\neg p_3\wedge\neg p_4), \neg\neg p_3, p_3\}\)</span></li>
+<li><span class="arithmatex">\(\{p_0\wedge \neg(p_1\wedge\neg p_2), p_0,  \neg(p_1\wedge\neg p_2), \neg p_1, \neg(\neg p_3\wedge\neg p_4), \neg\neg p_4, p_4\}\)</span></li>
+<li><span class="arithmatex">\(\{p_0\wedge \neg(p_1\wedge\neg p_2), p_0,  \neg(p_1\wedge\neg p_2), \neg\neg p_2, p_2, \neg(\neg p_3\wedge\neg p_4), \neg\neg p_3, p_3\}\)</span></li>
+<li><span class="arithmatex">\(\{p_0\wedge \neg(p_1\wedge\neg p_2), p_0,  \neg(p_1\wedge\neg p_2), \neg\neg p_2, p_2, \neg(\neg p_3\wedge\neg p_4), \neg\neg p_4, p_4\}\)</span></li>
+</ol>
+</div>
+<p>Step 2 of the proof of completeness follows from two key observations about Hintikka sets: </p>
+<ol>
+<li>If <span class="arithmatex">\(\Gamma\)</span> is a Hintikka set, then <span class="arithmatex">\(\Gamma\)</span> is satisfiable. </li>
+<li>If <span class="arithmatex">\(\Gamma\)</span> is consistent, then there is a Hintikka set <span class="arithmatex">\(\Delta\)</span> such that <span class="arithmatex">\(\Gamma\subseteq \Delta\)</span>. </li>
+</ol>
+<h2 id="exercises">Exercises</h2>
+<p>The tutorial questions are available at <a href="https://umd.instructure.com/courses/1301043/assignments/5538726">https://umd.instructure.com/courses/1301043/assignments/5538726</a></p>
 <p><br/>
 <br/>
 <br/>
@@ -521,7 +711,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../01-derivations/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../../week-4/01-derivations/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
