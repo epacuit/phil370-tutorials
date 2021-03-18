@@ -1,0 +1,974 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+        
+      
+      <link rel="shortcut icon" href="../../assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.1.2, mkdocs-material-6.2.6+insiders-1.16.1">
+    
+    
+      
+        <title>Terms, First-Order Formulas - PHIL 370 Notes</title>
+      
+    
+    
+      <link rel="stylesheet" href="../../assets/stylesheets/main.eb9f5a45.min.css">
+      
+        
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.697e47cb.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#ffffff">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7CRoboto+Mono&display=fallback">
+        <style>:root{--md-text-font-family:"Roboto",;--md-code-font-family:"Roboto Mono",}</style>
+      
+    
+    
+    
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
+    
+    
+      
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="" data-md-color-primary="white" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#terms-first-order-formulas" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      
+
+
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="PHIL 370 Notes" class="md-header__button md-logo" aria-label="PHIL 370 Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            PHIL 370 Notes
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Terms, First-Order Formulas
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    <div class="md-header__options">
+      
+      
+    </div>
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" data-md-state="active" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0116 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 019.5 16 6.5 6.5 0 013 9.5 6.5 6.5 0 019.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" data-md-component="search-reset" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      <div class="md-search__suggest" data-md-component="search-suggest"></div>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="../.." title="PHIL 370 Notes" class="md-nav__button md-logo" aria-label="PHIL 370 Notes">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 003-3 3 3 0 00-3-3 3 3 0 00-3 3 3 3 0 003 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"/></svg>
+
+    </a>
+    PHIL 370 Notes
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../.." class="md-nav__link">
+        Tutorials
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-2" type="checkbox" id="nav-2" >
+      
+      <label class="md-nav__link" for="nav-2">
+        Week 1
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Week 1" data-md-level="1">
+        <label class="md-nav__title" for="nav-2">
+          <span class="md-nav__icon md-icon"></span>
+          Week 1
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-1/01-basic-set-theory/" class="md-nav__link">
+        Set Theory
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-1/02-relations-and-functions/" class="md-nav__link">
+        Relations and Functions
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-1/03-introduction-proofs/" class="md-nav__link">
+        Introduction to Proofs
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-3" type="checkbox" id="nav-3" >
+      
+      <label class="md-nav__link" for="nav-3">
+        Week 2
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Week 2" data-md-level="1">
+        <label class="md-nav__title" for="nav-3">
+          <span class="md-nav__icon md-icon"></span>
+          Week 2
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-2/01-trees/" class="md-nav__link">
+        Trees
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-2/02-induction/" class="md-nav__link">
+        Induction
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-2/03-parse-trees/" class="md-nav__link">
+        Parse Trees and Compositional Definitions
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-4" type="checkbox" id="nav-4" >
+      
+      <label class="md-nav__link" for="nav-4">
+        Week 3
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Week 3" data-md-level="1">
+        <label class="md-nav__title" for="nav-4">
+          <span class="md-nav__icon md-icon"></span>
+          Week 3
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-3/01-models/" class="md-nav__link">
+        Truth Tables and Models
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-3/02-substitutions/" class="md-nav__link">
+        Substitutions
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-5" type="checkbox" id="nav-5" >
+      
+      <label class="md-nav__link" for="nav-5">
+        Week 4
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Week 4" data-md-level="1">
+        <label class="md-nav__title" for="nav-5">
+          <span class="md-nav__icon md-icon"></span>
+          Week 4
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-4/01-derivations/" class="md-nav__link">
+        Derivations
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-6" type="checkbox" id="nav-6" >
+      
+      <label class="md-nav__link" for="nav-6">
+        Week 5
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Week 5" data-md-level="1">
+        <label class="md-nav__title" for="nav-6">
+          <span class="md-nav__icon md-icon"></span>
+          Week 5
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-5/01-completeness/" class="md-nav__link">
+        Soundness and Completeness
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+      
+      <label class="md-nav__link" for="nav-7">
+        Week 8
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Week 8" data-md-level="1">
+        <label class="md-nav__title" for="nav-7">
+          <span class="md-nav__icon md-icon"></span>
+          Week 8
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Terms, First-Order Formulas
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Terms, First-Order Formulas
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    Example 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-language-of-arithmetic" class="md-nav__link">
+    The Language of Arithmetic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-language-of-linear-orders" class="md-nav__link">
+    The Language of Linear Orders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freebound-variables" class="md-nav__link">
+    Free/Bound Variables
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../02-substitutions/" class="md-nav__link">
+        Substitutions
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#examples" class="md-nav__link">
+    Examples
+  </a>
+  
+    <nav class="md-nav" aria-label="Examples">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#example-1" class="md-nav__link">
+    Example 1
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-language-of-arithmetic" class="md-nav__link">
+    The Language of Arithmetic
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#the-language-of-linear-orders" class="md-nav__link">
+    The Language of Linear Orders
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#freebound-variables" class="md-nav__link">
+    Free/Bound Variables
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                
+                <h1 id="terms-first-order-formulas">Terms, First-Order Formulas</h1>
+<div class="admonition definition">
+<p class="admonition-title">First-Order Signature</p>
+<p>A <strong>ﬁrst-order signature</strong>  is a 4-tuple <span class="arithmatex">\((Co, Fu, Re, r)\)</span> where:</p>
+<ol>
+<li><span class="arithmatex">\(Co\)</span> is a set (possibly empty) of symbols called the constant symbols;</li>
+<li><span class="arithmatex">\(Fu\)</span> is a set (possibly empty) of symbols called the function symbols;</li>
+<li><span class="arithmatex">\(Re\)</span> is a set (possibly empty) of symbols called the relation symbols;</li>
+<li><span class="arithmatex">\(Co\)</span>, <span class="arithmatex">\(Fu\)</span>, <span class="arithmatex">\(Re\)</span> are pairwise disjoint;</li>
+<li><span class="arithmatex">\(r\)</span> is a function taking each symbol <span class="arithmatex">\(s\)</span> in <span class="arithmatex">\(Fu \cup Re\)</span> to a positive integer <span class="arithmatex">\(r(s)\)</span> called the <strong>rank</strong> (or <strong>arity</strong>) of <span class="arithmatex">\(s\)</span>. We say a symbol is <span class="arithmatex">\(n\)</span>-ary if it has arity <span class="arithmatex">\(n\)</span>; binary means 2-ary.</li>
+</ol>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Variables</p>
+<p>The <strong>variables</strong> of <span class="arithmatex">\(LR(\sigma)\)</span> are the infinitely many symbols </p>
+<div class="arithmatex">\[
+x_0, x_1, x_2, \ldots
+\]</div>
+<p>which we assume are not in <span class="arithmatex">\(\sigma\)</span>. </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Terms</p>
+<p>Let <span class="arithmatex">\(\sigma = (Co, Fu, Re, r)\)</span> be a first-order signature.   A <strong>term</strong> of <span class="arithmatex">\(LR(\sigma)\)</span> is defined as follows: </p>
+<ol>
+<li>Every constant symbol of <span class="arithmatex">\(\sigma\)</span> is a term of <span class="arithmatex">\(LR(\sigma)\)</span>.</li>
+<li>Every variable is a term of <span class="arithmatex">\(LR(\sigma)\)</span>. </li>
+<li>For every function symbol <span class="arithmatex">\(F\)</span> of <span class="arithmatex">\(\sigma\)</span>, if <span class="arithmatex">\(F\)</span> has arity <span class="arithmatex">\(n\)</span> and <span class="arithmatex">\(t_1, \ldots, t_n\)</span> are terms of <span class="arithmatex">\(LR(\sigma)\)</span>, then <span class="arithmatex">\(F(t_1, \ldots, t_n)\)</span> is a term of <span class="arithmatex">\(LR(\sigma)\)</span>.  </li>
+<li>Nothing is a term of <span class="arithmatex">\(LR(\sigma)\)</span> except as implied by (1), (2), (3).</li>
+</ol>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Formula</p>
+<p>Let <span class="arithmatex">\(\sigma = (Co, Fu, Re, r)\)</span> be a first-order signature. A <strong>formula</strong> of <span class="arithmatex">\(LR(\sigma)\)</span> is defined as follows: </p>
+<ol>
+<li>If <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(t\)</span> are terms of <span class="arithmatex">\(LR(\sigma)\)</span>, then the expression <span class="arithmatex">\((s=t)\)</span> is a formula of <span class="arithmatex">\(LR(\sigma)\)</span>. </li>
+<li>If <span class="arithmatex">\(R\)</span> is a relation symbol of arity <span class="arithmatex">\(n\)</span> in <span class="arithmatex">\(\sigma\)</span> and <span class="arithmatex">\(t_1, \ldots, t_n\)</span>  are terms of <span class="arithmatex">\(LR(\sigma)\)</span>, then the expression <span class="arithmatex">\(R(t_1, \ldots, t_n)\)</span> is a formula of <span class="arithmatex">\(LR(\sigma)\)</span></li>
+<li><span class="arithmatex">\(\bot\)</span> is a formula of <span class="arithmatex">\(LR(\sigma)\)</span>.</li>
+<li>If <span class="arithmatex">\(\varphi\)</span>  and <span class="arithmatex">\(\psi\)</span> are formulas of <span class="arithmatex">\(LR(\sigma)\)</span>, then so are the following expressions:
+<span class="arithmatex">\((\neg\varphi)\)</span>, <span class="arithmatex">\((\varphi\wedge\psi)\)</span>, <span class="arithmatex">\((\varphi\vee\psi)\)</span>, <span class="arithmatex">\((\varphi\rightarrow\psi)\)</span>, and  <span class="arithmatex">\((\varphi\leftrightarrow\psi)\)</span>,</li>
+<li>If <span class="arithmatex">\(\varphi\)</span> is a formula of  <span class="arithmatex">\(LR(\sigma)\)</span> and <span class="arithmatex">\(v\)</span> is a variable, then the expressions <span class="arithmatex">\(\forall v\varphi\)</span> and <span class="arithmatex">\(\exists v\varphi\)</span> are formulas of  <span class="arithmatex">\(LR(\sigma)\)</span>. </li>
+<li>Nothing is a formula of  <span class="arithmatex">\(LR(\sigma)\)</span> except as implied by (1)–(5).</li>
+</ol>
+<p>The <strong>atomic formulas</strong> are the formulas constructed using clauses 1, 2 and 3.  </p>
+<p>A formula is <strong>quantifier-free</strong> if <span class="arithmatex">\(\forall\)</span> and <span class="arithmatex">\(\exists\)</span> does not occur anywhere in the formula. </p>
+</div>
+<h2 id="examples">Examples</h2>
+<h3 id="example-1">Example 1</h3>
+<p>Let <span class="arithmatex">\(\sigma = (\{c,d\}, \{f, g\}, \{P, Q\}, r)\)</span> where <span class="arithmatex">\(r(f)=2\)</span>, <span class="arithmatex">\(r(g)=1\)</span>, <span class="arithmatex">\(r(P)=1\)</span> and <span class="arithmatex">\(r(Q)=3\)</span>.  </p>
+<p>The following are examples of terms of <span class="arithmatex">\(LR(\sigma)\)</span> (you should draw the parse tree for each of the terms):</p>
+<ol>
+<li><span class="arithmatex">\(x_0\)</span></li>
+<li><span class="arithmatex">\(c\)</span></li>
+<li><span class="arithmatex">\(f(c,x_0)\)</span></li>
+<li><span class="arithmatex">\(f(f(f(d,x_0),c),g(c))\)</span></li>
+<li><span class="arithmatex">\(g(f(g(c),c))\)</span></li>
+</ol>
+<p>Examples of quantifier-free formulas of <span class="arithmatex">\(LR(\sigma)\)</span> include: (you should draw the parse tree for each of these formulas)</p>
+<ol>
+<li><span class="arithmatex">\(x_0 = x_1\)</span></li>
+<li><span class="arithmatex">\(c=d\)</span></li>
+<li><span class="arithmatex">\(f(c,d)=x_1 \wedge g(x_0)=c\)</span></li>
+<li><span class="arithmatex">\((\neg (P(d) \rightarrow Q(g(x_0), d, x_0)))\)</span></li>
+<li><span class="arithmatex">\((x_0=c)\wedge \neg P(g(x_0))\)</span></li>
+</ol>
+<p>Examples of  formulas of <span class="arithmatex">\(LR(\sigma)\)</span> include the above 5 quantifier-free formulas plus all of the following: (you should draw the parse tree for each of these formulas)</p>
+<ol>
+<li><span class="arithmatex">\(\exists x_0 (x_0 = x_1)\)</span></li>
+<li><span class="arithmatex">\(\exists x_0 (x_0 = c)\)</span></li>
+<li><span class="arithmatex">\((\forall x_1\exists x_0 (x_0 = x_1)\wedge \forall x_2 P(x_2))\)</span></li>
+<li><span class="arithmatex">\((\forall x_0 P(c)\wedge \exists x_1 P(x_1))\)</span></li>
+<li><span class="arithmatex">\(\forall x_0\exists x_1 Q(c, x_0, x_1)\)</span></li>
+<li><span class="arithmatex">\((P(x_0)\wedge P(x_1))\)</span></li>
+<li><span class="arithmatex">\(\forall x_0 P(x_0)\)</span></li>
+<li><span class="arithmatex">\(\forall x_1 P(x_0)\)</span></li>
+<li><span class="arithmatex">\(\forall x_0 (P(x_0)\rightarrow P(c))\)</span></li>
+<li><span class="arithmatex">\(\forall x_0 (Q(x_0,c,x_1)\rightarrow (P(f(c))\wedge \exists x_2 P(g(x_2,d,f(c)))))\)</span></li>
+</ol>
+<h3 id="the-language-of-arithmetic">The Language of Arithmetic</h3>
+<p>Let <span class="arithmatex">\(\sigma_{arith}\)</span> be the following signature: </p>
+<ol>
+<li>There is a single constant symbol <span class="arithmatex">\(\bar{0}\)</span></li>
+<li>There are three function symbols: <span class="arithmatex">\(\bar{S}\)</span>, <span class="arithmatex">\(\bar{+}\)</span> and <span class="arithmatex">\(\bar{\times}\)</span>.  The function symbol <span class="arithmatex">\(\bar{S}\)</span> has arity 1 and <span class="arithmatex">\(\bar{+}\)</span> and <span class="arithmatex">\(\bar{\times}\)</span> have arity 2. </li>
+<li>There are no relation symbols. </li>
+</ol>
+<p>The resulting language <span class="arithmatex">\(LR(\sigma_{arith})\)</span> is the first-order language of arithmetic. </p>
+<p>The following are examples of terms of <span class="arithmatex">\(LR(\sigma_{arith})\)</span> (you should draw the parse tree for each of the terms):</p>
+<ol>
+<li><span class="arithmatex">\(x_0\)</span></li>
+<li><span class="arithmatex">\(\bar{0}\)</span></li>
+<li><span class="arithmatex">\(\bar{S}(\bar{S}(\bar{0}))\)</span><br/> Informally, we typically write this as <span class="arithmatex">\(\bar{S}\bar{S}(\bar{0})\)</span></li>
+<li><span class="arithmatex">\(\bar{+}(\bar{S}(\bar{S}(\bar{0})), x_0)\)</span>. <br/> Informally, we typically write this as <span class="arithmatex">\((\bar{S}\bar{S}(\bar{0}) \bar{+} x_0)\)</span></li>
+<li><span class="arithmatex">\(\bar{+}(\bar{\times}(\bar{S}(\bar{S}(\bar{0})),x_0), \bar{S}(\bar{0}))\)</span><br/> Informally, we typically write this as <span class="arithmatex">\((\bar{S}\bar{S}(\bar{0}) \bar{\times} x_0) \bar{+} \bar{S}(\bar{0})\)</span></li>
+</ol>
+<p>Examples of quantifier-free formulas of <span class="arithmatex">\(LR(\sigma_{arith})\)</span> include: (you should draw the parse tree for each of these formulas)</p>
+<ol>
+<li><span class="arithmatex">\(x_0 = x_1\)</span></li>
+<li><span class="arithmatex">\(\bar{0}=\bar{S}(\bar{0})\)</span></li>
+<li><span class="arithmatex">\((\neg(\bar{0}=\bar{S}(\bar{0})))\)</span> <br/> Informally, we typically write this as <span class="arithmatex">\((\bar{0}\neq \bar{S}(\bar{0}))\)</span></li>
+<li><span class="arithmatex">\(\bar{S}(\bar{0})\bar{+} \bar{S}\bar{S}(\bar{0}) = \bar{S}(\bar{S}(\bar{0})\bar{+} \bar{S}(\bar{0}))\)</span></li>
+<li><span class="arithmatex">\(((x_1=\bar{0}) \wedge x_2\bar{\times} x_1 = \bar{S}(\bar{0}))\)</span></li>
+</ol>
+<p>Examples of  formulas of <span class="arithmatex">\(LR(\sigma_{arith})\)</span> include the above 5 quantifier-free formulas plus all of the following: (you should draw the parse tree for each of these formulas)</p>
+<ol>
+<li><span class="arithmatex">\(\exists x_0 (x_0 = \bar{S}\bar{S}\bar{S}(\bar{0}))\)</span></li>
+<li><span class="arithmatex">\(\forall x_0 (x_0 \neq \bar{S}(x_0))\)</span></li>
+<li><span class="arithmatex">\(\forall x_0 \exists x_1 (x_0 = \bar{S}(x_1))\)</span></li>
+<li><span class="arithmatex">\(\forall x_0  (x_0 \bar{+} \bar{0} = x_0)\)</span></li>
+<li><span class="arithmatex">\(\forall x_0  ( \bar{0} \bar{+}  x_0 = x_0)\)</span></li>
+<li><span class="arithmatex">\(\forall x_0 \forall x_1 ((x_0 \bar{+}  \bar{S}(x_0)) = \bar{S}(x_0\bar{+}  x_1))\)</span></li>
+</ol>
+<div class="admonition definition">
+<p class="admonition-title">Numeral</p>
+<p>For each natural number <span class="arithmatex">\(n\in\mathbb{N}\)</span>, let <span class="arithmatex">\(\bar{n}\)</span> be the term consisting of <span class="arithmatex">\(n\)</span> applications of  the function symbol <span class="arithmatex">\(\bar{S}\)</span>  to the constant <span class="arithmatex">\(\bar{0}\)</span>.  That is,  </p>
+<div class="arithmatex">\[
+\bar{n} = \underbrace{\bar{S}\cdots \bar{S}}_{n-times}(\bar{0})
+\]</div>
+</div>
+<p>Examples of numerals include: </p>
+<p><span class="arithmatex">\(\bar{1}=\bar{S}(\bar{0})\)</span><br/>
+<span class="arithmatex">\(\bar{2}=\bar{S}\bar{S}(\bar{0})\)</span><br/>
+<span class="arithmatex">\(\bar{3}=\bar{S}\bar{S}\bar{S}(\bar{0})\)</span><br/>
+<span class="arithmatex">\(\bar{7}=\bar{S}\bar{S}\bar{S}\bar{S}\bar{S}\bar{S}\bar{S}(\bar{0})\)</span></p>
+<div class="admonition caution">
+<p class="admonition-title">Important Point</p>
+<p>It is very important to understand the difference betweent the following two statements: </p>
+<ol>
+<li><span class="arithmatex">\(\forall x(x \bar{+} \bar{0} = x)\)</span></li>
+<li>For all <span class="arithmatex">\(n\in\mathbb{N}\)</span>, <span class="arithmatex">\(\bar{n} \bar{+} \bar{0}=\bar{n}\)</span></li>
+</ol>
+<p>Statement 1 is  a formula of first-order arithmetic.   Statement 2 is <em>not</em> a formula of first-order arithmetic.  It is a formula <em>schema</em>: a shorthand for expressing infinitely many atomic formulas of first-order arithmetic.   That is, statement 2 is short hand for the following list of formulas: </p>
+<ol>
+<li><span class="arithmatex">\(\bar{0} \bar{+} \bar{0}=\bar{0}\)</span></li>
+<li><span class="arithmatex">\(\bar{1} \bar{+} \bar{0}=\bar{1}\)</span></li>
+<li><span class="arithmatex">\(\bar{2} \bar{+} \bar{0}=\bar{2}\)</span></li>
+<li><span class="arithmatex">\(\cdots\)</span></li>
+</ol>
+</div>
+<h3 id="the-language-of-linear-orders">The Language of Linear Orders</h3>
+<p>Let <span class="arithmatex">\(\sigma_{lin}\)</span> be the following signature: </p>
+<ol>
+<li>There are no constant symbols.</li>
+<li>There are no function symbols. </li>
+<li>There is a single binary relation symbol <span class="arithmatex">\(&lt;\)</span>. </li>
+</ol>
+<p>The only terms of <span class="arithmatex">\(LR(\sigma_{lin})\)</span> are the variables <span class="arithmatex">\(x_0, x_1, \ldots\)</span>. </p>
+<p>Examples of formulas of <span class="arithmatex">\(LR(sigma_{arith})\)</span> include: </p>
+<ol>
+<li><span class="arithmatex">\(x_0 &lt; x_1\)</span></li>
+<li><span class="arithmatex">\(\forall x_0 \exists x_1 (x_0 &lt; x_1)\)</span></li>
+<li><span class="arithmatex">\(\forall x_0\forall x_1\forall x_2(((x_0 &lt; x_1) \wedge (x_1 &lt; x_2)) \rightarrow (x_0 &lt; x_2))\)</span></li>
+<li><span class="arithmatex">\(\forall x_0(\neg (x_0 &lt; x_0))\)</span></li>
+<li><span class="arithmatex">\(\forall x_0\exists x_1(x_1 &lt; x_0)\)</span></li>
+</ol>
+<h2 id="freebound-variables">Free/Bound Variables</h2>
+<p>(Definition 5.1.1) An occurrence of a variable in a piece of mathematical text is said to be <em>free</em> if the text allows us to read the variable as a name. If not free, the occurrence is <em>bound</em>. When an occurrence of a variable in the text is bound, there must always be something in the text that prevents us taking the occurrence as a name. </p>
+<p>If <span class="arithmatex">\(t\)</span> is a term, then <span class="arithmatex">\(x\)</span> is free in <span class="arithmatex">\(t\)</span> if <span class="arithmatex">\(x\)</span> occurs in <span class="arithmatex">\(t\)</span>. </p>
+<div class="admonition definition">
+<p class="admonition-title">Free Occurrence of a Variable</p>
+<p>Suppose that <span class="arithmatex">\(x\)</span> is a variable.  Then,  <strong><span class="arithmatex">\(x\)</span>   occurs free in <span class="arithmatex">\(\varphi\)</span></strong> is defined as follows: </p>
+<ol>
+<li>If <span class="arithmatex">\(\varphi\)</span> is an atomic formula, then <span class="arithmatex">\(x\)</span> occurs free in <span class="arithmatex">\(\varphi\)</span> provided <span class="arithmatex">\(x\)</span> occurs in <span class="arithmatex">\(\phi\)</span> (i.e., is a symbol  in <span class="arithmatex">\(\varphi\)</span>). </li>
+<li><span class="arithmatex">\(x\)</span> occurs free in <span class="arithmatex">\(\neg\psi\)</span> iff <span class="arithmatex">\(x\)</span> occurs free in <span class="arithmatex">\(\psi\)</span></li>
+<li><span class="arithmatex">\(x\)</span> occurs free in <span class="arithmatex">\(\psi_1\wedge\psi_2\)</span> iff <span class="arithmatex">\(x\)</span> occurs free in <span class="arithmatex">\(\psi_1\)</span> or <span class="arithmatex">\(x\)</span> occurs free in <span class="arithmatex">\(\psi_2\)</span> (similarly for the other Boolean connectives <span class="arithmatex">\(\vee\)</span>, <span class="arithmatex">\(\rightarrow\)</span>, <span class="arithmatex">\(\leftrightarrow\)</span>)</li>
+<li><span class="arithmatex">\(x\)</span> occurs free in <span class="arithmatex">\((\forall y)\psi\)</span> iff <span class="arithmatex">\(x\)</span> occurs free in <span class="arithmatex">\(\psi\)</span> and <span class="arithmatex">\(x\ne y\)</span></li>
+<li><span class="arithmatex">\(x\)</span> occurs free in <span class="arithmatex">\((\exists y)\psi\)</span> iff <span class="arithmatex">\(x\)</span> occurs free in <span class="arithmatex">\(\psi\)</span> and <span class="arithmatex">\(x\ne y\)</span></li>
+</ol>
+<p>A variable <span class="arithmatex">\(x\)</span> that is not free is said to be <strong>bound</strong>.  </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Closed Term/Sentence</p>
+<p>A term that does not contain any variables is said to be a <strong>closed term</strong>.  Formulas that do not contain any free variables are called <strong>sentences</strong>.</p>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Variable Occurrences</p>
+<p>We sometimes need to talk about different <em>occurrences</em> of a variable in a formula. For example, in the formula: </p>
+<div class="arithmatex">\[
+P(x)\wedge R(c,x)
+\]</div>
+<p>There is one free variable <span class="arithmatex">\(x\)</span>.   Note that <span class="arithmatex">\(x\)</span> occurrs twice in this formula: Once in the left conjunct and once in the right conjunct. The variable <span class="arithmatex">\(x\)</span> occurs three times in the following formula: </p>
+<div class="arithmatex">\[
+P(x)\wedge R(x,x)
+\]</div>
+<p>Note that same variable may occur both as a bound variable and a free variable in a formula: </p>
+<div class="arithmatex">\[
+(\forall xP(x) \wedge R(c,x))
+\]</div>
+<p>In the above formula, <span class="arithmatex">\(x\)</span> is free because it occurs free in the right conjunct <span class="arithmatex">\(R(c,x)\)</span>. </p>
+</div>
+<p><br/>
+<br/>
+<br/>
+<br/></p>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+        <a href="../../week-5/01-completeness/" class="md-footer__link md-footer__link--prev" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Soundness and Completeness
+            </div>
+          </div>
+        </a>
+      
+      
+        <a href="../02-substitutions/" class="md-footer__link md-footer__link--next" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Substitutions
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs Insiders
+          </a>
+        
+      </div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    
+      <script src="../../assets/javascripts/vendor.2d9b50f1.min.js"></script>
+      <script src="../../assets/javascripts/bundle.b7273581.min.js"></script><script id="__lang" type="application/json">{"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing"}</script>
+      
+      <script>
+        app = initialize({
+          base: "../..",
+          features: [],
+          search: Object.assign({
+            worker: "../../assets/javascripts/worker/search.e77c40e2.min.js"
+          }, typeof search !== "undefined" && search),
+          version: {}
+        })
+      </script>
+      
+        <script src="../../javascripts/config.js"></script>
+      
+        <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+      
+        <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+      
+        <script src="https://unpkg.com/mermaid@7.1.2/dist/mermaid.min.js"></script>
+      
+        <script src="https://d3js.org/d3.v6.min.js"></script>
+      
+        <script src="https://unpkg.com/@hpcc-js/wasm@0.3.11/dist/index.min.js"></script>
+      
+        <script src="https://unpkg.com/d3-graphviz@3.0.5/build/d3-graphviz.js"></script>
+      
+        <script src="../../javascripts/testing.js"></script>
+      
+    
+  </body>
+</html>
