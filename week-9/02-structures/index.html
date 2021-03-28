@@ -17,7 +17,7 @@
     
     
       
-        <title>Substitutions - PHIL 370 Notes</title>
+        <title>Structures - PHIL 370 Notes</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#substitutions" class="md-skip">
+        <a href="#structures" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Substitutions
+              Structures
             
           </span>
         </div>
@@ -480,14 +480,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
       
       <label class="md-nav__link" for="nav-7">
         Week 8
@@ -506,8 +504,65 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-first-order-formulas/" class="md-nav__link">
+      <a href="../../week-8/01-first-order-formulas/" class="md-nav__link">
         Terms, First-Order Formulas
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../week-8/02-substitutions/" class="md-nav__link">
+        Substitutions
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" checked>
+      
+      <label class="md-nav__link" for="nav-8">
+        Week 9
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Week 9" data-md-level="1">
+        <label class="md-nav__title" for="nav-8">
+          <span class="md-nav__icon md-icon"></span>
+          Week 9
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../01-equality/" class="md-nav__link">
+        Equality
       </a>
     </li>
   
@@ -527,12 +582,12 @@
       
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
-          Substitutions
+          Structures
           <span class="md-nav__icon md-icon"></span>
         </label>
       
       <a href="./" class="md-nav__link md-nav__link--active">
-        Substitutions
+        Structures
       </a>
       
         
@@ -549,8 +604,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    Exercises
+  <a href="#examples-of-structures" class="md-nav__link">
+    Examples of Structures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observations-about-structures" class="md-nav__link">
+    Observations about Structures
   </a>
   
 </li>
@@ -559,61 +621,6 @@
   
 </nav>
       
-    </li>
-  
-
-          
-        </ul>
-      </nav>
-    </li>
-  
-
-    
-      
-      
-      
-
-  
-  
-  
-    
-    <li class="md-nav__item md-nav__item--nested">
-      
-      
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-8" type="checkbox" id="nav-8" >
-      
-      <label class="md-nav__link" for="nav-8">
-        Week 9
-        <span class="md-nav__icon md-icon"></span>
-      </label>
-      <nav class="md-nav" aria-label="Week 9" data-md-level="1">
-        <label class="md-nav__title" for="nav-8">
-          <span class="md-nav__icon md-icon"></span>
-          Week 9
-        </label>
-        <ul class="md-nav__list" data-md-scrollfix>
-          
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../week-9/01-equality/" class="md-nav__link">
-        Equality
-      </a>
-    </li>
-  
-
-          
-            
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../../week-9/02-structures/" class="md-nav__link">
-        Structures
-      </a>
     </li>
   
 
@@ -649,8 +656,15 @@
     <ul class="md-nav__list" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    Exercises
+  <a href="#examples-of-structures" class="md-nav__link">
+    Examples of Structures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#observations-about-structures" class="md-nav__link">
+    Observations about Structures
   </a>
   
 </li>
@@ -668,43 +682,84 @@
               
                 
                 
-                <h1 id="substitutions">Substitutions</h1>
-<p>If <span class="arithmatex">\(t\)</span>  and <span class="arithmatex">\(s\)</span> are terms, we write <span class="arithmatex">\(t[s/x]\)</span> for the term where <span class="arithmatex">\(x\)</span> is replaced by <span class="arithmatex">\(s\)</span>.  The following is a compositional definition of <span class="arithmatex">\(t[s/x]\)</span>: </p>
+                <h1 id="structures">Structures</h1>
+<div class="admonition definition">
+<p class="admonition-title">Structures (or Models)</p>
+<p>Given a signature <span class="arithmatex">\(\sigma\)</span>, a <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(\mathcal{A}\)</span> consists of the following: </p>
 <ol>
-<li><span class="arithmatex">\(x[s/x]= s\)</span>;</li>
-<li><span class="arithmatex">\(y[s/x]=y\)</span> for <span class="arithmatex">\(y\ne x\)</span>;</li>
-<li><span class="arithmatex">\(c[s/x]=c\)</span>, where <span class="arithmatex">\(c\)</span> is a constant symbol.</li>
-<li><span class="arithmatex">\(f(t_1,t_2,\ldots, t_n)[s/x]=f(t_1[s/x],t_2[s/x],\ldots, t_n[s/x])\)</span>, where <span class="arithmatex">\(f\)</span> is an <span class="arithmatex">\(n\)</span>-ary function symbol. </li>
-</ol>
-<p>Similarly, for a first-order formula <span class="arithmatex">\(\varphi\)</span>, <span class="arithmatex">\(\varphi[s/x]\)</span> is the formula in which all free occurrences of <span class="arithmatex">\(x\)</span> are replaced with <span class="arithmatex">\(s\)</span>. The compositional definition for this is: </p>
-<ol>
-<li><span class="arithmatex">\((t_1=t_2)[s/x]\)</span> is <span class="arithmatex">\((t_1[s/x] = t_2[s/x])\)</span></li>
-<li><span class="arithmatex">\(\bot[s/x]\)</span> is <span class="arithmatex">\(\bot\)</span></li>
-<li><span class="arithmatex">\(R(t_1,\ldots,t_n)[s/x]\)</span> is <span class="arithmatex">\(R(t_1[s/x],\ldots,t_n[s/x])\)</span>, where <span class="arithmatex">\(R\)</span> is an <span class="arithmatex">\(n\)</span>-ary relation symbol. </li>
-<li><span class="arithmatex">\((\neg\psi)[s/x]\)</span> is <span class="arithmatex">\((\neg \psi[s/x])\)</span></li>
-<li><span class="arithmatex">\((\psi_1\wedge\psi_2)[s/x]\)</span> is <span class="arithmatex">\((\psi_1[s/x]\wedge\psi_2[s/x])\)</span><br/>(similarly for the other Boolean connectives <span class="arithmatex">\(\vee\)</span>, <span class="arithmatex">\(\rightarrow\)</span>, and <span class="arithmatex">\(\leftrightarrow\)</span>)</li>
-<li><span class="arithmatex">\((\forall x (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall x)\psi\)</span></li>
-<li><span class="arithmatex">\((\forall y (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall y (\psi[s/x]))\)</span>, where <span class="arithmatex">\(y\ne x\)</span></li>
-<li><span class="arithmatex">\((\exists x (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall x)\psi\)</span></li>
-<li><span class="arithmatex">\((\exists y (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall y (\psi[s/x]))\)</span>, where <span class="arithmatex">\(y\ne x\)</span></li>
-</ol>
-<div class="admonition example">
-<p class="admonition-title">Examples</p>
-<ol>
-<li><span class="arithmatex">\((x=y)[y/x]\)</span> is <span class="arithmatex">\(y=y\)</span> </li>
-<li><span class="arithmatex">\((x=y)[x/y]\)</span> is <span class="arithmatex">\(x=x\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (x=y))[y/x]\)</span> is <span class="arithmatex">\(\forall x (x=y)\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (x=y))[x/y]\)</span> is <span class="arithmatex">\(\forall x (x=x)\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (x=x))[y/x]\)</span> is <span class="arithmatex">\(\forall x (x=x)\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (P(x))\rightarrow P(x))[s/x]\)</span> is <span class="arithmatex">\((\forall x) P(x) \rightarrow P(s)\)</span>, where <span class="arithmatex">\(s\)</span> is a term. </li>
+<li>
+<p>A non-empty set called the <strong>domain</strong> of <span class="arithmatex">\(\mathcal{A}\)</span>.   Elements of the domain are called <strong>elements</strong> of <span class="arithmatex">\(\mathcal{A}\)</span>. We write <span class="arithmatex">\(|\mathcal{A}|\)</span> for the domain of <span class="arithmatex">\(\mathcal{A}\)</span>.  </p>
+</li>
+<li>
+<p>For each constant symbol <span class="arithmatex">\(c\)</span> of <span class="arithmatex">\(\sigma\)</span>, an element of the domain <span class="arithmatex">\(c_\mathcal{A}\)</span>. </p>
+</li>
+<li>
+<p>For each function symbol <span class="arithmatex">\(F\)</span> os <span class="arithmatex">\(\sigma\)</span> with arity <span class="arithmatex">\(n\)</span> (i.e., <span class="arithmatex">\(r(F)=n\)</span>), an <span class="arithmatex">\(n\)</span>-ary function on the domain, denoted <span class="arithmatex">\(F_\mathcal{A}\)</span>.   So, <span class="arithmatex">\(F_\mathcal{A}:|\mathcal{A}|^n\rightarrow |\mathcal{A}|\)</span>.  </p>
+</li>
+<li>
+<p>For each relation symbol <span class="arithmatex">\(R\)</span> of <span class="arithmatex">\(\sigma\)</span> with arity <span class="arithmatex">\(n\)</span> (i.e., <span class="arithmatex">\(r(R)=n\)</span>), an <span class="arithmatex">\(n\)</span>-ary relation on the domain, denoted <span class="arithmatex">\(R_\mathcal{A}\)</span>. So, <span class="arithmatex">\(R_\mathcal{A}\subseteq |\mathcal{A}|^n\)</span>.  </p>
+</li>
 </ol>
 </div>
-<h2 id="exercises">Exercises</h2>
-<p>The tutorial questions are available at <a href="https://umd.instructure.com/courses/1301043/assignments/5552980">https://umd.instructure.com/courses/1301043/assignments/5552980</a></p>
+<h2 id="examples-of-structures">Examples of Structures</h2>
+<p>Let <span class="arithmatex">\(\mathcal{N}\)</span> be the following <span class="arithmatex">\(\sigma_{arith}\)</span>-structure: </p>
+<ol>
+<li><span class="arithmatex">\(|\mathcal{N}| = \mathbb{N}\)</span></li>
+<li><span class="arithmatex">\(\bar{0}_\mathcal{N}\)</span> is <span class="arithmatex">\(0\)</span></li>
+<li><span class="arithmatex">\(\bar{S}_\mathcal{N}\)</span> is the successor function, i.e.,  <span class="arithmatex">\(n\mapsto n+1\)</span></li>
+<li><span class="arithmatex">\(\bar{+}_\mathcal{N}\)</span> is <span class="arithmatex">\(+\)</span>, i.e.,  <span class="arithmatex">\((m,n)\mapsto m+n\)</span></li>
+<li><span class="arithmatex">\(\bar{\times}_\mathcal{N}\)</span> is <span class="arithmatex">\(\times\)</span>, i.e.,  <span class="arithmatex">\((m,n)\mapsto m\times n\)</span></li>
+</ol>
+<p>Let <span class="arithmatex">\(\mathcal{N}_3\)</span> be the following <span class="arithmatex">\(\sigma_{arith}\)</span>-structure: </p>
+<ol>
+<li><span class="arithmatex">\(|\mathcal{N}_3| = \mathbb{N}/3\mathbb{N}= \{0, 1, 2\}\)</span></li>
+<li><span class="arithmatex">\(\bar{0}_{\mathcal{N}_3}\)</span> is <span class="arithmatex">\(0\)</span></li>
+<li><span class="arithmatex">\(\bar{S}_{\mathcal{N}_3}\)</span> is the  function <span class="arithmatex">\(\bar{S}_{\mathcal{N}_3}(n) = \begin{cases} n+1 &amp; n&lt;2 \\ 0 &amp; n=2\end{cases}\)</span></li>
+<li><span class="arithmatex">\(\bar{+}_{\mathcal{N}_3}\)</span> is the function that maps pairs of numbers <span class="arithmatex">\((x,y)\)</span> to the remainder when  <span class="arithmatex">\(x+y\)</span> is divided by <span class="arithmatex">\(3\)</span>. </li>
+<li><span class="arithmatex">\(\bar{\times}_{\mathcal{N}_3}\)</span> is the function that maps pairs of numbers <span class="arithmatex">\((x,y)\)</span> to the remainder when <span class="arithmatex">\(xy\)</span> is divided by <span class="arithmatex">\(3\)</span>.</li>
+</ol>
+<div class="admonition warning">
+<p class="admonition-title">Structures</p>
+<p>Often,   the same name is used for the domain of a structure and the structure.  For instance, in the Chiswell &amp; Hodges book, they use <span class="arithmatex">\(\mathbb{N}\)</span>  for the standard structure (called <span class="arithmatex">\(\mathcal{N}\)</span> above). </p>
+</div>
+<h2 id="observations-about-structures">Observations about Structures</h2>
+<ul>
+<li>There can be different structures of the same signature.</li>
+<li>The same formula can be true in one structure but false in another.  For example, <span class="arithmatex">\(\bar{0} = \bar{S}\bar{S}\bar{S}\bar{S}(\bar{0})\)</span> is true in <span class="arithmatex">\(\mathcal{N}\)</span> but this formula is false in <span class="arithmatex">\(\mathcal{N}_3\)</span>. </li>
+<li>Sometimes the same element is named by many different terms.  For example, in <span class="arithmatex">\(\mathcal{N}_3\)</span>, the element <span class="arithmatex">\(1\)</span> is named by the following terms: </li>
+</ul>
+<div class="arithmatex">\[\bar{S}(\bar{0}), \bar{S}\bar{S}\bar{S}\bar{S}(\bar{0}), \bar{S}\bar{S}\bar{S}\bar{S}\bar{S}\bar{S}\bar{S}(\bar{0}), \ldots \]</div>
+<ul>
+<li>
+<p>There may be structures for a signature with elements of the domain that are not named by any term in the language.   For instance, Let <span class="arithmatex">\(\mathcal{N}^*\)</span> be the following structure: </p>
+<ol>
+<li><span class="arithmatex">\(|\mathcal{N}^*| = \mathbb{N}\cup \{a,b\}\)</span></li>
+<li><span class="arithmatex">\(\bar{0}_{\mathcal{N}^*}\)</span> is <span class="arithmatex">\(0\)</span></li>
+<li>
+<p><span class="arithmatex">\(\bar{S}_{\mathcal{N}^*}\)</span> is the function <span class="arithmatex">\(S^*:\mathbb{N}\cup\{a,b\}\rightarrow\mathbb{N}\cup\{a,b\}\)</span> defined as follows: For all <span class="arithmatex">\(x\in\mathbb{N}\cup\{a,b\}\)</span>: </p>
+<div class="arithmatex">\[S^*(x) = \begin{cases} x+1 &amp; x\in\mathbb{N}\\
+                        a &amp; x=a\\
+                        b &amp; x=b\end{cases}\]</div>
+</li>
+<li>
+<p><span class="arithmatex">\(\bar{+}_{\mathcal{N}^*}\)</span> is the function <span class="arithmatex">\(+^*:|\mathcal{N}^*|\times |\mathcal{N}^*|\rightarrow |\mathcal{N}^*|\)</span> defined as follows: For all <span class="arithmatex">\(x,y\in\mathbb{N}\cup\{a,b\}\)</span>: </p>
+<div class="arithmatex">\[+^*(x,y) = \begin{cases} x + y &amp; x,y\in\mathbb{N}\\
+a &amp; x = a\mbox{ and } y\in\mathbb{N}\\
+b &amp; x = b\mbox{ and } y\in\mathbb{N}\\
+b &amp; y = a\mbox{ and } x\in\mathbb{N}\cup\{a,b\}\\
+a &amp; y = b\mbox{ and } x\in\mathbb{N}\cup\{a,b\}\end{cases}\]</div>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>The above is only part of a definition of a structure for <span class="arithmatex">\(\sigma_{arith}\)</span>.  To complete the definition, an interpretation of <span class="arithmatex">\(\bar{\times}\)</span> must be provided. </p>
+</div>
 <p><br/>
 <br/>
 <br/>
 <br/></p>
+</li>
+</ul>
                 
               
               
@@ -722,7 +777,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../01-first-order-formulas/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../01-equality/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -731,25 +786,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Terms, First-Order Formulas
-            </div>
-          </div>
-        </a>
-      
-      
-        <a href="../../week-9/01-equality/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
               Equality
             </div>
           </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
         </a>
+      
       
     </nav>
   
