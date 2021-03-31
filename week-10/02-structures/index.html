@@ -618,6 +618,13 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#interpreting-sentences" class="md-nav__link">
+    Interpreting Sentences
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#exercises" class="md-nav__link">
     Exercises
   </a>
@@ -672,6 +679,13 @@
         <li class="md-nav__item">
   <a href="#observations-about-structures" class="md-nav__link">
     Observations about Structures
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#interpreting-sentences" class="md-nav__link">
+    Interpreting Sentences
   </a>
   
 </li>
@@ -770,6 +784,70 @@ a &amp; y = b\mbox{ and } x\in\mathbb{N}\cup\{a,b\}\end{cases}\]</div>
 </div>
 </li>
 </ul>
+<h2 id="interpreting-sentences">Interpreting Sentences</h2>
+<div class="admonition definition">
+<p class="admonition-title">Closed Terms/Sentences</p>
+<p>A term or a quantifier-free formula of <span class="arithmatex">\(LR(\sigma)\)</span> is <strong>closed</strong> if it has no variables in it.   A closed qf formula is called a <strong>sentence</strong>. </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Interpreting Closed Terms</p>
+<p>Suppose that <span class="arithmatex">\(\sigma\)</span> is a signature and <span class="arithmatex">\(A\)</span> is a <span class="arithmatex">\(\sigma\)</span>-structure. Then for each closed term <span class="arithmatex">\(t\)</span> of <span class="arithmatex">\(LR(\sigma)\)</span> we deﬁne the element <span class="arithmatex">\(t_A\)</span> of the domain of <span class="arithmatex">\(A\)</span> by:</p>
+<ol>
+<li>If <span class="arithmatex">\(t\)</span> is a constant symbol <span class="arithmatex">\(c\)</span>, then <span class="arithmatex">\(t_A=c_A\)</span>; and</li>
+<li>
+<p>If <span class="arithmatex">\(F\)</span> is an <span class="arithmatex">\(n\)</span>-ary function symbole of <span class="arithmatex">\(\sigma\)</span>, and <span class="arithmatex">\(t_1,\ldots, t_n\)</span> are closed terms, then </p>
+<div class="arithmatex">\[(F(t_1,\ldots, t_n))_A = F_A((t_1)_A,\ldots, (t_n)_A)\]</div>
+</li>
+</ol>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Truth in a Structure</p>
+<p>Suppose that <span class="arithmatex">\(\sigma\)</span> is a signature, <span class="arithmatex">\(A\)</span> is a <span class="arithmatex">\(\sigma\)</span>-structure, and <span class="arithmatex">\(\chi\)</span> is a sentence of <span class="arithmatex">\(LR(\sigma)\)</span>. Then <span class="arithmatex">\(\chi\)</span> is true in <span class="arithmatex">\(A\)</span>, denoted <span class="arithmatex">\(\models_A\chi\)</span>, is defined as follows:</p>
+<ol>
+<li>
+<p>If <span class="arithmatex">\(\chi\)</span> is <span class="arithmatex">\(R(t_1,\ldots, t_n)\)</span>, where <span class="arithmatex">\(R\)</span> is an <span class="arithmatex">\(n\)</span>-ary relation symbol of <span class="arithmatex">\(\sigma\)</span> and <span class="arithmatex">\(t_1,\ldots, t_n\)</span> are terms (which must be closed), then </p>
+<div class="arithmatex">\[\models_A\chi \text{ if and only if } ((t_1)_A,\ldots, (t_n)_A)\in R_A\]</div>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\chi\)</span> is <span class="arithmatex">\((s=t)\)</span>, where <span class="arithmatex">\(s\)</span> and <span class="arithmatex">\(t\)</span> are closed terms, then </p>
+<div class="arithmatex">\[\models_A \chi \text{ if and only if } s_A=t_A\]</div>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\chi\)</span> is <span class="arithmatex">\(\bot\)</span>, then <span class="arithmatex">\(\models_A\chi\)</span> does not hold</p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\chi\)</span> is <span class="arithmatex">\((\neg\varphi)\)</span>, then </p>
+<div class="arithmatex">\[\models_A \chi \text{ if and only if it is not true that  } \models_A\varphi\]</div>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\chi\)</span> is <span class="arithmatex">\((\varphi\wedge\psi)\)</span>, then </p>
+<div class="arithmatex">\[\models_A \chi \text{ if and only if }\models_A\varphi\text{ and }\models_A\psi\]</div>
+</li>
+<li>
+<p>The definitions of the other Boolean connectives are similar (i.e., when <span class="arithmatex">\(\chi\)</span> is <span class="arithmatex">\((\varphi\vee\psi)\)</span>, <span class="arithmatex">\((\varphi\rightarrow\psi)\)</span> or <span class="arithmatex">\((\varphi\leftrightarrow\psi)\)</span>)</p>
+</li>
+</ol>
+<p>If <span class="arithmatex">\(\models_A\chi\)</span>, then we say that <span class="arithmatex">\(A\)</span> is a model of <span class="arithmatex">\(\varphi\)</span>.  </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Terminology</p>
+<p>Suppose that <span class="arithmatex">\(\sigma\)</span> is a signature and <span class="arithmatex">\(\varphi\)</span> is a qf sentence of <span class="arithmatex">\(LR(\sigma)\)</span>. </p>
+<ol>
+<li>
+<p>We say that <span class="arithmatex">\(\varphi\)</span> is <strong>valid</strong>, denoted <span class="arithmatex">\(\models_\sigma\varphi\)</span>, if for every <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(A\)</span>,  we have that <span class="arithmatex">\(\models_A\varphi\)</span>. </p>
+</li>
+<li>
+<p>We say that <span class="arithmatex">\(\varphi\)</span> is <strong>satisfiable</strong> if there is some <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(\models_A\varphi\)</span>. </p>
+</li>
+<li>
+<p>We say that <span class="arithmatex">\(\varphi\)</span> is a <strong>contradiction</strong> if there is no <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(A\)</span> such that <span class="arithmatex">\(\models_A\varphi\)</span>. </p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\Gamma\)</span> is a set of qf sentences of <span class="arithmatex">\(LR(\sigma)\)</span>, then we say that a  <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(A\)</span> is a model of <span class="arithmatex">\(\Gamma\)</span>, denoted <span class="arithmatex">\(\models_A\Gamma\)</span>,  when <span class="arithmatex">\(\models_A\chi\)</span> for all <span class="arithmatex">\(\chi\in\Gamma\)</span>.   Then,  </p>
+<div class="arithmatex">\[\Gamma\models_\sigma\varphi\text{ if and only if, for every }\sigma\text{-structure }A\text{, if }\models_A\Gamma\text{ then }\models_A\varphi.\]</div>
+</li>
+</ol>
+</div>
 <h2 id="exercises">Exercises</h2>
 <p>Complete <a href="https://umd.instructure.com/courses/1301043/assignments/5557711">the tutorial questions</a>. 
 <br/>
