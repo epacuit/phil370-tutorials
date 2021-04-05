@@ -17,7 +17,7 @@
     
     
       
-        <title>Substitutions - PHIL 370 Notes</title>
+        <title>Soundness and Completeness - PHIL 370 Notes</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#substitutions" class="md-skip">
+        <a href="#soundness-and-completeness" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Substitutions
+              Soundness and Completeness
             
           </span>
         </div>
@@ -480,14 +480,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
       
       <label class="md-nav__link" for="nav-7">
         Week 09
@@ -506,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-first-order-formulas/" class="md-nav__link">
+      <a href="../../week-09/01-first-order-formulas/" class="md-nav__link">
         Terms, First-Order Formulas
       </a>
     </li>
@@ -516,49 +514,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Substitutions
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../week-09/02-substitutions/" class="md-nav__link">
         Substitutions
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    Exercises
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -630,12 +590,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
       
       <label class="md-nav__link" for="nav-9">
         Week 11
@@ -654,7 +616,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week-11/01-satisfaction/" class="md-nav__link">
+      <a href="../01-satisfaction/" class="md-nav__link">
         Satisfaction
       </a>
     </li>
@@ -664,11 +626,20 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../week-11/02-soundness-completeness/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Soundness and Completeness
       </a>
+      
     </li>
   
 
@@ -697,21 +668,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    Exercises
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -723,39 +679,45 @@
               
                 
                 
-                <h1 id="substitutions">Substitutions</h1>
-<p>If <span class="arithmatex">\(t\)</span>  and <span class="arithmatex">\(s\)</span> are terms, we write <span class="arithmatex">\(t[s/x]\)</span> for the term where <span class="arithmatex">\(x\)</span> is replaced by <span class="arithmatex">\(s\)</span>.  The following is a compositional definition of <span class="arithmatex">\(t[s/x]\)</span>: </p>
+                <h1 id="soundness-and-completeness">Soundness and Completeness</h1>
+<p>Suppose that <span class="arithmatex">\(\Gamma\)</span> is a set of qf formulas of <span class="arithmatex">\(LR(\sigma)\)</span> and <span class="arithmatex">\(\psi\)</span> is a qf formula of <span class="arithmatex">\(LR(\sigma)\)</span>. </p>
+<p><span class="arithmatex">\(\Gamma\vdash_\sigma \psi\)</span> means that there is a derivation of natural deduction of <span class="arithmatex">\(\psi\)</span> where all undischarged assumptions are elements of <span class="arithmatex">\(\Gamma\)</span>. </p>
+<p><span class="arithmatex">\(\Gamma\models_\sigma\psi\)</span> means that for all <span class="arithmatex">\(\sigma\)</span>-structures <span class="arithmatex">\(A\)</span>, if for all <span class="arithmatex">\(\chi\in\Gamma\)</span>,  <span class="arithmatex">\(\models_A\chi\)</span>, then <span class="arithmatex">\(\models_A\psi\)</span>.</p>
+<div class="admonition definition">
+<p class="admonition-title">Soundness of Natural Deduction with qf Sentences</p>
+<p>Let <span class="arithmatex">\(\sigma\)</span> be a signature, <span class="arithmatex">\(\Gamma\)</span> a set of qf sentences of <span class="arithmatex">\(LR(\sigma)\)</span> and <span class="arithmatex">\(\psi\)</span> a qf sentence of <span class="arithmatex">\(LR(\sigma)\)</span>.  Then: </p>
+<div class="arithmatex">\[\text{If } \Gamma\vdash_\sigma\psi \text{ then } \Gamma\models_\sigma\psi\]</div>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Completeness of Natural Deduction with qf Sentences</p>
+<p>Let <span class="arithmatex">\(\sigma\)</span> be a signature, <span class="arithmatex">\(\Gamma\)</span> a set of qf sentences of <span class="arithmatex">\(LR(\sigma)\)</span> and <span class="arithmatex">\(\psi\)</span> a qf sentence of <span class="arithmatex">\(LR(\sigma)\)</span>.  Then: </p>
+<div class="arithmatex">\[\text{If } \Gamma\models_\sigma\psi \text{ then } \Gamma\vdash_\sigma\psi\]</div>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Hintikka Set</p>
+<p>Let <span class="arithmatex">\(\sigma\)</span> be a signature and let <span class="arithmatex">\(\Gamma\)</span> be a set of qf sentences of <span class="arithmatex">\(LR(\sigma)\)</span> (with only <span class="arithmatex">\(\wedge\)</span> and <span class="arithmatex">\(\neg\)</span> in the language).  We say that <span class="arithmatex">\(\Gamma\)</span> is a Hintikka set if it meets the following conditions:</p>
 <ol>
-<li><span class="arithmatex">\(x[s/x]= s\)</span>;</li>
-<li><span class="arithmatex">\(y[s/x]=y\)</span> for <span class="arithmatex">\(y\ne x\)</span>;</li>
-<li><span class="arithmatex">\(c[s/x]=c\)</span>, where <span class="arithmatex">\(c\)</span> is a constant symbol.</li>
-<li><span class="arithmatex">\(f(t_1,t_2,\ldots, t_n)[s/x]=f(t_1[s/x],t_2[s/x],\ldots, t_n[s/x])\)</span>, where <span class="arithmatex">\(f\)</span> is an <span class="arithmatex">\(n\)</span>-ary function symbol. </li>
-</ol>
-<p>Similarly, for a first-order formula <span class="arithmatex">\(\varphi\)</span>, <span class="arithmatex">\(\varphi[s/x]\)</span> is the formula in which all free occurrences of <span class="arithmatex">\(x\)</span> are replaced with <span class="arithmatex">\(s\)</span>. The compositional definition for this is: </p>
-<ol>
-<li><span class="arithmatex">\((t_1=t_2)[s/x]\)</span> is <span class="arithmatex">\((t_1[s/x] = t_2[s/x])\)</span></li>
-<li><span class="arithmatex">\(\bot[s/x]\)</span> is <span class="arithmatex">\(\bot\)</span></li>
-<li><span class="arithmatex">\(R(t_1,\ldots,t_n)[s/x]\)</span> is <span class="arithmatex">\(R(t_1[s/x],\ldots,t_n[s/x])\)</span>, where <span class="arithmatex">\(R\)</span> is an <span class="arithmatex">\(n\)</span>-ary relation symbol. </li>
-<li><span class="arithmatex">\((\neg\psi)[s/x]\)</span> is <span class="arithmatex">\((\neg \psi[s/x])\)</span></li>
-<li><span class="arithmatex">\((\psi_1\wedge\psi_2)[s/x]\)</span> is <span class="arithmatex">\((\psi_1[s/x]\wedge\psi_2[s/x])\)</span><br/>(similarly for the other Boolean connectives <span class="arithmatex">\(\vee\)</span>, <span class="arithmatex">\(\rightarrow\)</span>, and <span class="arithmatex">\(\leftrightarrow\)</span>)</li>
-<li><span class="arithmatex">\((\forall x (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall x)\psi\)</span></li>
-<li><span class="arithmatex">\((\forall y (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall y (\psi[s/x]))\)</span>, where <span class="arithmatex">\(y\ne x\)</span></li>
-<li><span class="arithmatex">\((\exists x (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall x)\psi\)</span></li>
-<li><span class="arithmatex">\((\exists y (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall y (\psi[s/x]))\)</span>, where <span class="arithmatex">\(y\ne x\)</span></li>
-</ol>
-<div class="admonition example">
-<p class="admonition-title">Examples</p>
-<ol>
-<li><span class="arithmatex">\((x=y)[y/x]\)</span> is <span class="arithmatex">\(y=y\)</span> </li>
-<li><span class="arithmatex">\((x=y)[x/y]\)</span> is <span class="arithmatex">\(x=x\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (x=y))[y/x]\)</span> is <span class="arithmatex">\(\forall x (x=y)\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (x=y))[x/y]\)</span> is <span class="arithmatex">\(\forall x (x=x)\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (x=x))[y/x]\)</span> is <span class="arithmatex">\(\forall x (x=x)\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (P(x))\rightarrow P(x))[s/x]\)</span> is <span class="arithmatex">\((\forall x) P(x) \rightarrow P(s)\)</span>, where <span class="arithmatex">\(s\)</span> is a term. </li>
+<li>If <span class="arithmatex">\((\varphi\wedge\psi)\in\Gamma\)</span>, then <span class="arithmatex">\(\varphi\in\Gamma\)</span> and <span class="arithmatex">\(\psi\in\Gamma\)</span>, </li>
+<li>If <span class="arithmatex">\(\neg(\varphi\wedge\psi)\in\Gamma\)</span>, then either <span class="arithmatex">\(\neg\varphi\in\Gamma\)</span> or <span class="arithmatex">\(\neg\psi\in\Gamma\)</span>, </li>
+<li>If  <span class="arithmatex">\((\neg(\neg\varphi)) \in\Gamma\)</span>, then  <span class="arithmatex">\(\varphi \in\Gamma\)</span>.</li>
+<li><span class="arithmatex">\(\bot\not\in\Gamma\)</span>.</li>
+<li>There is no atomic sentence <span class="arithmatex">\(\varphi\)</span> such that both <span class="arithmatex">\(\varphi\)</span> and <span class="arithmatex">\((\neg \varphi)\)</span> are in <span class="arithmatex">\(\Gamma\)</span>.</li>
+<li>For every closed term <span class="arithmatex">\(t\)</span>, <span class="arithmatex">\((t=t)\)</span> is in <span class="arithmatex">\(\Gamma\)</span>.</li>
+<li>If <span class="arithmatex">\(\varphi\)</span> is atomic and <span class="arithmatex">\(s,t\)</span> are closed terms such that both <span class="arithmatex">\((s=t)\in\Gamma\)</span> and <span class="arithmatex">\(\varphi[s/x]\in\Gamma\)</span>, then <span class="arithmatex">\(\varphi[t/x]\in\Gamma\)</span>.</li>
 </ol>
 </div>
-<h2 id="exercises">Exercises</h2>
-<p>The tutorial questions are available at <a href="https://umd.instructure.com/courses/1301043/assignments/5552980">https://umd.instructure.com/courses/1301043/assignments/5552980</a></p>
+<div class="admonition definition">
+<p class="admonition-title">Lemma</p>
+<p>If <span class="arithmatex">\(\Gamma\)</span> is a Hintikka set for <span class="arithmatex">\(LR(\sigma)\)</span>, then there is some <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(A\)</span> that is a model of <span class="arithmatex">\(\Gamma\)</span>. </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Lemma</p>
+<p>If <span class="arithmatex">\(\Gamma\)</span> is a consistent set of qf sentences, then there is a Hintikka set <span class="arithmatex">\(\Delta\)</span> such that <span class="arithmatex">\(\Gamma\subseteq \Delta\)</span>. </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Decidability Theorem for qf Sentences</p>
+<p>There is an algorithm which, given a ﬁnite set of qf sentences, will decide whether or not the set has a model.</p>
+</div>
 <p><br/>
 <br/>
 <br/>
@@ -777,7 +739,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../01-first-order-formulas/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../01-satisfaction/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -786,25 +748,11 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Terms, First-Order Formulas
+              Satisfaction
             </div>
           </div>
         </a>
       
-      
-        <a href="../../week-10/01-equality/" class="md-footer__link md-footer__link--next" rel="next">
-          <div class="md-footer__title">
-            <div class="md-ellipsis">
-              <span class="md-footer__direction">
-                Next
-              </span>
-              Equality
-            </div>
-          </div>
-          <div class="md-footer__button md-icon">
-            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
-          </div>
-        </a>
       
     </nav>
   

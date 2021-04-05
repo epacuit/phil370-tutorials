@@ -17,7 +17,7 @@
     
     
       
-        <title>Substitutions - PHIL 370 Notes</title>
+        <title>Satisfaction - PHIL 370 Notes</title>
       
     
     
@@ -67,7 +67,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#substitutions" class="md-skip">
+        <a href="#satisfaction" class="md-skip">
           Skip to content
         </a>
       
@@ -101,7 +101,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Substitutions
+              Satisfaction
             
           </span>
         </div>
@@ -480,14 +480,12 @@
 
   
   
-    
-  
   
     
-    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" checked>
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-7" type="checkbox" id="nav-7" >
       
       <label class="md-nav__link" for="nav-7">
         Week 09
@@ -506,7 +504,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../01-first-order-formulas/" class="md-nav__link">
+      <a href="../../week-09/01-first-order-formulas/" class="md-nav__link">
         Terms, First-Order Formulas
       </a>
     </li>
@@ -516,49 +514,11 @@
             
   
   
-    
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          Substitutions
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../week-09/02-substitutions/" class="md-nav__link">
         Substitutions
       </a>
-      
-        
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    Exercises
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -630,12 +590,14 @@
 
   
   
+    
+  
   
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
       
       
-        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" >
+        <input class="md-nav__toggle md-toggle" data-md-toggle="nav-9" type="checkbox" id="nav-9" checked>
       
       <label class="md-nav__link" for="nav-9">
         Week 11
@@ -652,11 +614,20 @@
             
   
   
+    
   
-    <li class="md-nav__item">
-      <a href="../../week-11/01-satisfaction/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+        
+      
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         Satisfaction
       </a>
+      
     </li>
   
 
@@ -666,7 +637,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../../week-11/02-soundness-completeness/" class="md-nav__link">
+      <a href="../02-soundness-completeness/" class="md-nav__link">
         Soundness and Completeness
       </a>
     </li>
@@ -697,21 +668,6 @@
     
   
   
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#exercises" class="md-nav__link">
-    Exercises
-  </a>
-  
-</li>
-      
-    </ul>
-  
 </nav>
                   </div>
                 </div>
@@ -723,39 +679,80 @@
               
                 
                 
-                <h1 id="substitutions">Substitutions</h1>
-<p>If <span class="arithmatex">\(t\)</span>  and <span class="arithmatex">\(s\)</span> are terms, we write <span class="arithmatex">\(t[s/x]\)</span> for the term where <span class="arithmatex">\(x\)</span> is replaced by <span class="arithmatex">\(s\)</span>.  The following is a compositional definition of <span class="arithmatex">\(t[s/x]\)</span>: </p>
+                <h1 id="satisfaction">Satisfaction</h1>
+<p>Consider the following three formulas: </p>
 <ol>
-<li><span class="arithmatex">\(x[s/x]= s\)</span>;</li>
-<li><span class="arithmatex">\(y[s/x]=y\)</span> for <span class="arithmatex">\(y\ne x\)</span>;</li>
-<li><span class="arithmatex">\(c[s/x]=c\)</span>, where <span class="arithmatex">\(c\)</span> is a constant symbol.</li>
-<li><span class="arithmatex">\(f(t_1,t_2,\ldots, t_n)[s/x]=f(t_1[s/x],t_2[s/x],\ldots, t_n[s/x])\)</span>, where <span class="arithmatex">\(f\)</span> is an <span class="arithmatex">\(n\)</span>-ary function symbol. </li>
+<li><span class="arithmatex">\((\bar{S}\bar{S}(\bar{0})\mathop{\bar{\times}} x) \mathop{\bar{+}} \bar{S}(\bar{0}) = \bar{S}\bar{S}\bar{S}(\bar{0})\)</span></li>
+<li><span class="arithmatex">\(x\mathop{\bar{+}} x = \bar{0}\)</span></li>
+<li><span class="arithmatex">\(x\mathop{\bar{\times}} y = \bar{0}\)</span></li>
 </ol>
-<p>Similarly, for a first-order formula <span class="arithmatex">\(\varphi\)</span>, <span class="arithmatex">\(\varphi[s/x]\)</span> is the formula in which all free occurrences of <span class="arithmatex">\(x\)</span> are replaced with <span class="arithmatex">\(s\)</span>. The compositional definition for this is: </p>
+<p>For each of the above formulas, there is a set of natural numbers or pairs of natuaral numbers that <em>satisfy</em> the above formulas.  </p>
+<p>Let <span class="arithmatex">\(y_1, \ldots, y_n\)</span> be distinct variables. If we introduce a formula <span class="arithmatex">\(\varphi\)</span> as <span class="arithmatex">\(\varphi(y_1,\ldots, y_n)\)</span>, this means that when we apply an <span class="arithmatex">\(n\)</span>-tuple <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> of elements to <span class="arithmatex">\(\varphi\)</span> we attach <span class="arithmatex">\(a_1\)</span> to <span class="arithmatex">\(y_1\)</span>, <span class="arithmatex">\(a_2\)</span> to <span class="arithmatex">\(y_2\)</span> and so on.  (The listed variables should include all the variables free in <span class="arithmatex">\(\varphi\)</span>, though sometimes it is useful to include some other variables as well.)</p>
+<div class="admonition definition">
+<p class="admonition-title">Witness</p>
+<p>Let <span class="arithmatex">\(\sigma\)</span> be a signature. A <strong>witness</strong> is a new constant symbol that is added to <span class="arithmatex">\(\sigma\)</span>. We use the notation <span class="arithmatex">\(\bar{a}_A\)</span> for a witness added to name the element <span class="arithmatex">\(a\)</span> in a <span class="arithmatex">\(\sigma\)</span>-structure <span class="arithmatex">\(A\)</span>; so <span class="arithmatex">\(\bar{a}_A = a\)</span>.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Satisfies</p>
+<p>Suppose <span class="arithmatex">\(\varphi(y_1,\ldots, y_n\)</span> is a qf formula of <span class="arithmatex">\(LR(\sigma)\)</span>, <span class="arithmatex">\(A\)</span> is a <span class="arithmatex">\(\sigma\)</span>-structure and <span class="arithmatex">\(a_1,\ldots, a_n)\)</span> are elements in the domain of <span class="arithmatex">\(A\)</span>. We deﬁne the relation "<span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies <span class="arithmatex">\(\varphi\)</span>" by the following recursion on the complexity of φ:</p>
 <ol>
-<li><span class="arithmatex">\((t_1=t_2)[s/x]\)</span> is <span class="arithmatex">\((t_1[s/x] = t_2[s/x])\)</span></li>
-<li><span class="arithmatex">\(\bot[s/x]\)</span> is <span class="arithmatex">\(\bot\)</span></li>
-<li><span class="arithmatex">\(R(t_1,\ldots,t_n)[s/x]\)</span> is <span class="arithmatex">\(R(t_1[s/x],\ldots,t_n[s/x])\)</span>, where <span class="arithmatex">\(R\)</span> is an <span class="arithmatex">\(n\)</span>-ary relation symbol. </li>
-<li><span class="arithmatex">\((\neg\psi)[s/x]\)</span> is <span class="arithmatex">\((\neg \psi[s/x])\)</span></li>
-<li><span class="arithmatex">\((\psi_1\wedge\psi_2)[s/x]\)</span> is <span class="arithmatex">\((\psi_1[s/x]\wedge\psi_2[s/x])\)</span><br/>(similarly for the other Boolean connectives <span class="arithmatex">\(\vee\)</span>, <span class="arithmatex">\(\rightarrow\)</span>, and <span class="arithmatex">\(\leftrightarrow\)</span>)</li>
-<li><span class="arithmatex">\((\forall x (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall x)\psi\)</span></li>
-<li><span class="arithmatex">\((\forall y (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall y (\psi[s/x]))\)</span>, where <span class="arithmatex">\(y\ne x\)</span></li>
-<li><span class="arithmatex">\((\exists x (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall x)\psi\)</span></li>
-<li><span class="arithmatex">\((\exists y (\psi))[s/x]\)</span> is <span class="arithmatex">\((\forall y (\psi[s/x]))\)</span>, where <span class="arithmatex">\(y\ne x\)</span></li>
+<li>If <span class="arithmatex">\(\varphi\)</span> is atomic then <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies <span class="arithmatex">\(\varphi\)</span> in <span class="arithmatex">\(A\)</span> if and only if</li>
 </ol>
-<div class="admonition example">
-<p class="admonition-title">Examples</p>
+<div class="arithmatex">\[\models_A\varphi[t_1/y_1, \ldots, t_n/y_n]\]</div>
+<p>where <span class="arithmatex">\(t_1,\ldots, t_n\)</span> are closed terms (possibly witnesses) such that for each <span class="arithmatex">\(i\)</span>, <span class="arithmatex">\((t_i)_A=a_i\)</span>.  </p>
 <ol>
-<li><span class="arithmatex">\((x=y)[y/x]\)</span> is <span class="arithmatex">\(y=y\)</span> </li>
-<li><span class="arithmatex">\((x=y)[x/y]\)</span> is <span class="arithmatex">\(x=x\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (x=y))[y/x]\)</span> is <span class="arithmatex">\(\forall x (x=y)\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (x=y))[x/y]\)</span> is <span class="arithmatex">\(\forall x (x=x)\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (x=x))[y/x]\)</span> is <span class="arithmatex">\(\forall x (x=x)\)</span>, </li>
-<li><span class="arithmatex">\((\forall x (P(x))\rightarrow P(x))[s/x]\)</span> is <span class="arithmatex">\((\forall x) P(x) \rightarrow P(s)\)</span>, where <span class="arithmatex">\(s\)</span> is a term. </li>
+<li>
+<p>If <span class="arithmatex">\(\varphi\)</span> is <span class="arithmatex">\((\neg\psi)\)</span>, then  <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies <span class="arithmatex">\(\varphi\)</span> in <span class="arithmatex">\(A\)</span> if and only if <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> does not satisfy <span class="arithmatex">\(\psi(y_1,\ldots, y_n)\)</span></p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\varphi\)</span> is <span class="arithmatex">\((\psi\wedge\chi)\)</span>, then <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies <span class="arithmatex">\(\varphi\)</span> in <span class="arithmatex">\(A\)</span> if and only if <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies both satisﬁes both <span class="arithmatex">\(\psi(y_1,\ldots, y_n)\)</span> and <span class="arithmatex">\(\chi(y_1,\ldots, y_n)\)</span></p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\varphi\)</span> is <span class="arithmatex">\((\psi\vee\chi)\)</span>, then <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies <span class="arithmatex">\(\varphi\)</span> in <span class="arithmatex">\(A\)</span> if and only if either <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies <span class="arithmatex">\(\psi(y_1,\ldots, y_n)\)</span> or <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies <span class="arithmatex">\(\chi(y_1,\ldots, y_n)\)</span></p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\varphi\)</span> is <span class="arithmatex">\((\psi\rightarrow\chi)\)</span>, then <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies <span class="arithmatex">\(\varphi\)</span> in <span class="arithmatex">\(A\)</span> if and only if either <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> does not  satisfy <span class="arithmatex">\(\psi(y_1,\ldots, y_n)\)</span> or <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies <span class="arithmatex">\(\chi(y_1,\ldots, y_n)\)</span></p>
+</li>
+<li>
+<p>If <span class="arithmatex">\(\varphi\)</span> is <span class="arithmatex">\((\psi\leftrightarrow\chi)\)</span>, then <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies <span class="arithmatex">\(\varphi\)</span> in <span class="arithmatex">\(A\)</span> if and only if either <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> either satisfies both  <span class="arithmatex">\(\psi(y_1,\ldots, y_n)\)</span> and <span class="arithmatex">\(\chi(y_1,\ldots, y_n)\)</span>, or  <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisfies neither. </p>
+</li>
 </ol>
 </div>
-<h2 id="exercises">Exercises</h2>
-<p>The tutorial questions are available at <a href="https://umd.instructure.com/courses/1301043/assignments/5552980">https://umd.instructure.com/courses/1301043/assignments/5552980</a></p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>For part 1 to make sense, we have to know that whether <span class="arithmatex">\(\models_A\varphi[t_1/y_1, \ldots, t_n/y_n]\)</span> depends only on <span class="arithmatex">\(a_1,\ldots, a_n\)</span> and not on the choice of terms used to name them. This is guaranteed by  Lemma 5.6.8(b). </p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Equivalent Formulas</p>
+<p>Let <span class="arithmatex">\(\varphi(y_1,\ldots, y_n)\)</span>  and <span class="arithmatex">\(\psi(y_1,\ldots, y_n)\)</span> be qf formulas of <span class="arithmatex">\(LR(\sigma)\)</span> and <span class="arithmatex">\(A\)</span> a <span class="arithmatex">\(\sigma\)</span>-structure. We say that <span class="arithmatex">\(\varphi\)</span> and <span class="arithmatex">\(\psi\)</span> are equivalent in <span class="arithmatex">\(A\)</span> if for all elements <span class="arithmatex">\(a_1,\ldots, a_n\)</span>  in the domain of <span class="arithmatex">\(A\)</span>, <span class="arithmatex">\((a_1,\ldots, a_n)\)</span> satisﬁes <span class="arithmatex">\(\varphi\)</span> in <span class="arithmatex">\(A\)</span> if and only if it satisﬁes <span class="arithmatex">\(\psi\)</span> in <span class="arithmatex">\(A\)</span>. We say that <span class="arithmatex">\(\varphi\)</span>  and <span class="arithmatex">\(\psi\)</span> are logically equivalent if they are equivalent in every <span class="arithmatex">\(\sigma\)</span>-structure.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Diophantine Equation</p>
+<p>Let <span class="arithmatex">\(n\)</span> be a positive integer and <span class="arithmatex">\(X\)</span> a set of <span class="arithmatex">\(n\)</span>-tuples of natural numbers. We say that <span class="arithmatex">\(X\)</span>  is diophantine if there is an equation <span class="arithmatex">\(\varphi(x_1,\ldots, x_n)\)</span> of <span class="arithmatex">\(LR(\sigma_{arith})\)</span> such that for every <span class="arithmatex">\(n\)</span>-tuple <span class="arithmatex">\((k_1,\ldots, k_n)\)</span> of natural numbers, <span class="arithmatex">\((k_1,\ldots, k_n)\in X\)</span> if and only if for some numbers <span class="arithmatex">\(l_1,\ldots, l_m\)</span>, </p>
+<div class="arithmatex">\[\models_{\mathbb{N}} \varphi(\bar{k}_1,\ldots, \bar{k}_n,\bar{l}_1,\ldots, \bar{l}_m)\]</div>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Computably Enumerable/Computable</p>
+<p>Let <span class="arithmatex">\(n\)</span> be a positive integer and let <span class="arithmatex">\(X\)</span> be a set of <span class="arithmatex">\(n\)</span>-tuples of natural numbers.</p>
+<p>We say that <span class="arithmatex">\(X\)</span> is <strong>computably enumerable</strong>, or c.e. for short, if a digital computer with inﬁnitely extendable memory and unlimited time can be programmed so that it lists (not necessarily in any reasonable order) all and only the <span class="arithmatex">\(n\)</span>-tuples that are in <span class="arithmatex">\(X\)</span>.</p>
+<p>We say that <span class="arithmatex">\(X\)</span> is <strong>computable</strong> if a digital computer with inﬁnitely extendable memory and unlimited time can be programmed so that if you type in an <span class="arithmatex">\(n\)</span>-tuple in <span class="arithmatex">\(X\)</span>, the computer prints YES, and if you type in an <span class="arithmatex">\(n\)</span>-tuple not in X then it prints NO.</p>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Lemma</p>
+<p>Let <span class="arithmatex">\(n\)</span> be a positive integer and <span class="arithmatex">\(X\)</span> a set of <span class="arithmatex">\(n\)</span>-tuples of natural numbers. Then the following are equivalent:</p>
+<ol>
+<li><span class="arithmatex">\(X\)</span> is computable.</li>
+<li>Both <span class="arithmatex">\(X\)</span> and <span class="arithmatex">\(\mathbb{N}\setminus X\)</span> are c.e.</li>
+</ol>
+</div>
+<div class="admonition definition">
+<p class="admonition-title">Matiyasevich's Theorem</p>
+<p>Let <span class="arithmatex">\(n\)</span> be a positive integer and <span class="arithmatex">\(X\)</span> a set of <span class="arithmatex">\(n\)</span>-tuples of natural numbers. Then the following are equivalent:</p>
+<ol>
+<li><span class="arithmatex">\(X\)</span> is computably enumerable.</li>
+<li><span class="arithmatex">\(X\)</span> is diophantine.   </li>
+</ol>
+</div>
 <p><br/>
 <br/>
 <br/>
@@ -777,7 +774,7 @@
   
     <nav class="md-footer__inner md-grid" aria-label="Footer">
       
-        <a href="../01-first-order-formulas/" class="md-footer__link md-footer__link--prev" rel="prev">
+        <a href="../../week-10/02-structures/" class="md-footer__link md-footer__link--prev" rel="prev">
           <div class="md-footer__button md-icon">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
           </div>
@@ -786,19 +783,19 @@
               <span class="md-footer__direction">
                 Previous
               </span>
-              Terms, First-Order Formulas
+              Structures
             </div>
           </div>
         </a>
       
       
-        <a href="../../week-10/01-equality/" class="md-footer__link md-footer__link--next" rel="next">
+        <a href="../02-soundness-completeness/" class="md-footer__link md-footer__link--next" rel="next">
           <div class="md-footer__title">
             <div class="md-ellipsis">
               <span class="md-footer__direction">
                 Next
               </span>
-              Equality
+              Soundness and Completeness
             </div>
           </div>
           <div class="md-footer__button md-icon">
